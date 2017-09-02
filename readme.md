@@ -1,4 +1,4 @@
-<p align="center">WHITESPACE</p>
+<h1 align="center">WHITESPACE</h1>
 
 <p align="center">
 TBA
