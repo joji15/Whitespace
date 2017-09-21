@@ -1,23 +1,7 @@
-body {
-    background: #f5f5f5;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    color: #23272b;
-    font-family: Roboto Light;
-    padding-top: 50px;
-    padding-left: 25px;
-    padding-right: 25px;
+html, body {
+  height:100%;
 }
-
-.sidenav{
-    padding: 15px;
-}
-
-hr{
-    background-color: #fff;
-}
-
-.tabstyle{
-  padding-top: 15px;
+.bodycenter{
+  display:flex;
+  align-items:center;
 }

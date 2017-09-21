@@ -17,27 +17,53 @@
       <div class="col-md-6 align-self-center">
         <i><h1 class="display-3 text-center" style="font-family:Segoe UI;">WhiteSpace</h1></i>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 animated">
         <form action="" method="POST">
           <div class="form-group row">
-            <label for="username" class="col-md-2 col-form-label">Username</label>
-            <div class="col-md-10">
+            <label for="username" class="col-md-4 col-form-label">Enter Username</label>
+            <div class="col-md-8">
               <input type="text" class="form-control" id="username" name="username" placeholder="Username">
             </div>
           </div>
           <div class="form-group row">
-            <label for="password" class="col-md-2 col-form-label">Password</label>
-            <div class="col-md-10">
+            <label for="password" class="col-md-4 col-form-label">Enter Password</label>
+            <div class="col-md-8">
               <input type="password" class="form-control" id="password" name="password" placeholder="Password">
             </div>
           </div>
-          <div class="form-group row text-center">
+          <div class="form-group row">
+            <label for="password" class="col-md-4 col-form-label">Confirm Password</label>
+            <div class="col-md-8">
+              <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="section" class="col-md-4 col-form-label">Section</label>
+            <div class="col-md-8">
+              <select class="custom-select" id="section" name="section">
+                <option selected>BSIT</option>
+                <option value="1">BSIS</option>
+                <option value="2">BSCS</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="section" class="col-md-4 col-form-label">Select Teacher</label>
+            <div class="col-md-8">
+              <select class="custom-select" id="section" name="section">
+                <option selected>Ms. De Vera</option>
+                <option value="1">Ms. Cruz</option>
+                <option value="2">Mr. George</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group row">
             <div class="col-md-12">
-              <button type="submit" class="btn btn-primary">Login</button>
+              <button type="submit" class="btn btn-primary">Register</button>
             </div>
           </div>
         </form>
-        <p class="text-center">No account? <a href="register">Sign-Up Here</a></p>
+        <p class="text-center">Have an account? <a href="/">Login Here</a></p>
       </div>
     </div>
   </div>
