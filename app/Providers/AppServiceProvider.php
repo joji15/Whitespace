@@ -12,10 +12,17 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
+<<<<<<< HEAD
     public function boot()
     {
         Schema::defaultStringLength(191);
     }
+=======
+     public function boot()
+     {
+         Schema::defaultStringLength(191);
+     }
+>>>>>>> f08f121a0439f30a6718327d22ab34ef8afbdd17
 
     /**
      * Register any application services.
