@@ -8,7 +8,7 @@ TBA
 
 TBA
 
-## About Whitespace
+## About Whitespace.
 
 8.20.2017 - Added Laravel Login
 
