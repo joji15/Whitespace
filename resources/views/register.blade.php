@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>WhiteSpace Test Dashboard</title>
+  <title>Register - Whitespace</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,7 +15,14 @@
   <div class="container animated fadeIn">
     <div class="row justify-content-center">
       <div class="col-md-6 align-self-center">
-        <i><h1 class="display-3 text-center" style="font-family:Segoe UI;">WhiteSpace</h1></i>
+        <div class="row">
+          <div class="col-sm-3 col-md-3 col-lg-3 animated fadeInUp">
+            <img src="{{ asset('img/WS.png') }}" width="150" height="150" alt="WS Logo">
+          </div>
+          <div class="col-sm-9 col-md-9 col-lg-9 align-self-center animated fadeInUp">
+            <i><h1 class="display-3 text-center title" style="font-family:Segoe UI;">WhiteSpace</h1></i>
+          </div>
+        </div>
       </div>
       <div class="col-md-6 animated">
         <form action="" method="POST">

@@ -20,4 +20,17 @@ class mainController extends Controller
     {
       return view('studentDash');
     }
+
+    public function admin()
+    {
+      return view('admin.adminHome');
+    }
+
+    public function adminStud(){
+        return view('admin.adminStudent');
+    }
+
+    public function adminQuiz(){
+        return view('admin.adminQuiz');
+    }
 }
