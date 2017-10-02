@@ -2,31 +2,14 @@
 
 @section('content')
 
-<div class="col-sm-10">
-  <p class="display-1">
-    Student Dashboard
-  </p>
-  <p class="display-2">
-    Student Dashboard
-  </p>
-  <p class="display-3">
-    Student Dashboard
-  </p>
-  <p class="display-4">
-    Student Dashboard
-  </p>
-  <p class="display-1">
-    Student Dashboard
-  </p>
-  <p class="display-2">
-    Student Dashboard
-  </p>
-  <p class="display-3">
-    Student Dashboard
-  </p>
-  <p class="display-4">
-    Student Dashboard
-  </p>
+<div class="col-sm-8 col-md-10 col-lg-10" id="studContent">
+  <div class="container">
+    <hr />
+    <p class="h1" style="font-family:Segoe UI Light;">
+      Manage Students
+    </p>
+    <hr />
+  </div>
 </div>
 
 @endsection

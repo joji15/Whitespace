@@ -2,31 +2,14 @@
 
 @section('content')
 
-<div class="col-sm-10">
-  <p class="display-1">
-    Quiz Dashboard
-  </p>
-  <p class="display-2">
-    Quiz Dashboard
-  </p>
-  <p class="display-3">
-    Quiz Dashboard
-  </p>
-  <p class="display-4">
-    Quiz Dashboard
-  </p>
-  <p class="display-1">
-    Quiz Dashboard
-  </p>
-  <p class="display-2">
-    Quiz Dashboard
-  </p>
-  <p class="display-3">
-    Quiz Dashboard
-  </p>
-  <p class="display-4">
-    Quiz Dashboard
-  </p>
+<div class="col-sm-8 col-md-10 col-lg-10" id="quizContent">
+  <div class="container">
+    <hr />
+    <p class="h1" style="font-family:Segoe UI Light;">
+      Manage Quizzes
+    </p>
+    <hr />
+  </div>
 </div>
 
 @endsection

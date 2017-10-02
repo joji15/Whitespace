@@ -33,4 +33,8 @@ class mainController extends Controller
     public function adminQuiz(){
         return view('admin.adminQuiz');
     }
+
+    public function adminUpload(){
+        return view('admin.adminUpload');
+    }
 }

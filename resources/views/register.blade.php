@@ -10,6 +10,8 @@
   <link href="/css/styles.css" rel="stylesheet">
   <!-- Animate CSS for animations -->
   <link href="/css/animate.min.css" rel="stylesheet">
+  <!-- Open Iconic - Icon Set *Glyphicons don't work -->
+  <link href="/css/open-iconic-bootstrap.css" rel="stylesheet">
 </head>
 <body class="bodycenter">
   <div class="container animated fadeIn">
@@ -24,47 +26,45 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6 animated">
+      <div class="col-md-6 align-self-center">
         <form action="" method="POST">
-          <div class="form-group row">
-            <label for="username" class="col-md-4 col-form-label">Enter Username</label>
-            <div class="col-md-8">
-              <input type="text" class="form-control" id="username" name="username" placeholder="Username">
-            </div>
+          <br />
+          <div class="input-group">
+            <span class="input-group-addon"><span class="oi oi-person" title="Username" aria-hidden="true"></span></span>
+            <input type="text" class="form-control" placeholder="Enter Username" aria-label="Username" aria-describedby="basic-addon1" id="username">
           </div>
-          <div class="form-group row">
-            <label for="password" class="col-md-4 col-form-label">Enter Password</label>
-            <div class="col-md-8">
-              <input type="password" class="form-control" id="password" name="password" placeholder="Password">
-            </div>
+          <br />
+          <div class="input-group">
+            <span class="input-group-addon"><span class="oi oi-key" title="Password" aria-hidden="true"></span></span>
+            <input type="password" class="form-control" placeholder="Enter Password" aria-label="Password" aria-describedby="basic-addon1" id="password">
           </div>
-          <div class="form-group row">
-            <label for="password" class="col-md-4 col-form-label">Confirm Password</label>
-            <div class="col-md-8">
-              <input type="password" class="form-control" id="password" name="password" placeholder="Password">
-            </div>
+          <br />
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1"><span class="oi oi-key" title="Password" aria-hidden="true"></span></span>
+            <input type="password" class="form-control" placeholder="Confirm Password" aria-label="Password" aria-describedby="basic-addon1" id="password">
           </div>
-          <div class="form-group row">
-            <label for="section" class="col-md-4 col-form-label">Section</label>
-            <div class="col-md-8">
-              <select class="custom-select" id="section" name="section">
-                <option selected>BSIT</option>
-                <option value="1">BSIS</option>
-                <option value="2">BSCS</option>
-              </select>
-            </div>
+          <br />
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1"><span class="oi oi-people" title="Password" aria-hidden="true"></span></span>
+            <select class="form-control custom-select" id="section" name="section">
+              <option value="0" selected disabled style="display:none;">Select Section</option>
+              <option value="1">BSIT: 2017-2018</option>
+              <option value="2">BSIS: 2017-2018</option>
+              <option value="3">BSCS: 2017-2018</option>
+            </select>
           </div>
-          <div class="form-group row">
-            <label for="section" class="col-md-4 col-form-label">Select Teacher</label>
-            <div class="col-md-8">
-              <select class="custom-select" id="section" name="section">
-                <option selected>Ms. De Vera</option>
-                <option value="1">Ms. Cruz</option>
-                <option value="2">Mr. George</option>
-              </select>
-            </div>
+          <br />
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1"><span class="oi oi-book" title="Password" aria-hidden="true"></span></span>
+            <select class="form-control custom-select" id="section" name="section">
+              <option value="0" selected disabled style="display:none;">Select Teacher</option>
+              <option value="1">Ms. De Vera</option>
+              <option value="2">Ms. Cruz</option>
+              <option value="3">Mr. George</option>
+            </select>
           </div>
-          <div class="form-group row">
+          <br />
+          <div class="form-group row text-center">
             <div class="col-md-12">
               <button type="submit" class="btn btn-primary">Register</button>
             </div>

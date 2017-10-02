@@ -23,4 +23,6 @@ Route::get('adminStud', 'mainController@adminStud');
 
 Route::get('adminQuiz', 'mainController@adminQuiz');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('adminUpload', 'mainController@adminUpload');
+
+Route::get('home', 'mainController@index');
