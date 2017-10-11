@@ -4,10 +4,10 @@
 
 @section('content')
 
-<div class="col-sm-8 col-md-10 col-lg-10 justify-content-start content" id="upContent">
+<div class="col-sm-8 col-md-9 col-lg-10 justify-content-start content" id="upContent">
   <div class="container-fluid contentMargin">
     <hr />
-    <p class="h1" style="font-family:Segoe UI Light;">
+    <p class="h2" style="font-family:Segoe UI Light;">
       Upload Files for Students
     </p>
     <hr />
@@ -72,11 +72,14 @@
           <div class="card-body">
             <form>
               <div class="form-group">
-                <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                <br />
-                <button class="btn btn-outline-primary">Upload</button>
+                <label class="custom-file">
+                  <input type="file" id="file2" class="custom-file-input">
+                  <span class="custom-file-control"></span>
+                </label>
               </div>
+              <button class="btn btn-outline-primary">Upload</button>
             </form>
+            <br />
             <p class="card-text">
               List of files types that can be uploaded. 25MB is the max file size
               <ul>

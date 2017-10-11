@@ -8,12 +8,20 @@
   border-color: rgb(244,67,54);
 }
 
+.text-red{
+  color: rgb(244,67,54);
+}
+
 .bg-purple{
   background-color: rgb(156,39,176);
 }
 
 .border-purple{
   border-color: rgb(156,39,176);
+}
+
+.text-purple{
+  color: rgb(156,39,176);
 }
 
 .bg-blue{
@@ -24,28 +32,44 @@
   border-color: rgb(33,150,243);
 }
 
+.text-blue{
+  color: rgb(33,150,243);
+}
+
 .bg-green{
-  background-color: rgb(76,175,80);
+  background-color: rgb(0,200,83);
 }
 
 .border-green{
-  border-color: rgb(76,175,80);
+  border-color: rgb(0,200,83);
+}
+
+.text-green{
+  color: rgb(0,200,83);
 }
 
 .bg-yellow{
-  background-color: rgb(251,192,45);
+  background-color: rgb(255,196,0);
 }
 
 .border-yellow{
-  border-color: rgb(251,192,45);
+  border-color: rgb(255,196,0);
+}
+
+.text-yellow{
+  color: rgb(255,196,0);
 }
 
 .bg-orange{
-  background-color: rgb(255,152,0);
+  background-color: rgb(255,109,0);
 }
 
 .border-orange{
-  border-color: rgb(255,152,0);
+  border-color: rgb(255,109,0);
+}
+
+.text-orange{
+  color: rgb(255,109,0);
 }
 
 .bg-brown{
@@ -56,10 +80,42 @@
   border-color: rgb(121,85,72);
 }
 
+.text-brown{
+  color: rgb(121,85,72);
+}
+
 .bg-grey{
   background-color: rgb(158,158,158);
 }
 
 .border-grey{
   border-color: rgb(158,158,158);
+}
+
+.text-grey{
+  color: rgb(158,158,158);
+}
+
+.bg-blue-grey{
+  background-color: rgb(38,50,56);
+}
+
+.border-blue-grey{
+  border-color: rgb(38,50,56);
+}
+
+.text-blue-grey{
+  color: rgb(38,50,56);
+}
+
+.bg-dark-grey{
+  background-color: rgb(33,33,33);
+}
+
+.border-dark-grey{
+  border-color: rgb(33,33,33);
+}
+
+.text-dark-grey{
+  color: rgb(33,33,33);
 }

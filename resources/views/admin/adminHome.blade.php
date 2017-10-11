@@ -4,16 +4,38 @@
 
 @section('content')
 
-<div class="col-sm-8 col-md-10 col-lg-10 justify-content-start content" id="homeContent">
+<div class="col-sm-8 col-md-9 col-lg-10 justify-content-start content" id="homeContent">
   <div class="container-fluid contentMargin">
     <hr />
-    <p class="h1" style="font-family:Segoe UI Light;">
+    <p class="h2" style="font-family:Segoe UI Light;" id="homeTitle">
       Welcome, Ms. De Vera
     </p>
     <hr />
     <div class="row">
+      <div class="col-12 mb-2">
+        <div class="input-group">
+          <input type="search" class="form-control" placeholder="Search..." aria-label="Search for..." aria-labelledby="search-input">
+          <span class="input-group-btn">
+            <button class="btn btn-primary" type="button" id="searchInput">Search</button>
+          </span>
+        </div>
+      </div>
+      <div class="col-12" id="searchResult" style="display:none;">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">Search Results</h3>
+            <p class="card-text">
+              <p class="lead">
+                Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+              </p>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
       <div class="col-12 col-md-12 col-lg-6 mt-4">
-        <div class="card border-yellow" style="height: 450px; min-height: 450px;">
+        <div class="card border-yellow">
           <div class="card-header bg-yellow text-white h5">
             <span class="oi oi-star" title="Rank" aria-hidden="true"></span> Class Standing - Overall
           </div>
@@ -119,8 +141,7 @@
             <h4 class="card-title">BSIT - practicedb</h4>
             <p class="card-text"><b>Date Created:</b> September 11, 2017</p>
             <a href="#" class="btn btn-primary">View or Edit</a>
-          </div>
-          <div class="card-body">
+            <hr />
             <h4 class="card-title">BSCS - practicedb</h4>
             <p class="card-text"><b>Date Created:</b> September 11, 2017</p>
             <a href="#" class="btn btn-primary">View or Edit</a>

@@ -30,8 +30,38 @@ class mainController extends Controller
         return view('admin.adminStudent');
     }
 
+    public function adminCreateClass()
+    {
+        return view('student.adminCreateClass');
+    }
+
+    public function adminViewDB()
+    {
+        return view('student.adminViewDB');
+    }
+
+    public function adminViewProgress()
+    {
+        return view('student.adminViewProgress');
+    }
+
     public function adminQuiz(){
         return view('admin.adminQuiz');
+    }
+
+    public function adminViewQuiz()
+    {
+        return view('quiz.viewQuiz');
+    }
+
+    public function adminCreateQuiz()
+    {
+        return view('quiz.createQuiz');
+    }
+
+    public function adminEditQuiz()
+    {
+        return view('quiz.editQuiz');
     }
 
     public function adminUpload(){

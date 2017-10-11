@@ -21,7 +21,19 @@ Route::get('admin', 'mainController@admin');
 
 Route::get('adminStud', 'mainController@adminStud');
 
+Route::get('adminCreateClass', 'mainController@adminCreateClass');
+
+Route::get('adminViewDB', 'mainController@adminViewDB');
+
+Route::get('adminViewProgress', 'mainController@adminViewProgress');
+
 Route::get('adminQuiz', 'mainController@adminQuiz');
+
+Route::get('adminViewQuiz', 'mainController@adminViewQuiz');
+
+Route::get('adminCreateQuiz', 'mainController@adminCreateQuiz');
+
+Route::get('adminEditQuiz', 'mainController@adminEditQuiz');
 
 Route::get('adminUpload', 'mainController@adminUpload');
 

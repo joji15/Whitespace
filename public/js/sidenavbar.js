@@ -5,22 +5,84 @@
 
 var home = document.getElementById('homeContent');
 var stud = document.getElementById('studContent');
+var createClass= document.getElementById('createClassContent');
+var search= document.getElementById('searchContent');
+var progress= document.getElementById('progressContent');
+var viewdb= document.getElementById('viewdbContent');
 var quiz = document.getElementById('quizContent');
+var viewquiz = document.getElementById('viewQuizContent');
+var createquiz = document.getElementById('createQuizContent');
+var editquiz = document.getElementById('editQuizContent');
 var upload = document.getElementById('upContent');
 
 if (home !== null){
     $(".a").find(".active").removeClass("active");
-    $('#admin').addClass("active");
+    $('#adminpill').addClass("active");
+    $('#studentSub').addClass("d-none");
+    $('#quizSub').addClass("d-none");
 }
+
 if (stud !== null){
     $(".a").find(".active").removeClass("active");
-    $('#adminStud').addClass("active");
+    $('#adminStudpill').addClass("active");
+    $('#studentSub').addClass("d-none");
+    $('#quizSub').addClass("d-none");
 }
+
+if (createClass !== null){
+  $(".a").find(".active").removeClass("active");
+  $('#adminCreateClasspill').addClass("active");
+  $('#quizSub').addClass("d-none");
+}
+
+if (progress !== null){
+  $(".a").find(".active").removeClass("active");
+  $('#adminViewProgresspill').addClass("active");
+  $('#quizSub').addClass("d-none");
+}
+
+if (viewdb !== null){
+  $(".a").find(".active").removeClass("active");
+  $('#adminViewDBpill').addClass("active");
+  $('#quizSub').addClass("d-none");
+}
+
 if (quiz !== null){
     $(".a").find(".active").removeClass("active");
-    $('#adminQuiz').addClass("active");
+    $('#adminQuizpill').addClass("active");
+    $('#studentSub').addClass("d-none");
+    $('#quizSub').addClass("d-none");
 }
+
+if (viewquiz !== null){
+  $(".a").find(".active").removeClass("active");
+  $('#viewQuizpill').addClass("active");
+  $('#studentSub').addClass("d-none");
+}
+
+if (createquiz !== null){
+  $(".a").find(".active").removeClass("active");
+  $('#createQuizpill').addClass("active");
+  $('#studentSub').addClass("d-none");
+}
+
+if (editquiz !== null){
+  $(".a").find(".active").removeClass("active");
+  $('#editQuizpill').addClass("active");
+  $('#studentSub').addClass("d-none");
+}
+
 if (upload !== null){
     $(".a").find(".active").removeClass("active");
-    $('#adminUpload').addClass("active");
+    $('#adminUploadpill').addClass("active");
+    $('#studentSub').addClass("d-none");
+    $('#quizSub').addClass("d-none");
 }
+
+$( window ).resize(function() {
+  if($(window).width() <=575){
+    $('#sidenavbar').addClass("collapse");
+  }
+  else
+    $('#sidenavbar').removeClass("collapse");
+});

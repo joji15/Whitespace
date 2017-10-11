@@ -1,0 +1,46 @@
+
+/* ---Media Queries--- */
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575px) {
+  .navbar-toggler{
+    display: block;
+  }
+  .main-header{
+    font-size: 3.5rem;
+  }
+  .main-header-img{
+    height: 100px;
+    width: 100px;
+  }
+}
+
+ /* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767px) {
+  .navbar-toggler{
+    display: none;
+  }
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991px) {
+  .main-header{
+    font-size: 3rem;
+  }
+  .main-header-img{
+    height: 100px;
+    width: 100px;
+  }
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199px) {
+  .main-header{
+    font-size: 3.5rem;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+
+}
