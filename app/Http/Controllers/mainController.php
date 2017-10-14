@@ -73,4 +73,16 @@ class mainController extends Controller
     public function studentHome(){
         return view('students.dashboard');
     }
+
+    public function studentsLesson(){
+        return view('students.studentsLesson');
+    }
+
+    public function studentsDownload(){
+        return view('students.studentsDownload');
+    }
+
+    public function studentsSimulator(){
+        return view('students.studentsSimulator');
+    }
 }

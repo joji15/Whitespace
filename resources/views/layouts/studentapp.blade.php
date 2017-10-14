@@ -33,9 +33,11 @@
         <nav class="nav nav-pills flex-column">
           <div class="navbar-collapse animated fadeIn" id="sidenavbar">
             <hr class="hr-white"/>
+            <!--  Change id  -->
             <a class="nav-item nav-link" href="dashboard" id="adminpill"><span class="oi oi-home" title="Home" aria-hidden="true"></span> Home</a>
-            <a class="nav-item nav-link" href="adminStud" id="adminStudpill"><span class="oi oi-book" title="SQL Lessons" aria-hidden="true"></span> SQL Lessons</a>
-            <a class="nav-item nav-link" href="adminQuiz" id="adminQuizpill"><span class="oi oi-loop-circular" title="SQL Simulator" aria-hidden="true"></span> SQL Simulator</a>
+            <a class="nav-item nav-link" href="studentsLesson" id="adminStudpill"><span class="oi oi-book" title="SQL Lessons" aria-hidden="true"></span> SQL Lessons</a>
+            <a class="nav-item nav-link" href="studentsDownload" id="adminUploadpill"><span class="oi oi-data-transfer-download" title="Uploaded Files" aria-hidden="true"></span> Download Files</a>
+            <a class="nav-item nav-link" href="studentsSimulator" id="adminQuizpill"><span class="oi oi-loop-circular" title="SQL Simulator" aria-hidden="true"></span> SQL Simulator</a>
             <hr class="hr-white"/>
           </div>
         </nav>

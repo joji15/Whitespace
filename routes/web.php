@@ -39,4 +39,10 @@ Route::get('adminUpload', 'mainController@adminUpload');
 
 Route::get('dashboard', 'mainController@studentHome');
 
+Route::get('studentsLesson', 'mainController@studentsLesson');
+
+Route::get('studentsDownload', 'mainController@studentsDownload');
+
+Route::get('studentsSimulator', 'mainController@studentsSimulator');
+
 Route::get('home', 'mainController@index');

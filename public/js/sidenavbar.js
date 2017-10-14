@@ -15,6 +15,7 @@ var createquiz = document.getElementById('createQuizContent');
 var editquiz = document.getElementById('editQuizContent');
 var upload = document.getElementById('upContent');
 
+
 if (home !== null){
     $(".a").find(".active").removeClass("active");
     $('#adminpill').addClass("active");
@@ -78,6 +79,7 @@ if (upload !== null){
     $('#studentSub').addClass("d-none");
     $('#quizSub').addClass("d-none");
 }
+
 
 $( window ).resize(function() {
   if($(window).width() <=575){
