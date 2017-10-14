@@ -15,7 +15,7 @@
       <div class="col-12 col-md-4 col-lg-4 mt-4">
         <div class="card border-blue-grey">
           <div class="card-body text-white bg-red">
-            <h4 class="card-title"><span class="oi oi-plus" title="newClass" aria-hidden="true"></span> Create New Class</h4>
+            <h4 class="card-title"><span class="oi oi-plus" title="New Class" aria-hidden="true"></span> Create New Class</h4>
             <p class="card-text">Create a new set of student for the start of a new semester.</p>
           </div>
           <a href="adminCreateClass"><div class="card-footer border-blue-grey">
@@ -27,7 +27,7 @@
       <div class="col-12 col-md-4 col-lg-4 mt-4">
         <div class="card border-blue-grey">
           <div class="card-body text-white bg-purple">
-            <h4 class="card-title"><span class="oi oi-graph" title="progress" aria-hidden="true"></span> Student’s Progress Monitoring</h4>
+            <h4 class="card-title"><span class="oi oi-graph" title="Student Monitoring Module" aria-hidden="true"></span> Student’s Progress Monitoring</h4>
             <p class="card-text">See the student's progress in learning SQL through this module</p>
           </div>
           <a href="adminViewProgress"><div class="card-footer border-blue-grey">
@@ -39,7 +39,7 @@
       <div class="col-12 col-md-4 col-lg-4 mt-4">
         <div class="card border-blue-grey">
           <div class="card-body text-white bg-blue">
-            <h4 class="card-title"><span class="oi oi-folder" title="classdb" aria-hidden="true"></span> Class Database</h4>
+            <h4 class="card-title"><span class="oi oi-folder" title="Class Database" aria-hidden="true"></span> Class Database</h4>
             <p class="card-text">Create Databases for the student to practice or view and edit an existing one.</p>
           </div>
           <a href="adminViewDB"><div class="card-footer border-blue-grey">

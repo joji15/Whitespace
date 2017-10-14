@@ -15,7 +15,7 @@
       <div class="col-12 col-md-4 col-lg-4 mt-4">
         <div class="card border-blue-grey">
           <div class="card-body text-white bg-green">
-            <h4 class="card-title"><span class="oi oi-magnifying-glass" title="newClass" aria-hidden="true"></span> View Quizzes</h4>
+            <h4 class="card-title"><span class="oi oi-magnifying-glass" title="View Quiz" aria-hidden="true"></span> View Quizzes</h4>
             <p class="card-text">View past quizzes to review the scores of the students.</p>
           </div>
           <a href="adminViewQuiz"><div class="card-footer border-blue-grey">
@@ -27,7 +27,7 @@
       <div class="col-12 col-md-4 col-lg-4 mt-4">
         <div class="card border-blue-grey">
           <div class="card-body text-white bg-yellow">
-            <h4 class="card-title"><span class="oi oi-plus" title="searchstud" aria-hidden="true"></span> Create Quiz</h4>
+            <h4 class="card-title"><span class="oi oi-plus" title="Create Quiz" aria-hidden="true"></span> Create Quiz</h4>
             <p class="card-text">Create a new quiz for your student to answer.</p>
           </div>
           <a href="adminCreateQuiz"><div class="card-footer border-blue-grey">
@@ -39,7 +39,7 @@
       <div class="col-12 col-md-4 col-lg-4 mt-4">
         <div class="card border-blue-grey">
           <div class="card-body text-white bg-orange">
-            <h4 class="card-title"><span class="oi oi-pencil" title="progress" aria-hidden="true"></span> Edit Quizzes</h4>
+            <h4 class="card-title"><span class="oi oi-pencil" title="Edit Quiz" aria-hidden="true"></span> Edit Quizzes</h4>
             <p class="card-text">Edit scheduled quizzes. Can edit the time, the questions and the answers.</p>
           </div>
           <a href="adminEditQuiz"><div class="card-footer border-blue-grey">

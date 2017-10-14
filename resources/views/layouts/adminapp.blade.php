@@ -53,7 +53,7 @@
     </a>
     <form class="form-inline mr-2">
       <div class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><span class="oi oi-person" title="account" aria-hidden="true"></span></a>
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><span class="oi oi-person" title="Account Menu" aria-hidden="true"></span></a>
         <div class="dropdown-menu" style="left:-100px">
           <h6 class="dropdown-header">Dropdown header</h6>
           <a class="dropdown-item" href="#"><span class="oi oi-cog" title="action" aria-hidden="true"></span> Action</a>

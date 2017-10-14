@@ -15,7 +15,7 @@
       <div class="col-sm col-md-7 col-lg-7 mt-4">
         <div class="card border-blue-grey">
           <div class="card-header bg-blue text-white h6">
-            <span class="oi oi-star" title="Rank" aria-hidden="true"></span> Uploaded Files
+            <span class="oi oi-data-transfer-upload" title="Uploaded Files" aria-hidden="true"></span> Uploaded Files
           </div>
           <div class="card-body" style="overflow:auto;">
             <table class="table table-hover table-sm">

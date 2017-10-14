@@ -6,11 +6,7 @@
 
 <div class="col-sm-8 col-md-9 col-lg-10 justify-content-start content" id="viewQuizContent">
   <div class="container-fluid contentMargin">
-    <hr />
-    <p class="h2" style="font-family:Segoe UI Light;">
-      View Quizzes...
-    </p>
-    <hr />
+    <br />
     <div class="row">
       <div class="col-12">
         <div class="card border-blue-grey" style="min-height:450px; max-height:700px;">
@@ -163,23 +159,27 @@
                 </table>
               </div>
               <div class="tab-pane fade" id="nav-other" role="tabpanel" aria-labelledby="nav-other-tab">
-                <canvas id="myChart" width="400" height="400"></canvas>
+                <canvas id="myChart" width="600" height="350"></canvas>
                 <script>
                 var ctx = document.getElementById("myChart");
                 var myChart = new Chart(ctx, {
                   type: 'bar',
                   data: {
-                    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                    labels: ["Q1", "Q2", "Q3", "Q4", "Q5", "Q6", "Q7", "Q8", "Q9", "Q10"],
                     datasets: [{
-                      label: '# of Votes',
-                      data: [12, 19, 3, 5, 2, 3],
+                      label: '# of Correct Answers for each question',
+                      data: [3, 13, 9, 5, 10, 8, 11, 6, 5, 4],
                       backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',
                         'rgba(255, 206, 86, 0.2)',
                         'rgba(75, 192, 192, 0.2)',
                         'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)'
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
                       ],
                       borderColor: [
                         'rgba(255,99,132,1)',
@@ -187,12 +187,17 @@
                         'rgba(255, 206, 86, 1)',
                         'rgba(75, 192, 192, 1)',
                         'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
                       ],
                       borderWidth: 1
                     }]
                   },
                   options: {
+                    // responsive:false,
                     scales: {
                       yAxes: [{
                         ticks: {
@@ -209,6 +214,7 @@
         </div>
       </div>
     </div>
+    <br />
   </div>
 </div>
 

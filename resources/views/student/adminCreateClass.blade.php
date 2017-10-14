@@ -12,7 +12,7 @@
     </p>
     <hr />
     <div class="row">
-      <div class="col-8">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 mt-4">
         <div class="card border-red">
           <div class="card-header bg-red text-white h6">
             <span class="oi oi-plus" title="create" aria-hidden="true"></span> Create Class
@@ -34,7 +34,7 @@
             </div>
             <br />
             <div class="row">
-              <div class="col-12 col-sm-6 col-md-4">
+              <div class="col-12 col-sm-6 col-md-4 mt-2">
                 <p class="h5">
                   Date:
                 </p>
@@ -77,7 +77,7 @@
                   </label>
                 </div>
               </div>
-              <div class="col-12 col-sm-6 col-md-4">
+              <div class="col-12 col-sm-6 col-md-4 mt-2">
                 <p class="h5">
                   Time Start:
                 </p>
@@ -86,7 +86,11 @@
                   <select class="form-control custom-select">
                     <?php
                     for($i=1; $i<=12; $i++){
-                      echo "<option value=".$i.">".$i."</option>";
+                      if(strlen($i) == 1){
+                        echo "<option value=".$i.">0".$i."</option>";
+                      }
+                      else
+                        echo "<option value=".$i.">".$i."</option>";
                     }
                     ?>
                   </select>
@@ -96,8 +100,12 @@
                   <select class="form-control custom-select">
                     <?php
                     $temp = 1;
-                    for($i=5; $i<=60; $i+=5){
-                      echo "<option value=".$temp.">".$i."</option>";
+                    for($i=0; $i<=60; $i+=5){
+                      if(strlen($i) == 1){
+                        echo "<option value=".$temp.">0".$i."</option>";
+                      }
+                      else
+                        echo "<option value=".$temp.">".$i."</option>";
                       $temp++;
                     }
                     ?>
@@ -111,7 +119,7 @@
                   </select>
                 </div>
               </div>
-              <div class="col-12 col-sm-6 col-md-4">
+              <div class="col-12 col-sm-6 col-md-4 mt-2">
                 <p class="h5">
                   Time End:
                 </p>
@@ -120,7 +128,11 @@
                   <select class="form-control custom-select">
                     <?php
                     for($i=1; $i<=12; $i++){
-                      echo "<option value=".$i.">".$i."</option>";
+                      if(strlen($i) == 1){
+                        echo "<option value=".$i.">0".$i."</option>";
+                      }
+                      else
+                        echo "<option value=".$i.">".$i."</option>";
                     }
                     ?>
                   </select>
@@ -130,8 +142,12 @@
                   <select class="form-control custom-select">
                     <?php
                     $temp = 1;
-                    for($i=5; $i<=60; $i+=5){
-                      echo "<option value=".$temp.">".$i."</option>";
+                    for($i=0; $i<=60; $i+=5){
+                      if(strlen($i) == 1){
+                        echo "<option value=".$temp.">0".$i."</option>";
+                      }
+                      else
+                        echo "<option value=".$temp.">".$i."</option>";
                       $temp++;
                     }
                     ?>
@@ -155,7 +171,7 @@
           </div>
         </div>
       </div>
-      <div class="col-4">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 mt-4">
         <div class="card border-red">
           <div class="card-header bg-red text-white h6">
             <span class="oi oi-list" title="create" aria-hidden="true"></span> Existing Classes

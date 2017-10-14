@@ -12,7 +12,7 @@
     </p>
     <hr />
     <div class="row">
-
+      <div class="col-12 col-sm"
     </div>
   </div>
 </div>

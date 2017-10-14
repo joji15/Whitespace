@@ -118,7 +118,7 @@
       <div class="col-12 col-md-6 col-lg-6 mt-4">
         <div class="card border-blue-grey">
           <div class="card-header bg-green text-white h6">
-            <span class="oi oi-spreadsheet" title="Database" aria-hidden="true"></span> Scheduled Quizzes
+            <span class="oi oi-spreadsheet" title="Quizzes" aria-hidden="true"></span> Scheduled Quizzes
           </div>
           <div class="card-body">
             <h5 class="card-title">Quiz #1 - Basics of SQL</h5>
