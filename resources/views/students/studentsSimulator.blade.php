@@ -18,7 +18,7 @@
           <div class="card-header text-white bg-blue-grey h5">
             <span class="oi oi-loop-circular" title="Simulator" aria-hidden="true"></span> SQL Simulator
           </div>
-          <div class="card-header bg-silver">
+          <div class="card-header">
             <nav class="nav nav-tabs card-header-tabs" id="mainTab" role="tablist">
               <a class="nav-item nav-link active text-black" id="nav-query-tab" data-toggle="tab" href="#nav-query" role="tab" aria-controls="nav-query" aria-expanded="true">SQL Query</a>
               <a class="nav-item nav-link text-black" id="nav-generator-tab" data-toggle="tab" href="#nav-generator" role="tab" aria-controls="nav-generator">Designer</a>
