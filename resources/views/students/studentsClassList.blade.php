@@ -8,7 +8,7 @@
   <div class="container-fluid contentMargin">
     <hr />
     <p class="h2" style="font-family:Segoe UI Light;">
-      SQL Lessons
+      Class List
     </p>
     <hr />
     <div class="row">
@@ -27,36 +27,36 @@
           </div>
           <div class="card-body" style="overflow-y: auto;">
             <table class="table table-bordered">
-              <thead class="table-inverse ">
-                <tr>
-                  <th>Class ID</th>
-                  <th>Schedule Day</th>
-                  <th>Schedule Time</th>
-                  <th>Professor</th>
-                  <th>Join Class</th>
+              <thead class="table-inverse">
+                <tr class="text-center">
+                  <td>Class ID</td>
+                  <td>Schedule Day</td>
+                  <td>Schedule Time</td>
+                  <td>Professor</td>
+                  <td>Join Class</td>
                 </tr>
               </thead>
-              <tbody>
+              <tbody >
                 <tr>
-                  <th>12345</th>
-                  <th>Monday</th>
-                  <th>7:00 am - 10:00 am</th>
-                  <th>Aimee Lou D. Cruz</th>
-                  <th><button class="btn btn-primary" type="button" name="join">Join</button></th>
+                  <td>12345</td>
+                  <td>Monday</td>
+                  <td>7:00 am - 10:00 am</td>
+                  <td>Aimee Lou D. Cruz</td>
+                  <td class="text-center"><a href="#"><span class="oi oi-share" title="Join Class" aria-hidden="true"></span></a></td>
                 </tr>
                 <tr>
-                  <th>67890</th>
-                  <th>Tuesday</th>
-                  <th>7:00 am - 10:00 am</th>
-                  <th>Jazelene Mae M. De Vera</th>
-                  <th><button class="btn btn-primary" type="button" name="join">Join</button></th>
+                  <td>67890</td>
+                  <td>Tuesday</td>
+                  <td>7:00 am - 10:00 am</td>
+                  <td>Jazelene Mae M. De Vera</td>
+                  <td class="text-center"><a href="#"><span class="oi oi-share" title="Join Class" aria-hidden="true"></span></a></td>
                 </tr>
                 <tr>
-                  <th>13579</th>
-                  <th>Wednesday</th>
-                  <th>7:00 am - 10:00 am</th>
-                  <th>Donald Patrick C. George</th>
-                  <th><button class="btn btn-primary" type="button" name="join">Join</button></th>
+                  <td>13579</td>
+                  <td>Wednesday</td>
+                  <td>7:00 am - 10:00 am</td>
+                  <td>Donald Patrick C. George</td>
+                  <td class="text-center"><a href="#"><span class="oi oi-share" title="Join Class" aria-hidden="true"></span></a></td>
                 </tr>
               </tbody>
             </table>

@@ -30,7 +30,7 @@
                 <tr>
                   <th scope="row">SQL Lesson #1.docx</th>
                   <td>09/24/2017</td>
-                  <td class="text-center"><a href="#" class=""><span class="oi oi-data-transfer-download" title="Download this file" aria-hidden="true"></span></a></td>
+                  <td class="text-center"><a href="#"><span class="oi oi-data-transfer-download" title="Download this file" aria-hidden="true"></span></a></td>
                 </tr>
                 <tr>
                   <th scope="row">SQL Lesson #2.docx</th>
