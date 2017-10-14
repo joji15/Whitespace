@@ -37,4 +37,10 @@ Route::get('adminEditQuiz', 'mainController@adminEditQuiz');
 
 Route::get('adminUpload', 'mainController@adminUpload');
 
+Route::get('adminUploadProp', 'mainController@adminUploadProp');
+
 Route::get('home', 'mainController@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

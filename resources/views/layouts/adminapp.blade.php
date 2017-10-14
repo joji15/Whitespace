@@ -15,6 +15,32 @@
   <link href="/css/styles.css" rel="stylesheet">
   <link href="/css/colors.css" rel="stylesheet">
   <link href="/css/media-queries.css" rel="stylesheet">
+  <!-- Google font Link -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="/js/jquery-3.2.1.min.js"></script>
+  <script src="/js/popper.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/Chart.bundle.min.js"></script>
+
+  <!-- To make use of the active class in the side nav, edit this js file -->
+  <script src="/js/sidenavbar.js" async></script>
+
+  <script async>
+  $(document).ready(function(){
+    $('#searchInput').on('click', function(){
+      var display = $('#searchResult').css('display');
+      if (display == "none") {
+        $("#searchResult").show();
+      }
+      else if (display == "block"){
+        $("#searchResult").hide();
+      }
+    });
+  });
+  </script>
 </head>
 <body class="dashboard">
   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top d-flex justify-content-end shadow">
@@ -25,10 +51,22 @@
       <img src="{{ asset('img/WS-ICO.png') }}" width="40" height="40" alt="WS Logo">
       Teacher's Dashboard
     </a>
-    <a class="btn btn-outline-danger align-middle p-2" href="home"><span class="oi oi-account-logout" title="icon name" aria-hidden="true"></span> Logout</a>
+    <form class="form-inline mr-2">
+      <div class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><span class="oi oi-person" title="account" aria-hidden="true"></span></a>
+        <div class="dropdown-menu" style="left:-100px">
+          <h6 class="dropdown-header">Dropdown header</h6>
+          <a class="dropdown-item" href="#"><span class="oi oi-cog" title="action" aria-hidden="true"></span> Action</a>
+          <a class="dropdown-item" href="home"><span class="oi oi-account-logout" title="logout" aria-hidden="true"></span> Logout</a>
+        </div>
+      </div>
+    </form>
+    <!-- <form>
+      <a class="btn btn-outline-danger align-middle p-2" href="home"><span class="oi oi-account-logout" title="icon name" aria-hidden="true"></span> Logout</a>
+    </form> -->
   </nav>
   <div class="container-fluid">
-    <div class="row" style="-webkit-min-logical-height: -webkit-fill-available">
+    <div class="row" style="height:100%;">
       <div class="col-sm-4 col-md-3 col-lg-2" style="background-color: rgb(40, 40, 40)">
         <nav class="nav nav-pills flex-column">
           <div class="navbar-collapse animated fadeIn" id="sidenavbar">
@@ -42,9 +80,9 @@
             </div>
             <a class="nav-item nav-link" href="adminQuiz" id="adminQuizpill"><span class="oi oi-spreadsheet" title="Quiz" aria-hidden="true"></span> Quizzes</a>
             <div id="quizSub">
-              <a class="nav-item nav-link ml-4 btn-sm" href="adminViewQuiz" id="viewQuizpill"><span class="oi oi-magnifying-glass" title="CreateClass" aria-hidden="true"></span> View Quizzes</a>
-              <a class="nav-item nav-link ml-4 btn-sm" href="adminCreateQuiz" id="createQuizpill"><span class="oi oi-plus" title="ViewProgress" aria-hidden="true"></span> Create Quiz</a>
-              <a class="nav-item nav-link ml-4 btn-sm" href="adminEditQuiz" id="editQuizpill"><span class="oi oi-pencil" title="Classdb" aria-hidden="true"></span> Edit Quiz</a>
+              <a class="nav-item nav-link ml-4 btn-sm" href="adminViewQuiz" id="viewQuizpill"><span class="oi oi-magnifying-glass" title="viewQuiz" aria-hidden="true"></span> View Quizzes</a>
+              <a class="nav-item nav-link ml-4 btn-sm" href="adminCreateQuiz" id="createQuizpill"><span class="oi oi-plus" title="createQuiz" aria-hidden="true"></span> Create Quiz</a>
+              <a class="nav-item nav-link ml-4 btn-sm" href="adminEditQuiz" id="editQuizpill"><span class="oi oi-pencil" title="editQuiz" aria-hidden="true"></span> Edit Quiz</a>
             </div>
             <a class="nav-item nav-link" href="adminUpload" id="adminUploadpill"><span class="oi oi-data-transfer-upload" title="Upload" aria-hidden="true"></span> Upload</a>
             <hr class="hr-white"/>
@@ -54,27 +92,5 @@
       @yield('content')
     </div>
   </div>
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="/js/jquery-3.2.1.min.js"></script>
-  <script src="/js/popper.min.js"></script>
-  <script src="/js/bootstrap.min.js"></script>
-
-  <!-- To make use of the active class in the side nav, edit this js file -->
-  <script src="/js/sidenavbar.js"></script>
-
-  <script>
-  $(document).ready(function(){
-    $('#searchInput').on('click', function(){
-      var display = $('#searchResult').css('display');
-      if (display == "none") {
-        $("#searchResult").show();
-      }
-      else if (display == "block"){
-        $("#searchResult").hide();
-      }
-    });
-  });
-  </script>
 </body>
 </html>

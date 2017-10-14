@@ -67,4 +67,8 @@ class mainController extends Controller
     public function adminUpload(){
         return view('admin.adminUpload');
     }
+
+    public function adminUploadProp(){
+        return view('upload.UploadProps');
+    }
 }

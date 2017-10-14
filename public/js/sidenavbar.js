@@ -79,10 +79,13 @@ if (upload !== null){
     $('#quizSub').addClass("d-none");
 }
 
-$( window ).resize(function() {
+function sidenavfunc() {
   if($(window).width() <=575){
     $('#sidenavbar').addClass("collapse");
   }
   else
     $('#sidenavbar').removeClass("collapse");
-});
+}
+
+$(document).ready(sidenavfunc);
+$(window).resize(sidenavfunc);

@@ -2,7 +2,7 @@
 /*---Main CSS External Stylesheet---*/
 
 body, html, .container-fluid {
-  font-family: Segoe UI Regular;
+  font-family: 'Open Sans', 'Roboto Regular', 'Segoe UI Regular', sans-serif;
   height: 100%;
 }
 
@@ -23,7 +23,7 @@ body, html, .container-fluid {
   border-left: 1px solid rgba(66,66,66, 0.1);
   font-family: Segoe UI Regular;
   font-size: 14px;
-  height: 100%;
+  overflow-y: scroll;
 }
 
 .contentMargin{

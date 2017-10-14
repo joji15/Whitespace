@@ -14,7 +14,7 @@
     <div class="row">
       <div class="col-8">
         <div class="card border-red">
-          <div class="card-header bg-red text-white h5">
+          <div class="card-header bg-red text-white h6">
             <span class="oi oi-plus" title="create" aria-hidden="true"></span> Create Class
           </div>
           <div class="card-body">
@@ -39,49 +39,37 @@
                   Date:
                 </p>
                 <hr />
-                <div class="form-check">
+                <div class="form-check custom-controls-stacked">
                   <label class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input"  value="Monday">
                     <span class="custom-control-indicator"></span>
                     <span class="custom-control-description">Monday</span>
                   </label>
-                </div>
-                <div class="form-check">
                   <label class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input"  value="Tuesday">
                     <span class="custom-control-indicator"></span>
                     <span class="custom-control-description">Tuesday</span>
                   </label>
-                </div>
-                <div class="form-check">
                   <label class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input"  value="Wednesday">
                     <span class="custom-control-indicator"></span>
                     <span class="custom-control-description">Wednesday</span>
                   </label>
-                </div>
-                <div class="form-check">
                   <label class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input"  value="Thursday">
                     <span class="custom-control-indicator"></span>
                     <span class="custom-control-description">Thursday</span>
                   </label>
-                </div>
-                <div class="form-check">
                   <label class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input"  value="Friday">
                     <span class="custom-control-indicator"></span>
                     <span class="custom-control-description">Friday</span>
                   </label>
-                </div>
-                <div class="form-check">
                   <label class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input"  value="Saturday">
                     <span class="custom-control-indicator"></span>
                     <span class="custom-control-description">Saturday</span>
                   </label>
-                </div>
-                <div class="form-check">
                   <label class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input"  value="Sunday">
                     <span class="custom-control-indicator"></span>
@@ -169,7 +157,7 @@
       </div>
       <div class="col-4">
         <div class="card border-red">
-          <div class="card-header bg-red text-white h5">
+          <div class="card-header bg-red text-white h6">
             <span class="oi oi-list" title="create" aria-hidden="true"></span> Existing Classes
           </div>
           <div class="card-body">
