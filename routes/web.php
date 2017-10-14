@@ -37,4 +37,6 @@ Route::get('adminEditQuiz', 'mainController@adminEditQuiz');
 
 Route::get('adminUpload', 'mainController@adminUpload');
 
+Route::get('dashboard', 'mainController@studentHome');
+
 Route::get('home', 'mainController@index');

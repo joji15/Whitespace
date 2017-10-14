@@ -67,4 +67,10 @@ class mainController extends Controller
     public function adminUpload(){
         return view('admin.adminUpload');
     }
+
+
+    /*STUDENTS*/
+    public function studentHome(){
+        return view('students.dashboard');
+    }
 }
