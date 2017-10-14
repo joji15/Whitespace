@@ -54,6 +54,9 @@
   <!-- To make use of the active class in the side nav, edit this js file -->
   <script src="/js/sidenavbar.js"></script>
 
+  <!-- Tree view -->
+  <script src="/js/treeview.js"></script>
+  
   <script>
   $(document).ready(function(){
     $('#searchInput').on('click', function(){

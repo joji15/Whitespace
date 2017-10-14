@@ -39,7 +39,13 @@ Route::get('adminUpload', 'mainController@adminUpload');
 
 Route::get('dashboard', 'mainController@studentHome');
 
+Route::get('studentsClassList', 'mainController@studentsClassList');
+
 Route::get('studentsLesson', 'mainController@studentsLesson');
+
+Route::get('studentsScheduledQuizzes', 'mainController@studentsScheduledQuizzes');
+
+Route::get('studentsRankings', 'mainController@studentsRankings');
 
 Route::get('studentsDownload', 'mainController@studentsDownload');
 

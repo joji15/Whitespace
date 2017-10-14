@@ -15,7 +15,7 @@
       <div class="col-12">
         <div class="card border-blue-grey" style="min-height:450px; max-height:700px;">
           <div class="card-header text-white bg-blue-grey h5">
-            <span class="oi oi-spreadsheet" title="Rank" aria-hidden="true"></span> Quiz Details
+            <span class="oi oi-spreadsheet" title="Quiz" aria-hidden="true"></span> Quiz Details
           </div>
           <div class="card-header text-white bg-dark-grey h6">
             <div class="input-group">
