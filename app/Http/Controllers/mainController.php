@@ -78,6 +78,10 @@ class mainController extends Controller
         return view('students.studentsClassList');
     }
 
+    public function studentsLessonList(){
+        return view('students.studentsLessonList');
+    }
+
     public function studentsLesson(){
         return view('students.studentsLesson');
     }

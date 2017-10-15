@@ -44,6 +44,8 @@ Route::get('dashboard', 'mainController@studentHome');
 
 Route::get('studentsClassList', 'mainController@studentsClassList');
 
+Route::get('studentsLessonList', 'mainController@studentsLessonList');
+
 Route::get('studentsLesson', 'mainController@studentsLesson');
 
 Route::get('studentsScheduledQuizzes', 'mainController@studentsScheduledQuizzes');

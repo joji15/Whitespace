@@ -41,7 +41,7 @@
               <a class="nav-item nav-link ml-4 btn-sm" href="studentsScheduledQuizzes" id=""><span class="oi oi-clock" title="ScheduledQuizzes" aria-hidden="true"></span> Quizzes</a>
               <a class="nav-item nav-link ml-4 btn-sm" href="studentsRankings" id=""><span class="oi oi-vertical-align-bottom" title="Rankings" aria-hidden="true"></span> Rankings</a>
             </div>
-            <a class="nav-item nav-link" href="studentsLesson" id="adminStudpill"><span class="oi oi-book" title="SQL Lessons" aria-hidden="true"></span> SQL Lessons</a>
+            <a class="nav-item nav-link" href="studentsLessonList" id="adminStudpill"><span class="oi oi-book" title="SQL Lessons" aria-hidden="true"></span> SQL Lessons</a>
             <a class="nav-item nav-link" href="studentsDownload" id="adminUploadpill"><span class="oi oi-data-transfer-download" title="Uploaded Files" aria-hidden="true"></span> Download Files</a>
             <a class="nav-item nav-link" href="studentsSimulator" id="adminQuizpill"><span class="oi oi-loop-circular" title="SQL Simulator" aria-hidden="true"></span> SQL Simulator</a>
             <hr class="hr-white"/>
