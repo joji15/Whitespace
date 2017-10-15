@@ -35,6 +35,11 @@
             <hr class="hr-white"/>
             <!--  Change id  -->
             <a class="nav-item nav-link" href="dashboard" id="adminpill"><span class="oi oi-home" title="Home" aria-hidden="true"></span> Home</a>
+            <div id="homeSub">
+              <a class="nav-item nav-link ml-4 btn-sm" href="studentsClassList" id=""><span class="oi oi-list" title="ClassList" aria-hidden="true"></span> Class List</a>
+              <a class="nav-item nav-link ml-4 btn-sm" href="studentsScheduledQuizzes" id=""><span class="oi oi-clock" title="ScheduledQuizzes" aria-hidden="true"></span> Quizzes</a>
+              <a class="nav-item nav-link ml-4 btn-sm" href="studentsRankings" id=""><span class="oi oi-vertical-align-bottom" title="Rankings" aria-hidden="true"></span> Rankings</a>
+            </div>
             <a class="nav-item nav-link" href="studentsLesson" id="adminStudpill"><span class="oi oi-book" title="SQL Lessons" aria-hidden="true"></span> SQL Lessons</a>
             <a class="nav-item nav-link" href="studentsDownload" id="adminUploadpill"><span class="oi oi-data-transfer-download" title="Uploaded Files" aria-hidden="true"></span> Download Files</a>
             <a class="nav-item nav-link" href="studentsSimulator" id="adminQuizpill"><span class="oi oi-loop-circular" title="SQL Simulator" aria-hidden="true"></span> SQL Simulator</a>
@@ -56,18 +61,28 @@
 
   <!-- Tree view -->
   <script src="/js/treeview.js"></script>
-  
+
+  <!--Lined Textarea-->
+  <script src="./js/bcralnit.js"></script>
+
   <script>
-  $(document).ready(function(){
-    $('#searchInput').on('click', function(){
-      var display = $('#searchResult').css('display');
-      if (display == "none") {
-        $("#searchResult").show();
-      }
-      else if (display == "block"){
-        $("#searchResult").hide();
-      }
+    $(document).ready(function(){
+      $('#searchInput').on('click', function(){
+        var display = $('#searchResult').css('display');
+        if (display == "none") {
+          $("#searchResult").show();
+        }
+        else if (display == "block"){
+          $("#searchResult").hide();
+        }
+      });
     });
+  </script>
+  <script>
+  $(".lined").bcralnit({
+      width: '50px',
+      background: 'rgb(38,50,56)',
+      color: '#fff',
   });
   </script>
 </body>

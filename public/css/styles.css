@@ -97,3 +97,23 @@ body, html, .container-fluid {
     border:1px solid #94a0b4;
     color:#000
 }
+
+/*Lined Textarea*/
+
+textarea {
+	width: 100%;
+	height: 300px;
+	padding: 10px;
+	background: #111;
+	color: #fff;
+	border: none;
+}
+.lined {
+	width: 675px; /*This should be 100%*/
+	height: 300px;
+	background: #fafafa;
+	color: rgb(38,50,56);
+	padding: 5px;
+	border: 2px solid rgb(220,220,220);
+	display: inline-block;
+}

@@ -42,13 +42,11 @@
             <h4 class="card-title"><span class="oi oi-calendar" title="scheduledQuizzes" aria-hidden="true"></span> Quizzes</h4>
             <p class="card-text">View scheduled quizzes and take what's scheduled for today. You can also review your past quizzes here. </p>
           </div>
-
           <a href="studentsScheduledQuizzes">
               <div class="card-footer border-blue">
                 View Scheduled Quizzes <span class="oi oi-link-intact" title="viewScheduledQuizzes" aria-hidden="true"></span>
               </div>
           </a>
-
         </div>
       </div>
       <div class="col-12 col-md-6 col-lg-6 mt-4">

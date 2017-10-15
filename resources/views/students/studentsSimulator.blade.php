@@ -28,8 +28,8 @@
             <div class="tab-content" id="nav-tabContent">
               <div class="tab-pane fade show active" id="nav-query" role="tabpanel" aria-labelledby="nav-query-tab">
                 <div class="row">
-                  <div class="col-sm-12">
-                    <textarea name="simulator" class="form-control" style="resize:none" rows="10"></textarea>
+                  <div class="col-12">
+                      <textarea name="simulator" class="lined"></textarea>
                     <div class="mt-1 text-right">
                       <button class="btn btn-primary" type="button" id="simulate">Run SQL <i class="oi oi-arrow-circle-right"></i></button>
                     </div>
@@ -87,7 +87,7 @@
               <div class="tab-pane fade" id="nav-generator" role="tabpanel" aria-labelledby="nav-generator-tab">
                 <div class="row">
                   <div class="col-12">
-                    <textarea name="simulator" class="form-control" style="resize:none" rows="10"></textarea>
+                      <textarea name="generator" class="lined"></textarea>
                     <div class="mt-1 text-right">
                       <button class="btn btn-success" type="button" id="generate">Generate ERD <i class="oi oi-arrow-circle-right"></i></button>
                     </div>
