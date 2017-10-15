@@ -4,8 +4,8 @@
 
 pre {
 
-  min-height: 316px;
-  max-height: 316px;
+  min-height: 315px;
+  max-height: 315px;
   min-width: 400px;
   white-space: pre-wrap;       /* css-3 */
   white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
@@ -17,4 +17,9 @@ pre {
 
 .text-black {
   color: black;
+}
+
+.customWidth {
+  min-width: 565px;
+  max-width: 565px;
 }
