@@ -14,7 +14,7 @@
     <div class="row">
       <div class="col-sm-5">
         <div class="lead text-left">
-            <b>Select Statement</b>
+          <span class="oi oi-book"></span> Select Statement
         </div>
           <div>
               <pre class="form-control noresize">
@@ -26,7 +26,7 @@
       </div>
       <div class="col-sm-7">
         <div class="lead text-left">
-          Try this!
+          <span class="oi oi-code"></span> Try this!
         </div>
         <div>
           <div><textarea name="simulator" class="lined"></textarea></div>
