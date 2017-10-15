@@ -20,9 +20,9 @@
             <div><span class="oi oi-clock" title="scheduledTime" aria-hidden="true"> Time</span></div>
             <div><span class="oi oi-contrast" title="status" aria-hidden="true"> Status</span></div>
             <hr/>
-              <a href="#" style="text-decoration:none">
+              <a href="studentsTakeQuiz" style="text-decoration:none">
                 <div class="row">
-                  <div class="col-10">Take this quiz</div>
+                  <div class="col-10">Take this quiz!</div>
                   <div class="col-2"><i class="oi oi-arrow-circle-right"></i></div>
                 </div>
               </a>
@@ -37,9 +37,9 @@
             <div><span class="oi oi-clock" title="scheduledTime" aria-hidden="true"> Time</span></div>
             <div><span class="oi oi-contrast" title="status" aria-hidden="true"> Status</span></div>
             <hr/>
-              <a href="#" style="text-decoration:none">
+              <a href="studentsTakeQuiz" style="text-decoration:none">
                 <div class="row">
-                  <div class="col-10">Take this quiz</div>
+                  <div class="col-10">Take this quiz!</div>
                   <div class="col-2"><i class="oi oi-arrow-circle-right"></i></div>
                 </div>
               </a>
@@ -54,9 +54,9 @@
             <div><span class="oi oi-clock" title="scheduledTime" aria-hidden="true"> Time</span></div>
             <div><span class="oi oi-contrast" title="status" aria-hidden="true"> Status</span></div>
             <hr/>
-              <a href="#" style="text-decoration:none">
+              <a href="studentsTakeQuiz" style="text-decoration:none">
                 <div class="row">
-                  <div class="col-10">Take this quiz</div>
+                  <div class="col-10">Take this quiz!</div>
                   <div class="col-2"><i class="oi oi-arrow-circle-right"></i></div>
                 </div>
               </a>
@@ -71,9 +71,9 @@
             <div><span class="oi oi-clock" title="scheduledTime" aria-hidden="true"> Time</span></div>
             <div><span class="oi oi-contrast" title="status" aria-hidden="true"> Status</span></div>
             <hr/>
-              <a href="#" style="text-decoration:none">
+              <a href="studentsTakeQuiz" style="text-decoration:none">
                 <div class="row">
-                  <div class="col-10">Take this quiz</div>
+                  <div class="col-10">Take this quiz!</div>
                   <div class="col-2"><i class="oi oi-arrow-circle-right"></i></div>
                 </div>
               </a>

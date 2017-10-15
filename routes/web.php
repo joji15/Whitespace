@@ -37,6 +37,9 @@ Route::get('adminEditQuiz', 'mainController@adminEditQuiz');
 
 Route::get('adminUpload', 'mainController@adminUpload');
 
+
+/*STUDENTS*/
+
 Route::get('dashboard', 'mainController@studentHome');
 
 Route::get('studentsClassList', 'mainController@studentsClassList');
@@ -44,6 +47,12 @@ Route::get('studentsClassList', 'mainController@studentsClassList');
 Route::get('studentsLesson', 'mainController@studentsLesson');
 
 Route::get('studentsScheduledQuizzes', 'mainController@studentsScheduledQuizzes');
+
+Route::get('studentsTakeQuiz', 'mainController@studentsTakeQuiz');
+
+Route::get('studentsTakeQuiz2', 'mainController@studentsTakeQuiz2');
+
+Route::get('studentsResultQuiz', 'mainController@studentsResultQuiz');
 
 Route::get('studentsRankings', 'mainController@studentsRankings');
 

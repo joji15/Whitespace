@@ -86,6 +86,18 @@ class mainController extends Controller
         return view('students.studentsScheduledQuizzes');
     }
 
+    public function studentsTakeQuiz(){
+        return view('students.studentsTakeQuiz');
+    }
+
+    public function studentsTakeQuiz2(){
+        return view('students.studentsTakeQuiz2');
+    }
+
+    public function studentsResultQuiz(){
+        return view('students.studentsResultQuiz');
+    }
+
     public function studentsRankings(){
         return view('students.studentsRankings');
     }
