@@ -12,10 +12,10 @@
   <!-- Open Iconic - Icon Set *Glyphicons don't work -->
   <link href="/css/open-iconic-bootstrap.css" rel="stylesheet">
   <!-- Stylesheet for Customazation -->
+  <link href="/css/custom.css" rel="stylesheet">
   <link href="/css/styles.css" rel="stylesheet">
   <link href="/css/colors.css" rel="stylesheet">
   <link href="/css/media-queries.css" rel="stylesheet">
-  <link href="/css/custom.css" rel="stylesheet">
 </head>
 <body class="dashboard">
   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top d-flex justify-content-end shadow">
