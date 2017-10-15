@@ -29,7 +29,7 @@
           Try this!
         </div>
         <div>
-          <div><textarea name="simulator" class="lined"></textarea></div>
+          <textarea name="simulator" class="lined"></textarea>
           <div class="mt-1 text-right">
             <button class="btn btn-primary btn-lg" type="button" id="simulate">Run SQL <i class="oi oi-arrow-circle-right"></i></button>
           </div>
