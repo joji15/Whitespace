@@ -6,11 +6,6 @@
 
 <div class="col-sm-8 col-md-9 col-lg-10 justify-content-start content" id="createClassContent">
   <div class="container-fluid contentMargin">
-    <hr />
-    <p class="h2" style="font-family:Segoe UI Light;">
-      Create Class
-    </p>
-    <hr />
     <div class="row">
       <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 mt-4">
         <div class="card border-red">

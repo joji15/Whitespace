@@ -41,6 +41,6 @@ Route::get('adminUploadProp', 'mainController@adminUploadProp');
 
 Route::get('home', 'mainController@index');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+// Auth::routes();
+//
+// Route::get('/home', 'HomeController@index')->name('home');

@@ -2,6 +2,7 @@
 /*---Main CSS External Stylesheet---*/
 
 body, html, .container-fluid {
+  color: rgb(0, 0, 0);
   font-family: 'Open Sans', 'Roboto Regular', 'Segoe UI Regular', sans-serif;
   height: 100%;
 }

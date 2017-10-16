@@ -15,6 +15,7 @@
   <link href="/css/styles.css" rel="stylesheet">
   <link href="/css/colors.css" rel="stylesheet">
   <link href="/css/media-queries.css" rel="stylesheet">
+  <link href="/css/admintree.css" rel="stylesheet">
   <!-- Google font Link -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
@@ -61,9 +62,7 @@
         </div>
       </div>
     </form>
-    <!-- <form>
-      <a class="btn btn-outline-danger align-middle p-2" href="home"><span class="oi oi-account-logout" title="icon name" aria-hidden="true"></span> Logout</a>
-    </form> -->
+    
   </nav>
   <div class="container-fluid">
     <div class="row" style="height:100%;">

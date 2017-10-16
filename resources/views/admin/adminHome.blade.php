@@ -143,15 +143,15 @@
           <div class="card-body">
             <h5 class="card-title">BSIT - practicedb</h5>
             <p class="card-text"><b>Date Created:</b> September 11, 2017</p>
-            <a href="#" class="btn btn-primary">View or Edit</a>
+            <a href="adminViewDB" class="btn btn-primary">View or Edit</a>
             <hr />
             <h5 class="card-title">BSCS - practicedb</h5>
             <p class="card-text"><b>Date Created:</b> September 11, 2017</p>
-            <a href="#" class="btn btn-primary">View or Edit</a>
+            <a href="adminViewDB" class="btn btn-primary">View or Edit</a>
             <hr />
             <h5 class="card-title">BSIS - practicedb</h5>
             <p class="card-text"><b>Date Created:</b> September 11, 2017</p>
-            <a href="#" class="btn btn-primary">View or Edit</a>
+            <a href="adminViewDB" class="btn btn-primary">View or Edit</a>
           </div>
         </div>
       </div>
