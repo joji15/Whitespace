@@ -15,13 +15,13 @@
     <!---SQL INTRODUCTION--->
     <div class="row">
       <div class="col-sm-6">
-        <div class="card border-silver">
+        <div class="card border-primary">
           <div class="card-body text-white bg-primary">
             <h4 class="card-title"><span class="oi oi-book" title="lessonList" aria-hidden="true"></span> Chapter 1: SQL Introduction</h4>
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="studentsLesson">
-            <div class="card-footer border-info">
+            <div class="card-footer border-primary">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -36,7 +36,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="database_concepts">
-            <div class="card-footer border-info">
+            <div class="card-footer border-primary">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -49,7 +49,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="relational_db">
-            <div class="card-footer border-info">
+            <div class="card-footer border-primary">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -62,7 +62,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="entities_attributes_relationships">
-            <div class="card-footer border-info">
+            <div class="card-footer border-primary">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -75,7 +75,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="functional_dependence">
-            <div class="card-footer border-info">
+            <div class="card-footer border-primary">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -88,7 +88,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="primary_key">
-            <div class="card-footer border-info">
+            <div class="card-footer border-primary">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -101,7 +101,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="diagrams_dbDesign">
-            <div class="card-footer border-info">
+            <div class="card-footer border-primary">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -112,13 +112,13 @@
     <!---CREATING TABLES--->
     <div class="row mt-5">
       <div class="col-sm-6">
-        <div class="card border-silver">
+        <div class="card border-danger">
           <div class="card-body text-white bg-danger">
             <h4 class="card-title"><span class="oi oi-book" title="lessonList" aria-hidden="true"></span> Chapter 2: Creating Tables</h4>
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="chap2_intro">
-            <div class="card-footer border-info">
+            <div class="card-footer border-danger">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -133,7 +133,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="create_table">
-            <div class="card-footer border-info">
+            <div class="card-footer border-danger">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -146,7 +146,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="data_type">
-            <div class="card-footer border-info">
+            <div class="card-footer border-danger">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -159,7 +159,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="using_nulls">
-            <div class="card-footer border-info">
+            <div class="card-footer border-danger">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -172,7 +172,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="describing_table">
-            <div class="card-footer border-info">
+            <div class="card-footer border-danger">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -185,7 +185,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="adding_rows">
-            <div class="card-footer border-info">
+            <div class="card-footer border-danger">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -198,7 +198,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="insert_command">
-            <div class="card-footer border-info">
+            <div class="card-footer border-danger">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -211,7 +211,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="insert_null">
-            <div class="card-footer border-info">
+            <div class="card-footer border-danger">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -224,7 +224,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="view_delete">
-            <div class="card-footer border-info">
+            <div class="card-footer border-danger">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -241,7 +241,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="single_table_query">
-            <div class="card-footer border-info">
+            <div class="card-footer border-success">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -256,7 +256,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="retrieve_all">
-            <div class="card-footer border-info">
+            <div class="card-footer border-success">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -269,7 +269,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="retrieve_certaincolumn">
-            <div class="card-footer border-info">
+            <div class="card-footer border-success">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -282,7 +282,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="where_clause">
-            <div class="card-footer border-info">
+            <div class="card-footer border-success">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -295,7 +295,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="compound_condition">
-            <div class="card-footer border-info">
+            <div class="card-footer border-success">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -308,7 +308,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="between">
-            <div class="card-footer border-info">
+            <div class="card-footer border-success">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -321,7 +321,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="computed_column">
-            <div class="card-footer border-info">
+            <div class="card-footer border-success">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -334,7 +334,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="like">
-            <div class="card-footer border-info">
+            <div class="card-footer border-success">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -347,7 +347,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="in">
-            <div class="card-footer border-info">
+            <div class="card-footer border-success">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -360,7 +360,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="sorting">
-            <div class="card-footer border-info">
+            <div class="card-footer border-success">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -373,7 +373,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="order_by">
-            <div class="card-footer border-info">
+            <div class="card-footer border-success">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -386,7 +386,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="additional_sorting">
-            <div class="card-footer border-info">
+            <div class="card-footer border-success">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -399,7 +399,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="using_function">
-            <div class="card-footer border-info">
+            <div class="card-footer border-success">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -412,7 +412,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="using_count">
-            <div class="card-footer border-info">
+            <div class="card-footer border-success">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -425,7 +425,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="using_sum">
-            <div class="card-footer border-info">
+            <div class="card-footer border-success">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -438,7 +438,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="avg_max_min">
-            <div class="card-footer border-info">
+            <div class="card-footer border-success">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -451,7 +451,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="using_distinct">
-            <div class="card-footer border-info">
+            <div class="card-footer border-success">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -464,7 +464,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="nesting_queries">
-            <div class="card-footer border-info">
+            <div class="card-footer border-success">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -477,7 +477,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="subqueries">
-            <div class="card-footer border-info">
+            <div class="card-footer border-success">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -490,7 +490,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="grouping">
-            <div class="card-footer border-info">
+            <div class="card-footer border-success">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -503,7 +503,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="group_by">
-            <div class="card-footer border-info">
+            <div class="card-footer border-success">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -516,7 +516,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="having">
-            <div class="card-footer border-info">
+            <div class="card-footer border-success">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -529,7 +529,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="having_where">
-            <div class="card-footer border-info">
+            <div class="card-footer border-success">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -542,7 +542,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="nulls">
-            <div class="card-footer border-info">
+            <div class="card-footer border-success">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -556,11 +556,11 @@
         <div class="card border-warning">
           <div class="card-body text-white bg-warning">
             <h4 class="card-title"><span class="oi oi-book" title="lessonList" aria-hidden="true"></span>
-              : Multiple Table Queries</h4>
+              Chapter 4: Multiple Table Queries</h4>
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="studentsLesson">
-            <div class="card-footer border-info">
+            <div class="card-footer border-warning">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -575,7 +575,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="studentsLesson">
-            <div class="card-footer border-info">
+            <div class="card-footer border-warning">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -588,7 +588,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="studentsLesson">
-            <div class="card-footer border-info">
+            <div class="card-footer border-warning">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -601,7 +601,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="studentsLesson">
-            <div class="card-footer border-info">
+            <div class="card-footer border-warning">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -614,7 +614,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="studentsLesson">
-            <div class="card-footer border-info">
+            <div class="card-footer border-warning">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -627,7 +627,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="studentsLesson">
-            <div class="card-footer border-info">
+            <div class="card-footer border-warning">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -640,7 +640,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="studentsLesson">
-            <div class="card-footer border-info">
+            <div class="card-footer border-warning">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -653,7 +653,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="studentsLesson">
-            <div class="card-footer border-info">
+            <div class="card-footer border-warning">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -666,7 +666,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="studentsLesson">
-            <div class="card-footer border-info">
+            <div class="card-footer border-warning">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -679,7 +679,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="studentsLesson">
-            <div class="card-footer border-info">
+            <div class="card-footer border-warning">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -692,7 +692,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="studentsLesson">
-            <div class="card-footer border-info">
+            <div class="card-footer border-warning">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -705,7 +705,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="studentsLesson">
-            <div class="card-footer border-info">
+            <div class="card-footer border-warning">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -718,7 +718,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="studentsLesson">
-            <div class="card-footer border-info">
+            <div class="card-footer border-warning">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -731,7 +731,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="studentsLesson">
-            <div class="card-footer border-info">
+            <div class="card-footer border-warning">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -742,13 +742,13 @@
     <!---UPDATING DATA--->
     <div class="row mt-5">
       <div class="col-sm-6">
-        <div class="card border-silver">
+        <div class="card border-purple">
           <div class="card-body text-white bg-purple">
             <h4 class="card-title"><span class="oi oi-book" title="lessonList" aria-hidden="true"></span> Chapter 5: Updating Data</h4>
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="studentsLesson">
-            <div class="card-footer border-info">
+            <div class="card-footer border-purple">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -758,12 +758,12 @@
     <div class="row mt-3">
       <div class="col-sm-4 mt-3">
         <div class="card border-silver">
-          <div class="card-body text-white bg-lightpurple">
+          <div class="card-body text-white bg-purple">
             <h4 class="card-title"><span class="oi oi-book" title="lessonList" aria-hidden="true"></span> Creating a New Table from an Existing Table</h4>
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="studentsLesson">
-            <div class="card-footer border-info">
+            <div class="card-footer border-purple">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -776,7 +776,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="studentsLesson">
-            <div class="card-footer border-info">
+            <div class="card-footer border-purple">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -789,7 +789,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="studentsLesson">
-            <div class="card-footer border-info">
+            <div class="card-footer border-purple">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -802,7 +802,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="studentsLesson">
-            <div class="card-footer border-info">
+            <div class="card-footer border-purple">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -815,7 +815,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="studentsLesson">
-            <div class="card-footer border-info">
+            <div class="card-footer border-purple">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -828,7 +828,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="studentsLesson">
-            <div class="card-footer border-info">
+            <div class="card-footer border-purple">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -841,7 +841,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="studentsLesson">
-            <div class="card-footer border-info">
+            <div class="card-footer border-purple">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -854,7 +854,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="studentsLesson">
-            <div class="card-footer border-info">
+            <div class="card-footer border-purple">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -867,7 +867,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="studentsLesson">
-            <div class="card-footer border-info">
+            <div class="card-footer border-purple">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -880,7 +880,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="studentsLesson">
-            <div class="card-footer border-info">
+            <div class="card-footer border-purple">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
@@ -893,7 +893,7 @@
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
           <a href="studentsLesson">
-            <div class="card-footer border-info">
+            <div class="card-footer border-purple">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>
