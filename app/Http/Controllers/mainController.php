@@ -67,7 +67,7 @@ class mainController extends Controller
     public function adminUpload(){
         return view('admin.adminUpload');
     }
-  
+
     /*STUDENTS*/
     public function studentHome(){
         return view('students.dashboard');
@@ -85,6 +85,10 @@ class mainController extends Controller
 
     public function studentsLesson(){
         return view('students.studentsLesson');
+    }
+
+    public function sql_intro(){
+        return view('students.lessons.chapter1.sql_intro');
     }
 
     public function database_concepts(){
@@ -239,6 +243,109 @@ class mainController extends Controller
         return view('students.lessons.chapter3.nulls');
     }
 
+    public function multiple_table(){
+          return view('students.lessons.chapter4.multiple_table');
+    }
+
+    public function joining_two_tables(){
+          return view('students.lessons.chapter4.joining_two_tables');
+    }
+
+    public function in_operator(){
+          return view('students.lessons.chapter4.in_operator');
+    }
+
+    public function exists_operator(){
+          return view('students.lessons.chapter4.exists_operator');
+    }
+
+    public function subquery_within_subquery(){
+          return view('students.lessons.chapter4.subquery_within_subquery');
+    }
+
+    public function alias(){
+          return view('students.lessons.chapter4.alias');
+    }
+
+    public function joining_table_itself(){
+          return view('students.lessons.chapter4.joining_table_itself');
+    }
+
+    public function self_join_primary_key(){
+          return view('students.lessons.chapter4.self_join_primary_key');
+    }
+
+    public function joining_several_tables(){
+          return view('students.lessons.chapter4.joining_several_tables');
+    }
+
+    public function set_operations(){
+          return view('students.lessons.chapter4.set_operations');
+    }
+
+    public function all_and_any(){
+          return view('students.lessons.chapter4.all_and_any');
+    }
+
+    public function inner_join(){
+          return view('students.lessons.chapter4.inner_join');
+    }
+
+    public function outer_join(){
+          return view('students.lessons.chapter4.outer_join');
+    }
+
+    public function product(){
+          return view('students.lessons.chapter4.product');
+    }
+
+    public function updating_data(){
+          return view('students.lessons.chapter5.updating_data');
+    }
+
+    public function new_from_existing(){
+          return view('students.lessons.chapter5.new_from_existing');
+    }
+
+    public function existing_data(){
+          return view('students.lessons.chapter5.existing_data');
+    }
+
+    public function add_rows_existing(){
+          return view('students.lessons.chapter5.add_rows_existing');
+    }
+
+    public function commit_and_rollback(){
+          return view('students.lessons.chapter5.commit_and_rollback');
+    }
+
+    public function transactions(){
+          return view('students.lessons.chapter5.transactions');
+    }
+
+    public function changing_deleting_existing(){
+          return view('students.lessons.chapter5.changing_deleting_existing');
+    }
+
+    public function rollback(){
+          return view('students.lessons.chapter5.rollback');
+    }
+
+    public function value_to_null(){
+          return view('students.lessons.chapter5.value_to_null');
+    }
+
+    public function tables_structure(){
+          return view('students.lessons.chapter5.tables_structure');
+    }
+
+    public function complex_changes(){
+          return view('students.lessons.chapter5.complex_changes');
+    }
+
+    public function dropping_table(){
+          return view('students.lessons.chapter5.dropping_table');
+    }
     /*------------------------QUIZZES------------------------*/
     public function studentsScheduledQuizzes(){
         return view('students.studentsScheduledQuizzes');
@@ -267,7 +374,7 @@ class mainController extends Controller
     public function studentsSimulator(){
         return view('students.studentsSimulator');
     }
-  
+
     public function adminUploadProp(){
         return view('upload.UploadProps');
     }
