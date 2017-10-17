@@ -89,10 +89,9 @@
             <h6><span class="card-text oi oi-calendar"></span> September 4, 2017</h6>
             <h6><span class="card-text oi oi-clock"></span> 9:00 AM</h6>
           </div>
-          <a href="studentsTakeQuiz">
-            <div class="card-footer border-info">
+          <a href="studentsTakeQuiz"><div class="card-footer border-info">
             Take Quiz! <span class="oi oi-arrow-circle-right" title="viewScheduledQuizzes" aria-hidden="true"></span>
-            </div>
+          </div>
           </a>
         </div>
       </div>
@@ -104,10 +103,9 @@
             <h6><span class="card-text oi oi-calendar"></span> November 7, 2017</h6>
             <h6><span class="card-text oi oi-clock"></span> 10:00 AM</h6>
           </div>
-          <a href="studentsTakeQuiz">
-            <div class="card-footer border-info">
+          <a href="studentsTakeQuiz"><div class="card-footer border-info">
             Take Quiz! <span class="oi oi-arrow-circle-right" title="viewScheduledQuizzes" aria-hidden="true"></span>
-            </div>
+          </div>
           </a>
         </div>
       </div>
@@ -119,10 +117,9 @@
             <h6><span class="card-text oi oi-calendar"></span> March 15, 2018</h6>
             <h6><span class="card-text oi oi-clock"></span> 11:00 AM</h6>
           </div>
-          <a href="studentsTakeQuiz">
-            <div class="card-footer border-info">
+          <a href="studentsTakeQuiz"><div class="card-footer border-info">
             Take Quiz! <span class="oi oi-arrow-circle-right" title="viewScheduledQuizzes" aria-hidden="true"></span>
-            </div>
+          </div>
           </a>
         </div>
       </div>
@@ -144,4 +141,6 @@
     </div>
   </div>
 </div>
+
+
 @endsection

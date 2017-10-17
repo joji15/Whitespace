@@ -14,13 +14,12 @@
     <div class="row">
       <div class="col-sm-5">
         <div class="lead text-left">
-          <span class="oi oi-book"></span> Select Statement
+          <span class="oi oi-book"></span> Using a WHERE Clause (=,>,<,<=,>=,<>,!=)
         </div>
           <div>
               <pre class="form-control noresize">
-                <div>Premiere was creating an inventory of his merchandise and he wants to know customer’s information and its content, so select the customer table…
-                </div>
-                <div><i>select * from customer;</i></div>
+                <div></div>
+                <div><i></i></div>
               </pre>
           </div>
       </div>
