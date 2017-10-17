@@ -6,15 +6,10 @@
 
 <div class="col-sm-8 col-md-9 col-lg-10 justify-content-start content" id="createClassContent">
   <div class="container-fluid contentMargin">
-    <hr />
-    <p class="h2" style="font-family:Segoe UI Light;">
-      Create Class
-    </p>
-    <hr />
     <div class="row">
-      <div class="col-8">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 mt-4">
         <div class="card border-red">
-          <div class="card-header bg-red text-white h5">
+          <div class="card-header bg-red text-white h6">
             <span class="oi oi-plus" title="create" aria-hidden="true"></span> Create Class
           </div>
           <div class="card-body">
@@ -34,54 +29,42 @@
             </div>
             <br />
             <div class="row">
-              <div class="col-12 col-sm-6 col-md-4">
+              <div class="col-12 col-sm-6 col-md-4 mt-2">
                 <p class="h5">
                   Date:
                 </p>
                 <hr />
-                <div class="form-check">
+                <div class="form-check custom-controls-stacked">
                   <label class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input"  value="Monday">
                     <span class="custom-control-indicator"></span>
                     <span class="custom-control-description">Monday</span>
                   </label>
-                </div>
-                <div class="form-check">
                   <label class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input"  value="Tuesday">
                     <span class="custom-control-indicator"></span>
                     <span class="custom-control-description">Tuesday</span>
                   </label>
-                </div>
-                <div class="form-check">
                   <label class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input"  value="Wednesday">
                     <span class="custom-control-indicator"></span>
                     <span class="custom-control-description">Wednesday</span>
                   </label>
-                </div>
-                <div class="form-check">
                   <label class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input"  value="Thursday">
                     <span class="custom-control-indicator"></span>
                     <span class="custom-control-description">Thursday</span>
                   </label>
-                </div>
-                <div class="form-check">
                   <label class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input"  value="Friday">
                     <span class="custom-control-indicator"></span>
                     <span class="custom-control-description">Friday</span>
                   </label>
-                </div>
-                <div class="form-check">
                   <label class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input"  value="Saturday">
                     <span class="custom-control-indicator"></span>
                     <span class="custom-control-description">Saturday</span>
                   </label>
-                </div>
-                <div class="form-check">
                   <label class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input"  value="Sunday">
                     <span class="custom-control-indicator"></span>
@@ -89,7 +72,7 @@
                   </label>
                 </div>
               </div>
-              <div class="col-12 col-sm-6 col-md-4">
+              <div class="col-12 col-sm-6 col-md-4 mt-2">
                 <p class="h5">
                   Time Start:
                 </p>
@@ -98,7 +81,11 @@
                   <select class="form-control custom-select">
                     <?php
                     for($i=1; $i<=12; $i++){
-                      echo "<option value=".$i.">".$i."</option>";
+                      if(strlen($i) == 1){
+                        echo "<option value=".$i.">0".$i."</option>";
+                      }
+                      else
+                        echo "<option value=".$i.">".$i."</option>";
                     }
                     ?>
                   </select>
@@ -108,8 +95,12 @@
                   <select class="form-control custom-select">
                     <?php
                     $temp = 1;
-                    for($i=5; $i<=60; $i+=5){
-                      echo "<option value=".$temp.">".$i."</option>";
+                    for($i=0; $i<=60; $i+=5){
+                      if(strlen($i) == 1){
+                        echo "<option value=".$temp.">0".$i."</option>";
+                      }
+                      else
+                        echo "<option value=".$temp.">".$i."</option>";
                       $temp++;
                     }
                     ?>
@@ -123,7 +114,7 @@
                   </select>
                 </div>
               </div>
-              <div class="col-12 col-sm-6 col-md-4">
+              <div class="col-12 col-sm-6 col-md-4 mt-2">
                 <p class="h5">
                   Time End:
                 </p>
@@ -132,7 +123,11 @@
                   <select class="form-control custom-select">
                     <?php
                     for($i=1; $i<=12; $i++){
-                      echo "<option value=".$i.">".$i."</option>";
+                      if(strlen($i) == 1){
+                        echo "<option value=".$i.">0".$i."</option>";
+                      }
+                      else
+                        echo "<option value=".$i.">".$i."</option>";
                     }
                     ?>
                   </select>
@@ -142,8 +137,12 @@
                   <select class="form-control custom-select">
                     <?php
                     $temp = 1;
-                    for($i=5; $i<=60; $i+=5){
-                      echo "<option value=".$temp.">".$i."</option>";
+                    for($i=0; $i<=60; $i+=5){
+                      if(strlen($i) == 1){
+                        echo "<option value=".$temp.">0".$i."</option>";
+                      }
+                      else
+                        echo "<option value=".$temp.">".$i."</option>";
                       $temp++;
                     }
                     ?>
@@ -167,9 +166,9 @@
           </div>
         </div>
       </div>
-      <div class="col-4">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 mt-4">
         <div class="card border-red">
-          <div class="card-header bg-red text-white h5">
+          <div class="card-header bg-red text-white h6">
             <span class="oi oi-list" title="create" aria-hidden="true"></span> Existing Classes
           </div>
           <div class="card-body">

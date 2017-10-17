@@ -37,7 +37,6 @@ Route::get('adminEditQuiz', 'mainController@adminEditQuiz');
 
 Route::get('adminUpload', 'mainController@adminUpload');
 
-
 /*STUDENTS*/
 
 Route::get('dashboard', 'mainController@studentHome');
@@ -143,4 +142,10 @@ Route::get('studentsDownload', 'mainController@studentsDownload');
 
 Route::get('studentsSimulator', 'mainController@studentsSimulator');
 
+Route::get('adminUploadProp', 'mainController@adminUploadProp');
+
 Route::get('home', 'mainController@index');
+
+// Auth::routes();
+//
+// Route::get('/home', 'HomeController@index')->name('home');

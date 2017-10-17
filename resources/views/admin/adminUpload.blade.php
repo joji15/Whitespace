@@ -13,17 +13,17 @@
     <hr />
     <div class="row">
       <div class="col-sm col-md-7 col-lg-7 mt-4">
-        <div class="card border-blue" style="height:450px;">
-          <div class="card-header bg-blue text-white h5">
-            <span class="oi oi-star" title="Rank" aria-hidden="true"></span> Uploaded Files
+        <div class="card border-blue-grey">
+          <div class="card-header bg-blue text-white h6">
+            <span class="oi oi-data-transfer-upload" title="Uploaded Files" aria-hidden="true"></span> Uploaded Files
           </div>
           <div class="card-body" style="overflow:auto;">
-            <table class="table table-hover">
+            <table class="table table-hover table-sm">
               <thead class="thead-inverse text-center">
                 <tr>
                   <th>File Name</th>
                   <th>Date Uploaded</th>
-                  <th>Download</th>
+                  <th class="text-center">Download</th>
                 </tr>
               </thead>
               <tbody>
@@ -68,18 +68,8 @@
         </div>
       </div>
       <div class="col-sm col-md-5 col-lg-5 mt-4">
-        <div class="card border-grey">
+        <div class="card border-blue-grey">
           <div class="card-body">
-            <form>
-              <div class="form-group">
-                <label class="custom-file">
-                  <input type="file" id="file2" class="custom-file-input">
-                  <span class="custom-file-control"></span>
-                </label>
-              </div>
-              <button class="btn btn-outline-primary">Upload</button>
-            </form>
-            <br />
             <p class="card-text">
               List of files types that can be uploaded. 25MB is the max file size
               <ul>
@@ -91,6 +81,16 @@
                 <li>Images (.jpeg/.jpg/.png)</li>
               </ul>
             </p>
+            <br />
+            <form>
+              <div class="form-group">
+                <label class="custom-file">
+                  <input type="file" id="file2" class="custom-file-input">
+                  <span class="custom-file-control"></span>
+                </label>
+              </div>
+              <button class="btn btn-outline-primary">Upload</button>
+            </form>
           </div>
         </div>
       </div>
