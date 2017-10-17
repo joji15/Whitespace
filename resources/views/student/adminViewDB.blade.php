@@ -7,7 +7,7 @@
 <div class="col-sm-8 col-md-9 col-lg-10 justify-content-start content" id="viewdbContent">
   <div class="container-fluid contentMargin">
     <div class="row">
-      <div class="col-12 mt-4">
+      <div class="col-12 mt-4 mb-4">
         <div class="card border-blue-grey" style="min-height:450px; max-height:700px;">
           <div class="card-header text-white bg-blue h6">
             <span class="oi oi-folder" title="Database" aria-hidden="true"></span> Class Database
@@ -23,10 +23,12 @@
             <div class="tab-content" id="nav-tabContent">
               <div class="tab-pane fade show active" id="nav-view" role="tabpanel" aria-labelledby="nav-view-tab">
                 <div class="row">
-                  <div class="col-12 col-sm-12 col-md-5 col-lg-6">
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                     <label for="dbselect">Databases:</label>
                     <small id="passwordHelpBlock" class="form-text text-muted">
                       Click one to see more information.
+                  </div>
+                  <div class="col-12 col-sm-12 col-md-6 col-lg-5">
                     </small>
                     <div class="tree">
                       <ul style="padding-left:inherit;">
@@ -174,15 +176,126 @@
 
                     </script>
                   </div>
-                  <div class="col-12 col-sm-12 col-md-7 col-lg-6">
-                    <table id="databaseTbl">
-
+                  <div class="col-12 col-sm-12 col-md-6 col-lg-7">
+                    <table class="table table-bordered table-hover" id="databaseTbl">
+                      <thead class="thead-inverse text-center">
+                        <tr>
+                          <th>Table Name</th>
+                          <th>No. of Columns</th>
+                          <th>Size</th>
+                          <th class="text-center">Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th>Table1</th>
+                          <td>3</td>
+                          <td>213 Kib</td>
+                          <td class="text-center">
+                            <a href="#"><span class="oi oi-browser" title="View Table Rows" aria-hidden="true"> &nbsp;</span></a>
+                            <a href="#"><span class="oi oi-list" title="View Table Structure" aria-hidden="true"> &nbsp;</span></a>
+                            <a href="#"><span class="oi oi-circle-x text-red" title="Drop Table" aria-hidden="true"></span></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Table2</th>
+                          <td>3</td>
+                          <td>213 Kib</td>
+                          <td class="text-center">
+                            <a href="#"><span class="oi oi-browser" title="View Table Rows" aria-hidden="true"> &nbsp;</span></a>
+                            <a href="#"><span class="oi oi-list" title="View Table Structure" aria-hidden="true"> &nbsp;</span></a>
+                            <a href="#"><span class="oi oi-circle-x text-red" title="Drop Table" aria-hidden="true"></span></a>
+                          </td>
+                        </tr>
+                      </tbody>
                     </table>
-                    <table id="tableTbl">
-
+                    <table class="table table-bordered table-hover" id="tableTbl">
+                      <thead class="thead-inverse text-center">
+                        <tr>
+                          <th>Column Name</th>
+                          <th>Type</th>
+                          <th>Null</th>
+                          <th title="Auto Increment">A_I</th>
+                          <th class="text-center">Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th>Field1</th>
+                          <td>int(10)</td>
+                          <td>No</td>
+                          <td>Yes</td>
+                          <td class="text-center">
+                            <a href="#"><span class="oi oi-pencil" title="Edit Column" aria-hidden="true"> &nbsp;</span></a>
+                            <a href="#"><span class="oi oi-list" title="View Table Structure" aria-hidden="true"> &nbsp;</span></a>
+                            <a href="#"><span class="oi oi-circle-x text-red" title="Drop Table" aria-hidden="true"></span></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Field2</th>
+                          <td>varchar(150)</td>
+                          <td>No</td>
+                          <td>No</td>
+                          <td class="text-center">
+                            <a href="#"><span class="oi oi-pencil" title="Edit Column" aria-hidden="true"> &nbsp;</span></a>
+                            <a href="#"><span class="oi oi-list" title="View Table Structure" aria-hidden="true"> &nbsp;</span></a>
+                            <a href="#"><span class="oi oi-circle-x text-red" title="Drop Table" aria-hidden="true"></span></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Field3</th>
+                          <td>ENUM('0','1')</td>
+                          <td>No</td>
+                          <td>No</td>
+                          <td class="text-center">
+                            <a href="#"><span class="oi oi-pencil" title="Edit Column" aria-hidden="true"> &nbsp;</span></a>
+                            <a href="#"><span class="oi oi-list" title="View Table Structure" aria-hidden="true"> &nbsp;</span></a>
+                            <a href="#"><span class="oi oi-circle-x text-red" title="Drop Table" aria-hidden="true"></span></a>
+                          </td>
+                        </tr>
+                      </tbody>
                     </table>
-                    <table id="colTbl">
-
+                    <table class="table table-bordered table-hover" id="rowTbl">
+                      <thead class="thead-inverse text-center">
+                        <tr>
+                          <th>Column Name</th>
+                          <th>Type</th>
+                          <th>Null</th>
+                          <th class="text-center">Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th>Field1</th>
+                          <td>int(10)</td>
+                          <td>No</td>
+                          <td class="text-center">
+                            <a href="#"><span class="oi oi-browser" title="View Table Rows" aria-hidden="true"> &nbsp;</span></a>
+                            <a href="#"><span class="oi oi-list" title="View Table Structure" aria-hidden="true"> &nbsp;</span></a>
+                            <a href="#"><span class="oi oi-circle-x text-red" title="Drop Table" aria-hidden="true"></span></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Field2</th>
+                          <td>varchar(150)</td>
+                          <td>No</td>
+                          <td class="text-center">
+                            <a href="#"><span class="oi oi-browser" title="View Table Rows" aria-hidden="true"> &nbsp;</span></a>
+                            <a href="#"><span class="oi oi-list" title="View Table Structure" aria-hidden="true"> &nbsp;</span></a>
+                            <a href="#"><span class="oi oi-circle-x text-red" title="Drop Table" aria-hidden="true"></span></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>Field3</th>
+                          <td>ENUM('0','1')</td>
+                          <td>No</td>
+                          <td class="text-center">
+                            <a href="#"><span class="oi oi-browser" title="View Table Rows" aria-hidden="true"> &nbsp;</span></a>
+                            <a href="#"><span class="oi oi-list" title="View Table Structure" aria-hidden="true"> &nbsp;</span></a>
+                            <a href="#"><span class="oi oi-circle-x text-red" title="Drop Table" aria-hidden="true"></span></a>
+                          </td>
+                        </tr>
+                      </tbody>
                     </table>
                   </div>
                 </div>

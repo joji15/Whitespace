@@ -48,7 +48,7 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenavbar" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand align-middle animated fadeIn mr-auto p-2" href="" style="font-family:Roboto Light">
+    <a class="navbar-brand align-middle animated fadeIn mr-auto p-2" href="">
       <img src="{{ asset('img/WS-ICO.png') }}" width="40" height="40" alt="WS Logo">
       Teacher's Dashboard
     </a>
@@ -62,7 +62,7 @@
         </div>
       </div>
     </form>
-    
+
   </nav>
   <div class="container-fluid">
     <div class="row" style="height:100%;">
