@@ -24,6 +24,18 @@
   color: rgb(156,39,176);
 }
 
+.bg-lightpurple{
+  background-color: rgb(186,104,200);
+}
+
+.border-lightpurple{
+  border-color: rgb(186,104,200);
+}
+
+.text-lavender{
+  border-color: rgb(211,69,244);
+}
+
 .bg-blue{
   background-color: rgb(33,150,243);
 }
@@ -118,4 +130,48 @@
 
 .text-dark-grey{
   color: rgb(33,33,33);
+}
+
+.bg-silver{
+  background-color: rgb(192,192,192);
+}
+
+.border-silver{
+  border-color: rgb(192,192,192);
+}
+
+.bg-gainsboro{
+  background-color: rgb(220,220,220);
+}
+
+.bg-whitesmoke{
+  background-color: rgb(245,245,245);
+}
+
+.bg-customblue{
+  background-color: rgb(0,155,183);
+}
+
+.border-customblue{
+  border-color: rgb(0,155,183);
+}
+
+.bg-customlightblue{
+  background-color: rgb(96,180,249);
+}
+
+.border-customlightblue{
+  border-color: rgb(96,180,249);
+}
+
+.bg-lightprimary {
+  background-color: rgb(90,173,246) !important;
+}
+
+.bg-maroon{
+  background-color: rgb(196,61,54) !important;
+}
+
+.border-maroon{
+  border-color: rgb(196,61,54);
 }

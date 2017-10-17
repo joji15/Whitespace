@@ -18,6 +18,7 @@ var upload = document.getElementById('upContent');
     These variables are getting the ID of every page
 */
 
+
 if (home !== null){
     $(".a").find(".active").removeClass("active");  //  Find all <a> tags with the active class, and then remove the said class
     $('#adminpill').addClass("active");             //  Add an active class to the ID of the nav item
