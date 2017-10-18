@@ -13,23 +13,23 @@
 
 Route::get('/', 'mainController@index');
 
-Route::get('adminStud', 'mainController@adminStud');
+Route::get('profStud', 'mainController@profStud');
 
-Route::get('adminCreateClass', 'mainController@adminCreateClass');
+Route::get('profCreateClass', 'mainController@profCreateClass');
 
-Route::get('adminViewDB', 'mainController@adminViewDB');
+Route::get('profViewDB', 'mainController@profViewDB');
 
-Route::get('adminViewProgress', 'mainController@adminViewProgress');
+Route::get('profViewProgress', 'mainController@profViewProgress');
 
-Route::get('adminQuiz', 'mainController@adminQuiz');
+Route::get('profQuiz', 'mainController@profQuiz');
 
-Route::get('adminViewQuiz', 'mainController@adminViewQuiz');
+Route::get('profViewQuiz', 'mainController@profViewQuiz');
 
-Route::get('adminCreateQuiz', 'mainController@adminCreateQuiz');
+Route::get('profCreateQuiz', 'mainController@profCreateQuiz');
 
-Route::get('adminEditQuiz', 'mainController@adminEditQuiz');
+Route::get('profEditQuiz', 'mainController@profEditQuiz');
 
-Route::get('adminUpload', 'mainController@adminUpload');
+Route::get('profUpload', 'mainController@profUpload');
 
 /*STUDENTS*/
 
@@ -189,7 +189,7 @@ Route::get('studentsDownload', 'mainController@studentsDownload');
 
 Route::get('studentsSimulator', 'mainController@studentsSimulator');
 
-Route::get('adminUploadProp', 'mainController@adminUploadProp');
+Route::get('profUploadProp', 'mainController@profUploadProp');
 
 Route::get('/', function () {
     return view('auth.login');
