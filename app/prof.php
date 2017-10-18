@@ -5,11 +5,15 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class prof extends Authenticatable
+class Prof extends Authenticatable
 {
     use Notifiable;
 
-    protected $guard = 'prof'
+    protected $table = 'professor';
+
+    protected $primaryKey = 'prof_id';
+
+    protected $guard = 'prof';
 
     /**
      * The attributes that are mass assignable.
@@ -17,7 +21,7 @@ class prof extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'prof_id', 'password',
+        'prof_id', 'email', 'first_Name', 'middle_Name', 'last_Name', 'address', 'contact_no', 'password',
     ];
 
     /**

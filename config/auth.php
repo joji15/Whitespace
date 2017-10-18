@@ -48,7 +48,12 @@ return [
 
         'prof' => [
             'driver' => 'session',
-            'provider' => 'profs',
+            'provider' => 'professors',
+        ],
+
+        'stud' => [
+            'driver' => 'session',
+            'provider' => 'students',
         ],
     ],
 
@@ -75,9 +80,9 @@ return [
             'model' => App\User::class,
         ],
 
-        'profs' => [
+        'professors' => [
             'driver' => 'eloquent',
-            'model' => App\prof::class,
+            'model' => App\Prof::class,
         ],
 
         'students' => [

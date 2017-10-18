@@ -13,9 +13,14 @@ class CreateProfTable extends Migration
      */
     public function up()
     {
-        Schema::create('acct_prof', function (Blueprint $table) {
-            $table->increments('acct_prof_id');
-            $table->integer('prof_id')->unique();
+        Schema::create('professor', function (Blueprint $table) {
+            $table->increments('prof_id');
+            $table->string('first_Name');
+            $table->string('middle_Name');
+            $table->string('last_Name');
+            $table->string('email')->unique();
+            $table->string('address');
+            $table->string('contact_no')->unique();
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();

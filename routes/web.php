@@ -11,8 +11,6 @@
 |
 */
 
-Route::get('/', 'mainController@index');
-
 Route::get('profStud', 'mainController@profStud');
 
 Route::get('profCreateClass', 'mainController@profCreateClass');
@@ -199,6 +197,12 @@ Route::get('login', 'mainController@logincheck');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index');
 
-Route::get('/prof', 'mainController@index');
+Route::prefix('prof')->group(function(){
+    Route::get('/login', 'Auth\profLoginController@showLoginForm')->name('prof.login');
+
+    Route::post('/login', 'Auth\profLoginController@login')->name('prof.login.submit');
+
+    Route::get('/', 'profController@index')->name('prof.profHome');
+});

@@ -70,21 +70,21 @@ class mainController extends Controller
 
 	public function profViewQuiz()
 	{
-		return view('quiz.viewQuiz');
+		return view('profquiz.viewQuiz');
 	}
 
 	public function profCreateQuiz()
 	{
-		return view('quiz.createQuiz');
+		return view('profquiz.createQuiz');
 	}
 
 	public function profEditQuiz()
 	{
-		return view('quiz.editQuiz');
+		return view('profquiz.editQuiz');
 	}
 
 	public function profUpload(){
-		return view('prof.profUpload');
+		return view('profUpload.profUpload');
 	}
 
 	public function profUploadProp(){

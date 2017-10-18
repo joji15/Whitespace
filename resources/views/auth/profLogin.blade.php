@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
-@section('title', 'Login')
+@section('title', 'Professor Login')
 
 @section('content')
 
 <div class="col-md-6 align-self-center">
-  <p class="h3 text-center"><em>Student Login</em></p>
-  <form method="POST" action="{{ route('login') }}">
+  <p class="h3 text-center"><em>Professor Login</em></p>
+  <form method="POST" action="{{ route('prof.login.submit') }}">
     {{ csrf_field() }}
     <br />
     <div class="input-group{{ $errors->has('email') ? ' has-error' : '' }}">
