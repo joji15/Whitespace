@@ -21,39 +21,39 @@ var upload = document.getElementById('upContent');
 
 if (home !== null){
     $(".a").find(".active").removeClass("active");  //  Find all <a> tags with the active class, and then remove the said class
-    $('#adminpill').addClass("active");             //  Add an active class to the ID of the nav item
+    $('#profpill').addClass("active");             //  Add an active class to the ID of the nav item
     $('#studentSub').addClass("d-none");            //  !!!(FOR SUB-MENUS)!!! Add a d-none (display:none) class to the div of subclass
     $('#quizSub').addClass("d-none");               //  Same as above...
 }
 
 if (stud !== null){
     $(".a").find(".active").removeClass("active");
-    $('#adminStudpill').addClass("active");
+    $('#profStudpill').addClass("active");
     $('#studentSub').addClass("d-none");
     $('#quizSub').addClass("d-none");
 }
 
 if (createClass !== null){
   $(".a").find(".active").removeClass("active");    //  Find all <a> tags with the active class, and then remove the said class
-  $('#adminCreateClasspill').addClass("active");    //  Add an active class to the ID of the nav item
+  $('#profCreateClasspill').addClass("active");    //  Add an active class to the ID of the nav item
   $('#quizSub').addClass("d-none");                 //  !!!(FOR SUB-MENUS)!!! Add a d-none (display:none) class to the div of subclass
 }
 
 if (progress !== null){
   $(".a").find(".active").removeClass("active");
-  $('#adminViewProgresspill').addClass("active");
+  $('#profViewProgresspill').addClass("active");
   $('#quizSub').addClass("d-none");
 }
 
 if (viewdb !== null){
   $(".a").find(".active").removeClass("active");
-  $('#adminViewDBpill').addClass("active");
+  $('#profViewDBpill').addClass("active");
   $('#quizSub').addClass("d-none");
 }
 
 if (quiz !== null){
     $(".a").find(".active").removeClass("active");
-    $('#adminQuizpill').addClass("active");
+    $('#profQuizpill').addClass("active");
     $('#studentSub').addClass("d-none");
     $('#quizSub').addClass("d-none");
 }
@@ -78,7 +78,7 @@ if (editquiz !== null){
 
 if (upload !== null){
     $(".a").find(".active").removeClass("active");
-    $('#adminUploadpill').addClass("active");
+    $('#profUploadpill').addClass("active");
     $('#studentSub').addClass("d-none");
     $('#quizSub').addClass("d-none");
 }

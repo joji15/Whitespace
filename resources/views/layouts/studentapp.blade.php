@@ -26,10 +26,17 @@
       <img src="{{ asset('img/WS-ICO.png') }}" width="40" height="40" alt="WS Logo">
       Student's Dashboard
     </a>
-    <a class="btn btn-outline-danger align-middle p-2" href="home"><span class="oi oi-account-logout" title="icon name" aria-hidden="true"></span> Logout</a>
+    <li>
+      <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+        Logout
+      </a>
+      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+        {{ csrf_field() }}
+      </form>
+    </li>
   </nav>
   <div class="container-fluid">
-    <div class="row" style="-webkit-min-logical-height: -webkit-fill-available">
+    <div class="row" style="height:100%">
       <div class="col-sm-4 col-md-3 col-lg-2" style="background-color: rgb(40, 40, 40)">
         <nav class="nav nav-pills flex-column">
           <div class="navbar-collapse animated fadeIn" id="sidenavbar">

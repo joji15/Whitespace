@@ -1,4 +1,4 @@
-@extends('layouts.adminapp')
+@extends('layouts.profApp')
 
 @section('title', 'Student\'s Progress Monitoring Module')
 

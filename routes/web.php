@@ -13,12 +13,6 @@
 
 Route::get('/', 'mainController@index');
 
-Route::get('register', 'mainController@register');
-
-Route::get('student', 'mainController@student');
-
-Route::get('admin', 'mainController@admin');
-
 Route::get('adminStud', 'mainController@adminStud');
 
 Route::get('adminCreateClass', 'mainController@adminCreateClass');
@@ -49,6 +43,8 @@ Route::get('studentsClassList', 'mainController@studentsClassList');
 Route::get('studentsLessonList', 'mainController@studentsLessonList');
 
 Route::get('studentsLesson', 'mainController@studentsLesson');
+
+Route::get('sql_intro', 'mainController@sql_intro');
 
 Route::get('database_concepts', 'mainController@database_concepts');
 
@@ -126,6 +122,57 @@ Route::get('having_where', 'mainController@having_where');
 
 Route::get('nulls', 'mainController@nulls');
 
+Route::get('multiple_table', 'mainController@multiple_table');
+
+Route::get('joining_two_tables', 'mainController@joining_two_tables');
+
+Route::get('in_operator', 'mainController@in_operator');
+
+Route::get('exists_operator', 'mainController@exists_operator');
+
+Route::get('subquery_within_subquery', 'mainController@subquery_within_subquery');
+
+Route::get('alias', 'mainController@alias');
+
+Route::get('joining_table_itself', 'mainController@joining_table_itself');
+
+Route::get('self_join_primary_key', 'mainController@self_join_primary_key');
+
+Route::get('joining_several_tables', 'mainController@joining_several_tables');
+
+Route::get('set_operations', 'mainController@set_operations');
+
+Route::get('all_and_any', 'mainController@all_and_any');
+
+Route::get('inner_join', 'mainController@inner_join');
+
+Route::get('outer_join', 'mainController@outer_join');
+
+Route::get('product', 'mainController@product');
+
+Route::get('updating_data', 'mainController@updating_data');
+
+Route::get('new_from_existing', 'mainController@new_from_existing');
+
+Route::get('existing_data', 'mainController@existing_data');
+
+Route::get('add_rows_existing', 'mainController@add_rows_existing');
+
+Route::get('commit_and_rollback', 'mainController@commit_and_rollback');
+
+Route::get('transactions', 'mainController@transactions');
+
+Route::get('changing_deleting_existing', 'mainController@changing_deleting_existing');
+
+Route::get('rollback', 'mainController@rollback');
+
+Route::get('value_to_null', 'mainController@value_to_null');
+
+Route::get('tables_structure', 'mainController@tables_structure');
+
+Route::get('complex_changes', 'mainController@complex_changes');
+
+Route::get('dropping_table', 'mainController@dropping_table');
 /*------------------------QUIZZES------------------------*/
 
 Route::get('studentsScheduledQuizzes', 'mainController@studentsScheduledQuizzes');
@@ -144,8 +191,14 @@ Route::get('studentsSimulator', 'mainController@studentsSimulator');
 
 Route::get('adminUploadProp', 'mainController@adminUploadProp');
 
-Route::get('home', 'mainController@index');
+Route::get('/', function () {
+    return view('auth.login');
+});
 
-// Auth::routes();
-//
-// Route::get('/home', 'HomeController@index')->name('home');
+Route::get('login', 'mainController@logincheck');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/prof', 'mainController@index');

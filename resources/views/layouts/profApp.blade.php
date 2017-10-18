@@ -58,6 +58,14 @@
         <div class="dropdown-menu" style="left:-100px">
           <h6 class="dropdown-header">Dropdown header</h6>
           <a class="dropdown-item" href="#"><span class="oi oi-cog" title="action" aria-hidden="true"></span> Action</a>
+          <li>
+            <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+              Logout
+            </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+              {{ csrf_field() }}
+            </form>
+          </li>
           <a class="dropdown-item" href="home"><span class="oi oi-account-logout" title="logout" aria-hidden="true"></span> Logout</a>
         </div>
       </div>
@@ -70,20 +78,20 @@
         <nav class="nav nav-pills flex-column">
           <div class="navbar-collapse animated fadeIn" id="sidenavbar">
             <hr class="hr-white"/>
-            <a class="nav-item nav-link" href="admin" id="adminpill"><span class="oi oi-home" title="Home" aria-hidden="true"></span> Home</a>
-            <a class="nav-item nav-link" href="adminStud" id="adminStudpill"><span class="oi oi-people" title="Student" aria-hidden="true"></span> Students</a>
+            <a class="nav-item nav-link" href="prof" id="profpill"><span class="oi oi-home" title="Home" aria-hidden="true"></span> Home</a>
+            <a class="nav-item nav-link" href="profStud" id="profStudpill"><span class="oi oi-people" title="Student" aria-hidden="true"></span> Students</a>
             <div id="studentSub">
-              <a class="nav-item nav-link ml-4 btn-sm" href="adminCreateClass" id="adminCreateClasspill"><span class="oi oi-plus" title="CreateClass" aria-hidden="true"></span> Create Class</a>
-              <a class="nav-item nav-link ml-4 btn-sm" href="adminViewProgress" id="adminViewProgresspill"><span class="oi oi-graph" title="ViewProgress" aria-hidden="true"></span> Student Progress</a>
-              <a class="nav-item nav-link ml-4 btn-sm" href="adminViewDB" id="adminViewDBpill"><span class="oi oi-folder" title="Classdb" aria-hidden="true"></span> Class Database</a>
+              <a class="nav-item nav-link ml-4 btn-sm" href="profCreateClass" id="profCreateClasspill"><span class="oi oi-plus" title="CreateClass" aria-hidden="true"></span> Create Class</a>
+              <a class="nav-item nav-link ml-4 btn-sm" href="profViewProgress" id="profViewProgresspill"><span class="oi oi-graph" title="ViewProgress" aria-hidden="true"></span> Student Progress</a>
+              <a class="nav-item nav-link ml-4 btn-sm" href="profViewDB" id="profViewDBpill"><span class="oi oi-folder" title="Classdb" aria-hidden="true"></span> Class Database</a>
             </div>
-            <a class="nav-item nav-link" href="adminQuiz" id="adminQuizpill"><span class="oi oi-spreadsheet" title="Quiz" aria-hidden="true"></span> Quizzes</a>
+            <a class="nav-item nav-link" href="profQuiz" id="profQuizpill"><span class="oi oi-spreadsheet" title="Quiz" aria-hidden="true"></span> Quizzes</a>
             <div id="quizSub">
-              <a class="nav-item nav-link ml-4 btn-sm" href="adminViewQuiz" id="viewQuizpill"><span class="oi oi-magnifying-glass" title="viewQuiz" aria-hidden="true"></span> View Quizzes</a>
-              <a class="nav-item nav-link ml-4 btn-sm" href="adminCreateQuiz" id="createQuizpill"><span class="oi oi-plus" title="createQuiz" aria-hidden="true"></span> Create Quiz</a>
-              <a class="nav-item nav-link ml-4 btn-sm" href="adminEditQuiz" id="editQuizpill"><span class="oi oi-pencil" title="editQuiz" aria-hidden="true"></span> Edit Quiz</a>
+              <a class="nav-item nav-link ml-4 btn-sm" href="profViewQuiz" id="viewQuizpill"><span class="oi oi-magnifying-glass" title="viewQuiz" aria-hidden="true"></span> View Quizzes</a>
+              <a class="nav-item nav-link ml-4 btn-sm" href="profCreateQuiz" id="createQuizpill"><span class="oi oi-plus" title="createQuiz" aria-hidden="true"></span> Create Quiz</a>
+              <a class="nav-item nav-link ml-4 btn-sm" href="profEditQuiz" id="editQuizpill"><span class="oi oi-pencil" title="editQuiz" aria-hidden="true"></span> Edit Quiz</a>
             </div>
-            <a class="nav-item nav-link" href="adminUpload" id="adminUploadpill"><span class="oi oi-data-transfer-upload" title="Upload" aria-hidden="true"></span> Upload</a>
+            <a class="nav-item nav-link" href="profUpload" id="profUploadpill"><span class="oi oi-data-transfer-upload" title="Upload" aria-hidden="true"></span> Upload</a>
             <hr class="hr-white"/>
           </div>
         </nav>
