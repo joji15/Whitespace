@@ -83,6 +83,11 @@ class mainController extends Controller
 		return view('profquiz.editQuiz');
 	}
 
+	public function profEditQuizContent()
+	{
+		return view('profquiz.editQuizContent');
+	}
+
 	public function profUpload(){
 		return view('profUpload.profUpload');
 	}

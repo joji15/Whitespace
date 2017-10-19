@@ -27,6 +27,8 @@ Route::get('profCreateQuiz', 'mainController@profCreateQuiz');
 
 Route::get('profEditQuiz', 'mainController@profEditQuiz');
 
+Route::get('profEditQuizContent', 'mainController@profEditQuizContent');
+
 Route::get('profUpload', 'mainController@profUpload');
 
 /*STUDENTS*/
