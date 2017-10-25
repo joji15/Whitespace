@@ -63,8 +63,6 @@
   <!-- Tree view -->
   <script src="/js/treeview.js"></script>
 
-  <!--Lined Textarea-->
-  <script src="./js/bcralnit.js"></script>
 
   <script>
     $(document).ready(function(){
@@ -78,13 +76,6 @@
         }
       });
     });
-  </script>
-  <script>
-  $(".lined").bcralnit({
-      width: '50px',
-      background: 'rgb(38,50,56)',
-      color: '#fff',
-  });
   </script>
 </body>
 </html>
