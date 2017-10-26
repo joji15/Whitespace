@@ -29,7 +29,7 @@
               <div class="tab-pane fade show active" id="nav-query" role="tabpanel" aria-labelledby="nav-query-tab">
                 <div class="row">
                   <div class="col-12">
-                      <textarea name="simulator"  rows="20"></textarea>
+                      <textarea name="simulator" class="lined" rows="20"></textarea>
                     <div class="mt-1 text-right">
                       <button class="btn btn-primary" type="button" id="simulate">Run SQL <i class="oi oi-arrow-circle-right"></i></button>
                     </div>
@@ -167,5 +167,9 @@
   </div>
 </div>
 
-
+<script>
+$(function() {
+	$(".lined").linedtextarea();
+});
+</script>
 @endsection

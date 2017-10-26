@@ -16,6 +16,9 @@
   <link href="/css/styles.css" rel="stylesheet">
   <link href="/css/colors.css" rel="stylesheet">
   <link href="/css/media-queries.css" rel="stylesheet">
+
+  <!--Lined Textarea-->
+  <link href="/css/jquery-linedtextarea.css" rel="stylesheet">
 </head>
 <body class="dashboard">
   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top d-flex justify-content-end shadow">
@@ -63,7 +66,9 @@
   <!-- Tree view -->
   <script src="/js/treeview.js"></script>
 
-
+  <!--Lined Textarea-->
+  <script src="/js/jquery-linedtextarea.js"></script>
+  
   <script>
     $(document).ready(function(){
       $('#searchInput').on('click', function(){
