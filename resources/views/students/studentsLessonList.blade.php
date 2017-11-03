@@ -20,7 +20,7 @@
             <h4 class="card-title"><span class="oi oi-book" title="lessonList" aria-hidden="true"></span> Chapter 1: SQL Introduction</h4>
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
-          <a href="sql_intro">
+          <a href="{{ route('chapter1') }}">
             <div class="card-footer border-primary">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
@@ -35,7 +35,7 @@
             <h4 class="card-title"><span class="oi oi-book" title="lessonList" aria-hidden="true"></span> Database Concepts</h4>
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
-          <a href="database_concepts">
+          <a href="{{ route('chapter1.database_concepts') }}">
             <div class="card-footer border-primary">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>

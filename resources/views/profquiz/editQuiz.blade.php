@@ -30,37 +30,37 @@
                 <tr>
                   <th scope="row">SQL Introduction</th>
                   <td>09/04/2017</td>
-                  <td class="text-center"><a href="profEditQuizContent" class=""><span class="oi oi-pencil" title="Edit quiz" aria-hidden="true"></span></a></td>
+                  <td class="text-center"><a href="/prof/Quiz/EditQuizContent" class=""><span class="oi oi-pencil" title="Edit quiz" aria-hidden="true"></span></a></td>
                 </tr>
                 <tr>
                   <th scope="row">SQL Fundamentals</th>
                   <td>09/24/2017</td>
-                  <td class="text-center"><a href="profEditQuizContent"><span class="oi oi-pencil" title="Edit quiz" aria-hidden="true"></span></a></td>
+                  <td class="text-center"><a href="/prof/Quiz/EditQuizContent"><span class="oi oi-pencil" title="Edit quiz" aria-hidden="true"></span></a></td>
                 </tr>
                 <tr>
                   <th scope="row">SQL Data Manipulation Language</th>
                   <td>09/29/2017</td>
-                  <td class="text-center"><a href="profEditQuizContent"><span class="oi oi-pencil" title="Edit quiz" aria-hidden="true"></span></a></td>
+                  <td class="text-center"><a href="/prof/Quiz/EditQuizContent"><span class="oi oi-pencil" title="Edit quiz" aria-hidden="true"></span></a></td>
                 </tr>
                 <tr>
                   <th scope="row">SQL Data Definition Language</th>
                   <td>10/01/2017</td>
-                  <td class="text-center"><a href="profEditQuizContent"><span class="oi oi-pencil" title="Edit quiz" aria-hidden="true"></span></a></td>
+                  <td class="text-center"><a href="/prof/Quiz/EditQuizContent"><span class="oi oi-pencil" title="Edit quiz" aria-hidden="true"></span></a></td>
                 </tr>
                 <tr>
                   <th scope="row">SQL Single Table Query</th>
                   <td>10/05/2017</td>
-                  <td class="text-center"><a href="profEditQuizContent"><span class="oi oi-pencil" title="Edit quiz" aria-hidden="true"></span></a></td>
+                  <td class="text-center"><a href="/prof/Quiz/EditQuizContent"><span class="oi oi-pencil" title="Edit quiz" aria-hidden="true"></span></a></td>
                 </tr>
                 <tr>
                   <th scope="row">Creating Tables</th>
                   <td>10/05/2017</td>
-                  <td class="text-center"><a href="profEditQuizContent"><span class="oi oi-pencil" title="Edit quiz" aria-hidden="true"></span></a></td>
+                  <td class="text-center"><a href="/prof/Quiz/EditQuizContent"><span class="oi oi-pencil" title="Edit quiz" aria-hidden="true"></span></a></td>
                 </tr>
                 <tr>
                   <th scope="row">SQL Multiple Table Query</th>
                   <td>10/08/2017</td>
-                  <td class="text-center"><a href="profEditQuizContent"><span class="oi oi-pencil" title="Edit quiz" aria-hidden="true"></span></a></td>
+                  <td class="text-center"><a href="/prof/Quiz/EditQuizContent"><span class="oi oi-pencil" title="Edit quiz" aria-hidden="true"></span></a></td>
                 </tr>
               </tbody>
             </table>

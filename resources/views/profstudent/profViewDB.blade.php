@@ -15,8 +15,8 @@
           <div class="card-header bg-dark-grey">
             <nav class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
               <a class="nav-item nav-link active" id="nav-QandA-tab" data-toggle="tab" href="#nav-view" role="tab" aria-controls="nav-QandA" aria-expanded="true"><span class="oi oi-eye" title="View" aria-hidden="true"></span> View Database</a>
-              <a class="nav-item nav-link" id="nav-results-tab" data-toggle="tab" href="#nav-edit" role="tab" aria-controls="nav-results"><span class="oi oi-pencil" title="Edit" aria-hidden="true"></span> Edit Database</a>
-              <a class="nav-item nav-link" id="nav-other-tab" data-toggle="tab" href="#nav-delete" role="tab" aria-controls="nav-other"><span class="oi oi-trash" title="Delete" aria-hidden="true"></span> Delete Database</a>
+              <!-- <a class="nav-item nav-link" id="nav-results-tab" data-toggle="tab" href="#nav-edit" role="tab" aria-controls="nav-results"><span class="oi oi-pencil" title="Edit" aria-hidden="true"></span> Edit Database</a>
+              <a class="nav-item nav-link" id="nav-other-tab" data-toggle="tab" href="#nav-delete" role="tab" aria-controls="nav-other"><span class="oi oi-trash" title="Delete" aria-hidden="true"></span> Delete Database</a> -->
             </nav>
           </div>
           <div class="card-body" style="overflow-y: auto;">

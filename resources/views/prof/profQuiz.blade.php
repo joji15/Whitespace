@@ -18,7 +18,7 @@
             <h4 class="card-title"><span class="oi oi-magnifying-glass" title="View Quiz" aria-hidden="true"></span> View Quizzes</h4>
             <p class="card-text">View past quizzes to review the scores of the students.</p>
           </div>
-          <a href="profViewQuiz"><div class="card-footer border-blue-grey">
+          <a href="/prof/Quiz/ViewQuiz"><div class="card-footer border-blue-grey">
             View Quizzes here... <span class="oi oi-link-intact" title="viewClass" aria-hidden="true"></span>
           </div>
           </a>
@@ -30,7 +30,7 @@
             <h4 class="card-title"><span class="oi oi-plus" title="Create Quiz" aria-hidden="true"></span> Create Quiz</h4>
             <p class="card-text">Create a new quiz for your student to answer.</p>
           </div>
-          <a href="profCreateQuiz"><div class="card-footer border-blue-grey">
+          <a href="/prof/Quiz/CreateQuiz"><div class="card-footer border-blue-grey">
             Create Quiz here... <span class="oi oi-link-intact" title="viewClass" aria-hidden="true"></span>
           </div>
           </a>
@@ -42,7 +42,7 @@
             <h4 class="card-title"><span class="oi oi-pencil" title="Edit Quiz" aria-hidden="true"></span> Edit Quizzes</h4>
             <p class="card-text">Edit scheduled quizzes. Can edit the time, the questions and the answers.</p>
           </div>
-          <a href="profEditQuiz"><div class="card-footer border-blue-grey">
+          <a href="/prof/Quiz/EditQuiz"><div class="card-footer border-blue-grey">
             Edit Quizzes here... <span class="oi oi-link-intact" title="viewClass" aria-hidden="true"></span>
           </div>
           </a>

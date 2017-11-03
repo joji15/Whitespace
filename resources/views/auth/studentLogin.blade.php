@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
-@section('title', 'Professor Login')
+@section('title', 'Student Login')
 
 @section('content')
 
 <div class="col-md-6 align-self-center">
-  <p class="h3 text-center"><em>Professor Login</em></p>
-  <form method="POST" action="{{ route('prof.login.submit') }}">
+  <p class="h3 text-center"><em>Student Login</em></p>
+  <form method="POST" action="{{ route('student.login.submit') }}">
     {{ csrf_field() }}
     <br />
     <div class="input-group{{ $errors->has('email') ? ' has-error' : '' }}">
@@ -43,5 +43,6 @@
       </div>
     </form>
   <!-- <p class="text-center"><a class="btn btn-link" href="{{ route('password.request') }}">Forgot Your Password?</a></p> -->
+  <p class="text-center">No account? <a href="{{ route('register') }}">Sign-Up Here</a></p>
 </div>
 @endsection

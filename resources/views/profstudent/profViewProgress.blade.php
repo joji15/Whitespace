@@ -136,7 +136,7 @@
                       </thead>
                       <tbody>
                         <tr>
-                          <td><a href="adminStudentInfo">Aimee Lou D. Cruz</a></td>
+                          <td><a href="profStudentInfo">Aimee Lou D. Cruz</a></td>
                           <td>5</td>
                           <td>
                             <div class="btn-group">
@@ -155,7 +155,7 @@
                           <td>85%</td>
                         </tr>
                         <tr>
-                          <td><a href="adminStudentInfo">Jazelene Mae M. de Vera</a></td>
+                          <td><a href="profStudentInfo">Jazelene Mae M. de Vera</a></td>
                           <td>4</td>
                           <td>
                             <div class="btn-group">
@@ -174,7 +174,7 @@
                           <td>83%</td>
                         </tr>
                         <tr>
-                          <td><a href="adminStudentInfo">Donald Patrick C. George</a></td>
+                          <td><a href="profStudentInfo">Donald Patrick C. George</a></td>
                           <td>4</td>
                           <td>
                             <div class="btn-group">

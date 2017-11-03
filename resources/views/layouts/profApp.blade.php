@@ -31,15 +31,7 @@
 
   <script async>
   $(document).ready(function(){
-    $('#searchInput').on('click', function(){
-      var display = $('#searchResult').css('display');
-      if (display == "none") {
-        $("#searchResult").show();
-      }
-      else if (display == "block"){
-        $("#searchResult").hide();
-      }
-    });
+
   });
   </script>
 </head>
@@ -50,17 +42,17 @@
     </button>
     <a class="navbar-brand align-middle animated fadeIn mr-auto p-2" href="">
       <img src="{{ asset('img/WS-ICO.png') }}" width="40" height="40" alt="WS Logo">
-      Teacher's Dashboard
+      Professor's Dashboard
     </a>
-    <li>
-      <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+    <li style="list-style-type:none">
+      <a class="btn btn-outline-danger" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
         Logout
       </a>
       <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
         {{ csrf_field() }}
       </form>
     </li>
-    <form class="form-inline mr-2">
+    <!-- <form class="form-inline mr-2">
       <div class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><span class="oi oi-person" title="Account Menu" aria-hidden="true"></span></a>
         <div class="dropdown-menu" style="left:-100px">
@@ -69,7 +61,7 @@
           <a class="dropdown-item" href="home"><span class="oi oi-account-logout" title="logout" aria-hidden="true"></span> Logout</a>
         </div>
       </div>
-    </form>
+    </form> -->
 
   </nav>
   <div class="container-fluid">
@@ -78,20 +70,20 @@
         <nav class="nav nav-pills flex-column">
           <div class="navbar-collapse animated fadeIn" id="sidenavbar">
             <hr class="hr-white"/>
-            <a class="nav-item nav-link" href="prof" id="profpill"><span class="oi oi-home" title="Home" aria-hidden="true"></span> Home</a>
-            <a class="nav-item nav-link" href="profStud" id="profStudpill"><span class="oi oi-people" title="Student" aria-hidden="true"></span> Students</a>
+            <a class="nav-item nav-link" href="/prof/Home" id="profpill"><span class="oi oi-home" title="Home" aria-hidden="true"></span> Home</a>
+            <a class="nav-item nav-link" href="/prof/Student" id="profStudpill"><span class="oi oi-people" title="Student" aria-hidden="true"></span> Students</a>
             <div id="studentSub">
-              <a class="nav-item nav-link ml-4 btn-sm" href="profCreateClass" id="profCreateClasspill"><span class="oi oi-plus" title="CreateClass" aria-hidden="true"></span> Create Class</a>
-              <a class="nav-item nav-link ml-4 btn-sm" href="profViewProgress" id="profViewProgresspill"><span class="oi oi-graph" title="ViewProgress" aria-hidden="true"></span> Student Progress</a>
-              <a class="nav-item nav-link ml-4 btn-sm" href="profViewDB" id="profViewDBpill"><span class="oi oi-folder" title="Classdb" aria-hidden="true"></span> Class Database</a>
+              <a class="nav-item nav-link ml-4 btn-sm" href="/prof/Student/CreateClass" id="profCreateClasspill"><span class="oi oi-plus" title="CreateClass" aria-hidden="true"></span> Create Class</a>
+              <a class="nav-item nav-link ml-4 btn-sm" href="/prof/Student/ViewProgress" id="profViewProgresspill"><span class="oi oi-graph" title="ViewProgress" aria-hidden="true"></span> Student Progress</a>
+              <a class="nav-item nav-link ml-4 btn-sm" href="/prof/Student/ViewDatabase" id="profViewDBpill"><span class="oi oi-folder" title="Classdb" aria-hidden="true"></span> Class Database</a>
             </div>
-            <a class="nav-item nav-link" href="profQuiz" id="profQuizpill"><span class="oi oi-spreadsheet" title="Quiz" aria-hidden="true"></span> Quizzes</a>
+            <a class="nav-item nav-link" href="/prof/Quiz" id="profQuizpill"><span class="oi oi-spreadsheet" title="Quiz" aria-hidden="true"></span> Quizzes</a>
             <div id="quizSub">
-              <a class="nav-item nav-link ml-4 btn-sm" href="profViewQuiz" id="viewQuizpill"><span class="oi oi-magnifying-glass" title="viewQuiz" aria-hidden="true"></span> View Quizzes</a>
-              <a class="nav-item nav-link ml-4 btn-sm" href="profCreateQuiz" id="createQuizpill"><span class="oi oi-plus" title="createQuiz" aria-hidden="true"></span> Create Quiz</a>
-              <a class="nav-item nav-link ml-4 btn-sm" href="profEditQuiz" id="editQuizpill"><span class="oi oi-pencil" title="editQuiz" aria-hidden="true"></span> Edit Quiz</a>
+              <a class="nav-item nav-link ml-4 btn-sm" href="/prof/Quiz/ViewQuiz" id="viewQuizpill"><span class="oi oi-magnifying-glass" title="viewQuiz" aria-hidden="true"></span> View Quizzes</a>
+              <a class="nav-item nav-link ml-4 btn-sm" href="/prof/Quiz/CreateQuiz" id="createQuizpill"><span class="oi oi-plus" title="createQuiz" aria-hidden="true"></span> Create Quiz</a>
+              <a class="nav-item nav-link ml-4 btn-sm" href="/prof/Quiz/EditQuiz" id="editQuizpill"><span class="oi oi-pencil" title="editQuiz" aria-hidden="true"></span> Edit Quiz</a>
             </div>
-            <a class="nav-item nav-link" href="profUpload" id="profUploadpill"><span class="oi oi-data-transfer-upload" title="Upload" aria-hidden="true"></span> Upload</a>
+            <a class="nav-item nav-link" href="/prof/Upload" id="profUploadpill"><span class="oi oi-data-transfer-upload" title="Upload" aria-hidden="true"></span> Upload</a>
             <hr class="hr-white"/>
           </div>
         </nav>
