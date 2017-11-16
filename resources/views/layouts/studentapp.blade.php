@@ -66,9 +66,6 @@
   <!-- Tree view -->
   <script src="/js/treeview.js"></script>
 
-  <!--Lined Textarea-->
-  <script src="/js/jquery-linedtextarea.js"></script>
-  
   <script>
     $(document).ready(function(){
       $('#searchInput').on('click', function(){

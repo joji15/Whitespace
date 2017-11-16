@@ -49,6 +49,10 @@ class mainController extends Controller
         return view('admin.adminQuiz');
     }
 
+    public function connections(){
+        return view('admin.connections');
+    }
+
     public function adminViewQuiz()
     {
         return view('quiz.viewQuiz');
@@ -67,7 +71,7 @@ class mainController extends Controller
     public function adminUpload(){
         return view('admin.adminUpload');
     }
-  
+
     /*STUDENTS*/
     public function studentHome(){
         return view('students.dashboard');
@@ -267,7 +271,7 @@ class mainController extends Controller
     public function studentsSimulator(){
         return view('students.studentsSimulator');
     }
-  
+
     public function adminUploadProp(){
         return view('upload.UploadProps');
     }

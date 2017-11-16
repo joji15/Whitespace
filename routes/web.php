@@ -37,6 +37,10 @@ Route::get('adminEditQuiz', 'mainController@adminEditQuiz');
 
 Route::get('adminUpload', 'mainController@adminUpload');
 
+Route::get('connections', 'mainController@connections');
+
+Route::post('connections/submit','ConnectionsController@submit');
+
 /*STUDENTS*/
 
 Route::get('dashboard', 'mainController@studentHome');
