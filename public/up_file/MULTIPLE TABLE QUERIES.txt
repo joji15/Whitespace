@@ -1,0 +1,153 @@
+=============================================MULTIPLE TABLE QUERIES===============================================
+
+1. List the number and name of each customer, together with the number, last name and first name of the sales rep who represents the customer.
+
+select CUSTOMER_NUM,CUSTOMER_NAME,rep.REP_NUM,LAST_NAME,FIRST_NAME
+
+from customer,rep
+
+where customer.REP_NUM=rep.REP_NUM
+
+2. List the number and name of each customer whose credit limit is $7500 together with the number, last name and first name of the sales rep who represents the customer
+
+select CUSTOMER_NUM,CUSTOMER_NAME,rep.REP_NUM,LAST_NAME,FIRST_NAME
+
+from customer,rep
+
+where customer.REP_NUM=rep.REP_NUM 
+and customer.CREDIT_LIMIT='7500'
+
+3. For every part on order, list the order number, part number, part description, number of units ordered, quoted price and unit price.
+
+select ORDER_NUM, order_line.PART_NUM,DESCRIPTION,NUM_ORDERED,QUOTED_PRICE, PRICE
+
+from order_line,part
+
+where order_line.PART_NUM=part.PART_NUM
+
+4. Find the description of each part included in order number 21610.
+
+select DESCRIPTION
+
+from order_line,part
+
+where order_line.PART_NUM=part.PART_NUM
+
+and ORDER_NUM='21610'
+
+select DESCRIPTION
+
+from part
+
+where PART_NUM IN 
+
+(select PART_NUM
+
+from order_line
+
+where ORDER_NUM=21610)
+
+5. Find the order number and order date for each order that contains part number DR93
+
+select ORDER_NUM,ORDER_DATE
+
+from orders
+
+where ORDER_NUM IN 
+
+(select ORDER_NUM
+
+from order_line
+
+where PART_NUM='DR93')
+
+select ORDER_NUM,ORDER_DATE
+
+from orders
+
+where exists
+
+(select *
+
+from order_line
+
+where orders.ORDER_NUM=order_line.ORDER_NUM
+
+and PART_NUM='DR93')
+
+6. Find the order number and order date for each order that includes a part located in warehouse 3.
+
+select ORDER_NUM,ORDER_DATE
+
+from orders
+
+where ORDER_NUM IN 
+
+(select ORDER_NUM
+
+from order_line
+
+where PART_NUM IN
+(select PART_NUM
+from part
+where WAREHOUSE='3'))
+
+select orders.ORDER_NUM,ORDER_DATE
+
+from orders, order_line, part
+
+where orders.ORDER_NUM=order_line.ORDER_NUM
+
+and order_line.PART_NUM=part.PART_NUM 
+and WAREHOUSE='3'
+
+7. List the customer number, order number, order date and order total for each order with a total that exceeds $1000. Rename the order total as ORDER_TOTAL.
+
+select CUSTOMER_NUM, orders.ORDER_NUM,ORDER_DATE, 
+
+sum(NUM_ORDERED*QUOTED_PRICE) as ORDER_TOTAL
+
+from orders, order_line
+
+where orders.ORDER_NUM=order_line.ORDER_NUM
+
+group by orders.ORDER_NUM,CUSTOMER_NUM,ORDER_NUM
+
+having sum(NUM_ORDERED*QUOTED_PRICE)>1000
+
+order by orders.ORDER_NUM
+
+USING AN ALIAS
+
+8. List the number, last name and first name for each sales rep together with the number and name for each customer the sales rep represents
+
+select r.REP_NUM, LAST_NAME, FIRST_NAME, c.CUSTOMER_NUM, CUSTOMER_NAME
+
+from rep r,customer c
+
+where r.REP_NUM = c.CUSTOMER_NUM
+
+***
+select r.REP_NUM, LAST_NAME, FIRST_NAME, c.CUSTOMER_NUM, CUSTOMER_NAME
+
+
+from rep r,customer c
+
+
+where r.REP_NUM=c.REP_NUM 
+AND c.CUSTOMER_NUM=c.CUSTOMER_NUM
+
+
+=============================================JOINING A TABLE TO ITSELF===============================================
+
+9. For each pair of customers located in the same city, display the customer number, customer name and city
+
+select f.CUSTOMER_NUM, f.CUSTOMER_NAME, s.CUSTOMER_NUM,s.CUSTOMER_NAME, f.CITY
+
+from customer f, customer s 
+
+where f.CITY=s.CITY
+
+and f.CUSTOMER_NUM<s.CUSTOMER_NUM
+
+order by f.CUSTOMER_NUM, s.CUSTOMER_NUM 

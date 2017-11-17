@@ -27,41 +27,13 @@
                 </tr>
               </thead>
               <tbody>
+                @foreach($downloads as $down)
                 <tr>
-                  <th scope="row">SQL Lesson #1.docx</th>
-                  <td>09/24/2017</td>
-                  <td class="text-center"><a href="#" class=""><span class="oi oi-data-transfer-download" title="Download this file" aria-hidden="true"></span></a></td>
+                  <th scope="row">{{$down->filename}}</th>
+                  <td>{{$down->created_at}}</td>
+                  <td class="text-center"><a href="up_file/{{$down->filename}}" download="{{$down->filename}}"><span class="oi oi-data-transfer-download" title="Download this file" aria-hidden="true"></span></a></td>
                 </tr>
-                <tr>
-                  <th scope="row">SQL Lesson #2.docx</th>
-                  <td>09/26/2017</td>
-                  <td class="text-center"><a href="#"><span class="oi oi-data-transfer-download" title="Download this file" aria-hidden="true"></span></a></td>
-                </tr>
-                <tr>
-                  <th scope="row">Query Reviewer.pdf</th>
-                  <td>09/27/2017</td>
-                  <td class="text-center"><a href="#"><span class="oi oi-data-transfer-download" title="Download this file" aria-hidden="true"></span></a></td>
-                </tr>
-                <tr>
-                  <th scope="row">SQL Lesson #3.docx</th>
-                  <td>09/29/2017</td>
-                  <td class="text-center"><a href="#"><span class="oi oi-data-transfer-download" title="Download this file" aria-hidden="true"></span></a></td>
-                </tr>
-                <tr>
-                  <th scope="row">SQL Lesson #4.docx</th>
-                  <td>09/29/2017</td>
-                  <td class="text-center"><a href="#"><span class="oi oi-data-transfer-download" title="Download this file" aria-hidden="true"></span></a></td>
-                </tr>
-                <tr>
-                  <th scope="row">SQL Reviewer.pdf</th>
-                  <td>09/30/2017</td>
-                  <td class="text-center"><a href="#"><span class="oi oi-data-transfer-download" title="Download this file" aria-hidden="true"></span></a></td>
-                </tr>
-                <tr>
-                  <th scope="row">Database Management.pptx</th>
-                  <td>10/01/2017</td>
-                  <td class="text-center"><a href="#"><span class="oi oi-data-transfer-download" title="Download this file" aria-hidden="true"></span></a></td>
-                </tr>
+                @endforeach
               </tbody>
             </table>
           </div>
@@ -76,26 +48,45 @@
                 <li>Word Document (.doc/.docx)</li>
                 <li>Portable Document Format (.pdf)</li>
                 <li>PowerPoint Presentation (.ppt/.pptx)</li>
-                <li>Audio file (.mp3)</li>
+                <li>Excel File (.xls/.xlsx)</li>
                 <li>Text file (.txt)</li>
-                <li>Images (.jpeg/.jpg/.png)</li>
+                <li>SQL File (.sql)</li>
+                <li>Images (.jpeg/.jpg/.png/.svg)</li>
               </ul>
             </p>
             <br />
-            <form>
-              <div class="form-group">
+            {!!Form::open(array('url'=>'insertfile','method'=>'POST','files'=>true))!!}
+              <div class="form-group ">
                 <label class="custom-file">
-                  <input type="file" id="file2" class="custom-file-input">
+                  <input type="file" name="file" id="file" class="custom-file-input">
                   <span class="custom-file-control"></span>
                 </label>
+
+                @if($errors->has('file'))
+                <p class="help-block">{{$errors->first('file')}}</p>
+                @endif
               </div>
               <button class="btn btn-outline-primary">Upload</button>
-            </form>
+
+            {!!Form::close()!!}
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
+<script>
+  @if(Session::has('notification'))
+  alert("{{ Session::get('notification.alert-type') }}");
+    var type = "{{ Session::get('alert-type','info') }}";
+    switch (type) {
+      case success:
+        toastr.success("{{ Session::get('notification.message') }}");
+        break;
+      case error:
+        toastr.error("{{ Session::get('notification.message') }}");
+        break;
+      }
+    @endif
+</script>
 @endsection

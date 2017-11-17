@@ -19,6 +19,9 @@
   <!-- Google font Link -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
+  <!--For Notifications-->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css">
+
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="/js/jquery-3.2.1.min.js"></script>
@@ -28,6 +31,9 @@
 
   <!-- To make use of the active class in the side nav, edit this js file -->
   <script src="/js/sidenavbar.js" async></script>
+
+  <!--For Notifications-->
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
   <script async>
   $(document).ready(function(){

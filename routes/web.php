@@ -35,10 +35,15 @@ Route::get('adminCreateQuiz', 'mainController@adminCreateQuiz');
 
 Route::get('adminEditQuiz', 'mainController@adminEditQuiz');
 
-Route::get('adminUpload', 'mainController@adminUpload');
+//Route::get('adminUpload', 'mainController@adminUpload');
+
+Route::get('/uploadfile','UploadController@getView'); //upload file
+Route::post('insertfile',array('as'=>'insertfile','uses'=>'UploadController@insertFile'));
+
+Route::get('adminUpload','DownloadController@dlProf'); //download files
+
 
 Route::get('connections', 'mainController@connections');
-
 Route::post('connections/submit','ConnectionsController@submit');
 
 /*STUDENTS*/
@@ -142,7 +147,8 @@ Route::get('studentsResultQuiz', 'mainController@studentsResultQuiz');
 
 Route::get('studentsRankings', 'mainController@studentsRankings');
 
-Route::get('studentsDownload', 'mainController@studentsDownload');
+//Route::get('studentsDownload', 'mainController@studentsDownload');
+Route::get('studentsDownload','DownloadController@dlStud');
 
 Route::get('studentsSimulator', 'mainController@studentsSimulator');
 

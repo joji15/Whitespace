@@ -1,0 +1,8 @@
+11. select CUSTOMER_NUM, CUSTOMER_NAME
+from customer
+where CUSTOMER_NAME LIKE 'K%';
+
+14. select count(CUSTOMER_NAME)
+from customer
+where BALANCE > CREDIT_LIMIT
+S

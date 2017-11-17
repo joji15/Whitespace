@@ -1,0 +1,290 @@
+1. List the number, name and balance for all customers.
+
+select CUSTOMER_NUM, CUSTOMER_NAME, BALANCE
+
+from customer
+
+2. List the complete part table.
+
+select * from part
+
+3. What is the name of customer number 148.
+
+select CUSTOMER_NAME
+
+from customer
+
+Where CUSTOMER_NUM='148'
+
+4. Find the number and name of each customer located in the city of Grove.
+
+select CUSTOMER_NUM, CUSTOMER_NAME
+
+from customer
+
+Where City='Grove'
+
+5. Find the name, number, balance and credit limit for all customers with balance that exceed their credit limits.
+
+select CUSTOMER_NUM, CUSTOMER_NAME, BALANCE, CREDIT_LIMIT
+
+from customer
+
+Where BALANCE > CREDIT_LIMIT
+
+6. List the descriptions for all parts that are located in warehouse 3 and for which there are more than 25 units on hand.
+
+select Description
+
+from part
+
+Where WAREHOUSE='3'
+
+and ON_HAND 
+
+7. List the descriptions for all parts that are located in warehouse 3 and for which there are more than 25 units on hand.
+
+select Description
+
+from part
+
+Where (WAREHOUSE='3')
+and (ON_HAND >25)
+
+8. List the descriptions of all parts that are not in warehouse 3.
+
+select Description
+
+from part
+
+Where WAREHOUSE !='3'
+
+select Description
+
+from part
+
+Where not (WAREHOUSE ='3')
+
+9. List the number, name and balance of all customers with balances.
+
+select CUSTOMER_NUM, CUSTOMER_NAME, BALANCE
+
+from customer
+where BALANCE is not null
+
+10.Greater than or equal to $2,000 and less than or equal to $5,000.
+
+select CUSTOMER_NUM, CUSTOMER_NAME, BALANCE
+
+from customer
+
+where BALANCE >= 2000
+
+and BALANCE <= 5000
+
+select CUSTOMER_NUM, CUSTOMER_NAME, BALANCE
+
+from customer
+
+where BALANCE between 2000
+ and 5000
+ 
+
+11. Find the number, name and available credit (the credit limit minus the balance).
+
+select CUSTOMER_NUM, CUSTOMER_NAME, (CREDIT_LIMIT-BALANCE)
+
+from customer
+
+select CUSTOMER_NUM, CUSTOMER_NAME, (CREDIT_LIMIT-BALANCE) as available_credit
+
+from customer
+
+13. Find the number, name and available credit for each customer with at least $5,000 of available credit.
+
+select CUSTOMER_NUM, CUSTOMER_NAME, (CREDIT_LIMIT-BALANCE) as available_credit
+
+from customer
+
+where (CREDIT_LIMIT-BALANCE) >= 5000
+
+14. List the number, name and complete of each customer located on a street that contains letters "Central"
+
+select CUSTOMER_NUM, CUSTOMER_NAME, STREET, CITY, STATE, ZIP
+from customer
+where STREET LIKE '%Central%';
+
+15. List the number, name and credit limit for each customer with a credit limit of $5,000
+
+select CUSTOMER_NUM, CUSTOMER_NAME, CREDIT_LIMIT
+
+from customer
+
+where CREDIT_LIMIT = '5000'
+___________________________________________________________________________________________________________________________
+14. List the number, name and balance of each customer (sort) the output in ascending order (increasing order) by balance.
+
+select CUSTOMER_NUM, CUSTOMER_NAME, BALANCE 
+
+from customer
+
+order by BALANCE
+
+15. List the number, name and credit limit of each customer order the customer by name within descending credit limit.
+    In other word, sort the customers by credit limit in descending order. Within each group of customers that have a common credit limit, sort the customers by name in ascending order.
+
+select CUSTOMER_NUM, CUSTOMER_NAME, CREDIT_LIMIT 
+
+from customer
+
+order by CREDIT_LIMIT DESC, CUSTOMER_NAME
+
+16. How many parts are in item class HW?
+
+select count(*)
+
+from part
+
+where CLASS = 'HW'
+
+17. Find the total number of premiere products customers and the total of their balances.
+
+select count(*), sum(BALANCE)
+
+from customer
+
+select sum(BALANCE), avg(BALANCE), max(BALANCE), min(BALANCE)
+
+from customer
+
+18. Find the number of each customer that currently has an open order (that is, an order currently, in order's table).
+
+select CUSTOMER_NUM
+from orders
+
+19. Find the number of each customer that currently has an open order. List each customer only once.
+
+select distinct(CUSTOMER_NUM)
+
+from orders
+
+20. Count the number of customers that currently has an open orders.
+
+select count(distinct(CUSTOMER_NUM))
+
+from orders
+
+___________________________________________________________________________________________________________________________
+21. List the number of each part in class AP.
+
+select PART_NUM
+
+from part
+
+where CLASS='AP'
+
+22. List the order numbers that contain an order line for a part in class AP.
+
+select ORDER_NUM
+
+from order_line
+
+where PART_NUM in('CD52', 'DR93', 'DW11','KL62','KT03')
+
+23. Find the answer to Examples 21 and 22 in one step
+
+
+select ORDER_NUM
+
+
+from order_line
+
+
+where PART_NUM in
+(select PART_NUM
+
+from part
+
+where CLASS='AP')
+
+24. List the number, name and balance for each customer whose balance exceeds the average balance of all customers.
+
+select CUSTOMER_NUM,CUSTOMER_NAME,BALANCE
+
+from customer
+
+where BALANCE>(select AVG (BALANCE)
+
+from customer)
+
+25. For each sales rep, list the rep number and the average balance of the rep's customers.
+
+select REP_NUM,avg(BALANCE)
+
+from customer
+
+group by REP_NUM
+
+order by REP_NUM
+
+26. Repeat the previous example, but list only those reps who represent fewer than four customers.
+
+select REP_NUM,avg(BALANCE)
+
+from customer
+
+group by REP_NUM
+
+having count(*)<4
+
+order by REP_NUM
+
+27. List each credit limit and the number of customers having each credit limit.
+
+select CREDIT_LIMIT,count(*)
+
+from customer
+
+group by CREDIT_LIMIT
+
+28. Repeat example 27, but list only those credit limits held by more than one customer.
+
+select CREDIT_LIMIT,count(*)
+
+from customer
+
+group by CREDIT_LIMIT
+
+having count(*)>1
+
+29. List each credit limit and space the number of customers of sales rep 20 that have this limit.
+
+select CREDIT_LIMIT,count(*)
+
+from customer
+
+where REP_NUM='20'
+
+group by CREDIT_LIMIT
+
+30. Repeat example 29,  but list only those credit limit held by more than one customer.
+
+select CREDIT_LIMIT,count(*)
+
+from customer
+
+where REP_NUM='20'
+
+group by CREDIT_LIMIT
+
+having count(*)>1
+
+31. List the number and name of each customer with a null (unknown) street value.
+
+select CUSTOMER_NUM, CUSTOMER_NAME
+
+from customer
+
+where STREET is null
+
+___________________________________________________________________________________________________________________________
