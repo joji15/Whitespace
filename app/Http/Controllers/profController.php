@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\class_tbl;
+use App\student;
+use App\quiz;
 
 class profController extends Controller
 {
@@ -23,7 +26,7 @@ class profController extends Controller
   */
   public function index()
   {
-    return view('prof.profHome');
+    return view('prof.profHome')->with('students', Student::all())->with('quizzes', Quiz::all())->with('classes', class_tbl::all());
   }
 
   public function StudentView()
@@ -33,7 +36,8 @@ class profController extends Controller
 
   public function CreateClassView()
   {
-    return view('profstudent.profCreateClass');
+    $show = 0;
+    return view('profstudent.profCreateClass', ['status' => $show]);
   }
 
   public function ViewDatabaseView()
@@ -85,4 +89,5 @@ class profController extends Controller
   {
     return view('profUpload.UploadProps');
   }
+
 }

@@ -14,12 +14,15 @@
           </div>
           <div class="card-header bg-dark-grey">
             <nav class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
-              <a class="nav-item nav-link active" id="nav-BSIT3A-tab" data-toggle="tab" href="#nav-BSIT3A" role="tab" aria-controls="nav-BSIT3A" aria-expanded="true"><span class="oi oi-people" title="BSIT3A" aria-hidden="true"></span> BSIT-3A</a>
-              <a class="nav-item nav-link" id="nav-BSIT3B-tab" data-toggle="tab" href="#nav-BSIT3B" role="tab" aria-controls="nav-BSIT3B"><span class="oi oi-people" title="BSIT3B" aria-hidden="true"></span> BSIT-3B</a>
-              <a class="nav-item nav-link" id="nav-BSCS3A-tab" data-toggle="tab" href="#nav-BSCS3A" role="tab" aria-controls="nav-BSCS3A"><span class="oi oi-people" title="BSCS3A" aria-hidden="true"></span> BSCS-3A</a>
-              <a class="nav-item nav-link" id="nav-BSCS3B-tab" data-toggle="tab" href="#nav-BSCS3B" role="tab" aria-controls="nav-BSCS3B"><span class="oi oi-people" title="BSCS3B" aria-hidden="true"></span> BSCS-3B</a>
-              <a class="nav-item nav-link" id="nav-BSIS3A-tab" data-toggle="tab" href="#nav-BSIS3A" role="tab" aria-controls="nav-BSIS3A"><span class="oi oi-people" title="BSIS3A" aria-hidden="true"></span> BSIS-3A</a>
-              <a class="nav-item nav-link" id="nav-BSIS3B-tab" data-toggle="tab" href="#nav-BSIS3B" role="tab" aria-controls="nav-BSIS3B"><span class="oi oi-people" title="BSIS3B" aria-hidden="true"></span> BSIS-3B</a>
+              @if($classes->isEmpty())
+                <p class="h5 text-white pl-3">
+                  No Class Found
+                </p>
+              @else
+                @foreach ($classes as $class)
+                  <a class="nav-item nav-link active" id="nav-{{ $class->crs_sec }}-tab" data-toggle="tab" href="#nav-{{ $class->crs_sec }}" role="tab" aria-controls="nav-{{ $class->crs_sec }}" aria-expanded="true"><span class="oi oi-people" title="{{ $class->crs_sec }}" aria-hidden="true"></span> {{ $class->crs_sec }}</a>
+                @endforeach
+              @endif
             </nav>
           </div>
           <div class="card-body" style="overflow-y: auto;">
@@ -28,263 +31,27 @@
                 <table class="table table-striped table-hover table-sm">
                   <thead class="thead-inverse text-center">
                     <tr>
+                      @if($students->isEmpty())
+                      <p class="h3 pt-3">
+                        No Students Found
+                      </p>
+                      @else
                       <th>Rank</th>
                       <th>Student Name</th>
                       <th>Course & Section</th>
                       <th>Score</th>
+                      @endif
                     </tr>
                   </thead>
                   <tbody>
-                    <tr style="background-color: rgb(255, 255, 130);">
-                      <th scope="row">1</th>
-                      <td>De Vera, Jazelene Mae M.</td>
-                      <td>BSIT-4A</td>
-                      <td>405</td>
-                    </tr>
-                    <tr style="background-color: rgb(222, 222, 222);">
-                      <th scope="row">2</th>
-                      <td>Cruz, Aimee Lou D.</td>
-                      <td>BSIT-4A</td>
-                      <td>397</td>
-                    </tr>
-                    <tr style="background-color: rgb(255, 190, 121);">
-                      <th scope="row">3</th>
-                      <td>George, Donald Patrick C.</td>
-                      <td>BSIT-4A</td>
-                      <td>381</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">4</th>
-                      <td>NAME GOES HERE</td>
-                      <td>BSIT-4A</td>
-                      <td>332</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">5</th>
-                      <td>NAME GOES HERE</td>
-                      <td>BSCS-4B</td>
-                      <td>381</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="tab-pane fade" id="nav-BSIT3B" role="tabpanel" aria-labelledby="nav-BSIT3B-tab">
-                <table class="table table-striped table-hover table-sm">
-                  <thead class="thead-inverse text-center">
-                    <tr>
-                      <th>Rank</th>
-                      <th>Student Name</th>
-                      <th>Course & Section</th>
-                      <th>Score</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr style="background-color: rgb(255, 255, 130);">
-                      <th scope="row">1</th>
-                      <td>De Vera, Jazelene Mae M.</td>
-                      <td>BSIT-4A</td>
-                      <td>405</td>
-                    </tr>
-                    <tr style="background-color: rgb(222, 222, 222);">
-                      <th scope="row">2</th>
-                      <td>Cruz, Aimee Lou D.</td>
-                      <td>BSIT-4A</td>
-                      <td>397</td>
-                    </tr>
-                    <tr style="background-color: rgb(255, 190, 121);">
-                      <th scope="row">3</th>
-                      <td>George, Donald Patrick C.</td>
-                      <td>BSIT-4A</td>
-                      <td>381</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">4</th>
-                      <td>NAME GOES HERE</td>
-                      <td>BSIT-4A</td>
-                      <td>332</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">5</th>
-                      <td>NAME GOES HERE</td>
-                      <td>BSCS-4B</td>
-                      <td>381</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="tab-pane fade" id="nav-BSCS3A" role="tabpanel" aria-labelledby="nav-BSCS3A-tab">
-                <table class="table table-striped table-hover table-sm">
-                  <thead class="thead-inverse text-center">
-                    <tr>
-                      <th>Rank</th>
-                      <th>Student Name</th>
-                      <th>Course & Section</th>
-                      <th>Score</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr style="background-color: rgb(255, 255, 130);">
-                      <th scope="row">1</th>
-                      <td>De Vera, Jazelene Mae M.</td>
-                      <td>BSIT-4A</td>
-                      <td>405</td>
-                    </tr>
-                    <tr style="background-color: rgb(222, 222, 222);">
-                      <th scope="row">2</th>
-                      <td>Cruz, Aimee Lou D.</td>
-                      <td>BSIT-4A</td>
-                      <td>397</td>
-                    </tr>
-                    <tr style="background-color: rgb(255, 190, 121);">
-                      <th scope="row">3</th>
-                      <td>George, Donald Patrick C.</td>
-                      <td>BSIT-4A</td>
-                      <td>381</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">4</th>
-                      <td>NAME GOES HERE</td>
-                      <td>BSIT-4A</td>
-                      <td>332</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">5</th>
-                      <td>NAME GOES HERE</td>
-                      <td>BSCS-4B</td>
-                      <td>381</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="tab-pane fade" id="nav-BSCS3B" role="tabpanel" aria-labelledby="nav-BSCS3B-tab">
-                <table class="table table-striped table-hover table-sm">
-                  <thead class="thead-inverse text-center">
-                    <tr>
-                      <th>Rank</th>
-                      <th>Student Name</th>
-                      <th>Course & Section</th>
-                      <th>Score</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr style="background-color: rgb(255, 255, 130);">
-                      <th scope="row">1</th>
-                      <td>De Vera, Jazelene Mae M.</td>
-                      <td>BSIT-4A</td>
-                      <td>405</td>
-                    </tr>
-                    <tr style="background-color: rgb(222, 222, 222);">
-                      <th scope="row">2</th>
-                      <td>Cruz, Aimee Lou D.</td>
-                      <td>BSIT-4A</td>
-                      <td>397</td>
-                    </tr>
-                    <tr style="background-color: rgb(255, 190, 121);">
-                      <th scope="row">3</th>
-                      <td>George, Donald Patrick C.</td>
-                      <td>BSIT-4A</td>
-                      <td>381</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">4</th>
-                      <td>NAME GOES HERE</td>
-                      <td>BSIT-4A</td>
-                      <td>332</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">5</th>
-                      <td>NAME GOES HERE</td>
-                      <td>BSCS-4B</td>
-                      <td>381</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="tab-pane fade" id="nav-BSIS3A" role="tabpanel" aria-labelledby="nav-BSIS3A-tab">
-                <table class="table table-striped table-hover table-sm">
-                  <thead class="thead-inverse text-center">
-                    <tr>
-                      <th>Rank</th>
-                      <th>Student Name</th>
-                      <th>Course & Section</th>
-                      <th>Score</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr style="background-color: rgb(255, 255, 130);">
-                      <th scope="row">1</th>
-                      <td>De Vera, Jazelene Mae M.</td>
-                      <td>BSIT-4A</td>
-                      <td>405</td>
-                    </tr>
-                    <tr style="background-color: rgb(222, 222, 222);">
-                      <th scope="row">2</th>
-                      <td>Cruz, Aimee Lou D.</td>
-                      <td>BSIT-4A</td>
-                      <td>397</td>
-                    </tr>
-                    <tr style="background-color: rgb(255, 190, 121);">
-                      <th scope="row">3</th>
-                      <td>George, Donald Patrick C.</td>
-                      <td>BSIT-4A</td>
-                      <td>381</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">4</th>
-                      <td>NAME GOES HERE</td>
-                      <td>BSIT-4A</td>
-                      <td>332</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">5</th>
-                      <td>NAME GOES HERE</td>
-                      <td>BSCS-4B</td>
-                      <td>381</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="tab-pane fade" id="nav-BSIS3B" role="tabpanel" aria-labelledby="nav-BSIS3B-tab">
-                <table class="table table-striped table-hover table-sm">
-                  <thead class="thead-inverse text-center">
-                    <tr>
-                      <th>Rank</th>
-                      <th>Student Name</th>
-                      <th>Course & Section</th>
-                      <th>Score</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr style="background-color: rgb(255, 255, 130);">
-                      <th scope="row">1</th>
-                      <td>De Vera, Jazelene Mae M.</td>
-                      <td>BSIT-4A</td>
-                      <td>405</td>
-                    </tr>
-                    <tr style="background-color: rgb(222, 222, 222);">
-                      <th scope="row">2</th>
-                      <td>Cruz, Aimee Lou D.</td>
-                      <td>BSIT-4A</td>
-                      <td>397</td>
-                    </tr>
-                    <tr style="background-color: rgb(255, 190, 121);">
-                      <th scope="row">3</th>
-                      <td>George, Donald Patrick C.</td>
-                      <td>BSIT-4A</td>
-                      <td>381</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">4</th>
-                      <td>NAME GOES HERE</td>
-                      <td>BSIT-4A</td>
-                      <td>332</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">5</th>
-                      <td>NAME GOES HERE</td>
-                      <td>BSCS-4B</td>
-                      <td>381</td>
-                    </tr>
+                      @foreach ($students as $student)
+                      <tr>
+                        <th scope="row">{{ $student->stud_id }}</th>
+                        <td>{{ $student->last_Name }}, {{ $student->first_Name }} {{ $student->middle_Name }}</td>
+                        <td>{{ $student->degree_Program }}-{{ $student->section }}</td>
+                        <td>NO SCORE</td>
+                      </tr>
+                      @endforeach
                   </tbody>
                 </table>
               </div>
@@ -298,17 +65,17 @@
             <span class="oi oi-spreadsheet" title="Quizzes" aria-hidden="true"></span> Scheduled Quizzes
           </div>
           <div class="card-body">
-            <h5 class="card-title">Quiz #1 - Basics of SQL</h5>
-            <p class="card-text">September 4, 2017 - <b>8:00AM</b></p>
-            <a href="profEditQuiz" class="btn bg-green border-green btn-primary">Edit Quiz</a>
-            <hr />
-            <h5 class="card-title">Quiz #2 - SQL SELECT Statements</h5>
-            <p class="card-text">September 11, 2017 - <b>8:00AM</b></p>
-            <a href="profEditQuiz" class="btn bg-green border-green btn-primary">Edit Quiz</a>
-            <hr />
-            <h5 class="card-title">Quiz #3 - SQL FROM Statements</h5>
-            <p class="card-text">September 18, 2017 - <b>8:00AM</b></p>
-            <a href="profEditQuiz" class="btn bg-green border-green btn-primary">Edit Quiz</a>
+            @if($quizzes->isEmpty())
+              <h5 class="card-title">No Quizzes Found</h5>
+              <a href="profCreateQuiz" class="btn bg-green border-green btn-primary">Create Here...</a>
+            @else
+              @foreach ($quizzes as $quiz)
+                <h5 class="card-title">{{ $quiz->title }}</h5>
+                <p class="card-text">{{ $quiz->sched_date }} - <b>{{ $quiz->sched_time }}</b></p>
+                <a href="profEditQuiz" class="btn bg-green border-green btn-primary">Edit Quiz</a>
+                <hr />
+              @endforeach
+            @endif
           </div>
         </div>
       </div>

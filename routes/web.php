@@ -216,13 +216,15 @@ Route::prefix('prof')->group(function(){
 
         Route::get('/', 'profController@StudentView')->name('prof.student');
 
-        Route::get('/CreateClass', 'profController@CreateClassView')->name('prof.student.CreateClass');
+        Route::get('CreateClass', 'profController@CreateClassView')->name('prof.student.CreateClass');
 
-        Route::get('/ViewDatabase', 'profController@ViewDatabaseView')->name('prof.student.ViewDatabase');
+        Route::post('CreateClass', 'ImportClassController@ImportClass')->name('prof.student.CreateClass.import');
 
-        Route::get('/ViewProgress', 'profController@ViewProgressView')->name('prof.student.ViewProgress');
+        Route::get('ViewDatabase', 'profController@ViewDatabaseView')->name('prof.student.ViewDatabase');
 
-        Route::get('/StudentInfo', 'profController@StudentInfoView')->name('prof.student.StudentInfo');
+        Route::get('ViewProgress', 'profController@ViewProgressView')->name('prof.student.ViewProgress');
+
+        Route::get('StudentInfo', 'profController@StudentInfoView')->name('prof.student.StudentInfo');
 
     });
 
@@ -230,13 +232,13 @@ Route::prefix('prof')->group(function(){
 
         Route::get('/', 'profController@QuizView');
 
-        Route::get('/ViewQuiz', 'profController@ViewQuizView');
+        Route::get('ViewQuiz', 'profController@ViewQuizView');
 
-        Route::get('/CreateQuiz', 'profController@CreateQuizView');
+        Route::get('CreateQuiz', 'profController@CreateQuizView');
 
-        Route::get('/EditQuiz', 'profController@EditQuizView');
+        Route::get('EditQuiz', 'profController@EditQuizView');
 
-        Route::get('/EditQuizContent', 'profController@EditQuizContentView');
+        Route::get('EditQuizContent', 'profController@EditQuizContentView');
 
     });
 

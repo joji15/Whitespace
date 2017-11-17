@@ -14,16 +14,15 @@ class CreateProfTable extends Migration
     public function up()
     {
         Schema::create('professor', function (Blueprint $table) {
-            $table->increments('prof_id');
-            $table->string('first_Name');
-            $table->string('middle_Name');
-            $table->string('last_Name');
-            $table->string('email')->unique();
-            $table->string('address');
-            $table->string('contact_no')->unique();
-            $table->string('password');
+            $table->integer('prof_id')->unsigned()->primary();
+            $table->string('first_Name', 50);
+            $table->string('middle_Name', 50);
+            $table->string('last_Name', 50);
+            $table->string('email', 50);
+            $table->string('password', 100);
             $table->rememberToken();
             $table->timestamps();
+
         });
     }
 
@@ -34,6 +33,6 @@ class CreateProfTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('acct_prof');
+        Schema::dropIfExists('professor');
     }
 }

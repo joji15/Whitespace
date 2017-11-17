@@ -138,6 +138,13 @@ return [
     'providers' => [
 
         /*
+         *  Custom Service Providers...
+         */
+
+        Maatwebsite\Excel\ExcelServiceProvider::class,
+
+
+        /*
          * Laravel Framework Service Providers...
          */
         Illuminate\Auth\AuthServiceProvider::class,
@@ -191,6 +198,11 @@ return [
     */
 
     'aliases' => [
+
+          // Custom Aliases
+
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+
 
         'App' => Illuminate\Support\Facades\App::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,

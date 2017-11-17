@@ -31,9 +31,33 @@
 
   <script async>
   $(document).ready(function(){
-
+      var upload = document.getElementById('minbtn');
+      $(upload).on('click', function (){
+        $("#navbarmenu").removeClass("col-sm-4");
+        $("#navbarmenu").addClass("col-sm-1");
+        $("#navbarmenu").removeClass("col-md-3");
+        $("#navbarmenu").addClass("col-md-1");
+        $("#navbarmenu").removeClass("col-lg-2");
+        $("#navbarmenu").addClass("col-lg-1");
+        $("#profpill").text("");
+        $("#profpill").append("<span class='oi oi-home' title='Home' aria-hidden='true'></span>");
+        $("#profStudpill").text("");
+        $("#profStudpill").append("<span class='oi oi-people' title='Student' aria-hidden='true'></span>");
+        $("#profQuizpill").text("");
+        $("#profQuizpill").append("<span class='oi oi-spreadsheet' title='Quiz' aria-hidden='true'></span>");
+        $("#profUploadpill").text("");
+        $("#profUploadpill").append("<span class='oi oi-data-transfer-upload' title='Upload' aria-hidden='true'></span>");
+      });
   });
   </script>
+  <style>
+  .nav-item{
+    font-size: 14px;
+  }
+  .nav-pills .nav-link{
+    border-radius: 0px;
+  }
+  </style>
 </head>
 <body class="dashboard">
   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top d-flex justify-content-end shadow">
@@ -44,47 +68,55 @@
       <img src="{{ asset('img/WS-ICO.png') }}" width="40" height="40" alt="WS Logo">
       Professor's Dashboard
     </a>
-    <li style="list-style-type:none">
-      <a class="btn btn-outline-danger" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-        Logout
-      </a>
-      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-        {{ csrf_field() }}
-      </form>
-    </li>
-    <!-- <form class="form-inline mr-2">
-      <div class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><span class="oi oi-person" title="Account Menu" aria-hidden="true"></span></a>
-        <div class="dropdown-menu" style="left:-100px">
-          <h6 class="dropdown-header">Dropdown header</h6>
-          <a class="dropdown-item" href="#"><span class="oi oi-cog" title="action" aria-hidden="true"></span> Action</a>
-          <a class="dropdown-item" href="home"><span class="oi oi-account-logout" title="logout" aria-hidden="true"></span> Logout</a>
-        </div>
-      </div>
-    </form> -->
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="notificationDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="oi oi-bell" title="notification" aria-hidden="true"> &nbsp;&nbsp;<span class="badge badge-light">4</span></span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="notificationDropdown">
 
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="oi oi-person" title="account" aria-hidden="true"></span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item text-red" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+            <span class="oi oi-account-logout" title="logout" aria-hidden="true"></span> Logout
+          </a>
+          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            {{ csrf_field() }}
+          </form>
+        </div>
+      </li>
+    </ul>
   </nav>
+
   <div class="container-fluid">
     <div class="row" style="height:100%;">
-      <div class="col-sm-4 col-md-3 col-lg-2" style="background-color: rgb(40, 40, 40)">
+      <div class="col-sm-4 col-md-3 col-lg-2" style="padding:0px; background-color: rgb(40, 40, 40)" id="navbarmenu">
         <nav class="nav nav-pills flex-column">
           <div class="navbar-collapse animated fadeIn" id="sidenavbar">
             <hr class="hr-white"/>
             <a class="nav-item nav-link" href="/prof/Home" id="profpill"><span class="oi oi-home" title="Home" aria-hidden="true"></span> Home</a>
             <a class="nav-item nav-link" href="/prof/Student" id="profStudpill"><span class="oi oi-people" title="Student" aria-hidden="true"></span> Students</a>
             <div id="studentSub">
-              <a class="nav-item nav-link ml-4 btn-sm" href="/prof/Student/CreateClass" id="profCreateClasspill"><span class="oi oi-plus" title="CreateClass" aria-hidden="true"></span> Create Class</a>
-              <a class="nav-item nav-link ml-4 btn-sm" href="/prof/Student/ViewProgress" id="profViewProgresspill"><span class="oi oi-graph" title="ViewProgress" aria-hidden="true"></span> Student Progress</a>
-              <a class="nav-item nav-link ml-4 btn-sm" href="/prof/Student/ViewDatabase" id="profViewDBpill"><span class="oi oi-folder" title="Classdb" aria-hidden="true"></span> Class Database</a>
+              <a class="nav-item nav-link pl-5 btn-sm" href="/prof/Student/CreateClass" id="profCreateClasspill"><span class="oi oi-plus" title="CreateClass" aria-hidden="true"></span> Create Class</a>
+              <a class="nav-item nav-link pl-5 btn-sm" href="/prof/Student/ViewProgress" id="profViewProgresspill"><span class="oi oi-graph" title="ViewProgress" aria-hidden="true"></span> Student Progress</a>
+              <a class="nav-item nav-link pl-5 btn-sm" href="/prof/Student/ViewDatabase" id="profViewDBpill"><span class="oi oi-folder" title="Classdb" aria-hidden="true"></span> Class Database</a>
             </div>
             <a class="nav-item nav-link" href="/prof/Quiz" id="profQuizpill"><span class="oi oi-spreadsheet" title="Quiz" aria-hidden="true"></span> Quizzes</a>
             <div id="quizSub">
-              <a class="nav-item nav-link ml-4 btn-sm" href="/prof/Quiz/ViewQuiz" id="viewQuizpill"><span class="oi oi-magnifying-glass" title="viewQuiz" aria-hidden="true"></span> View Quizzes</a>
-              <a class="nav-item nav-link ml-4 btn-sm" href="/prof/Quiz/CreateQuiz" id="createQuizpill"><span class="oi oi-plus" title="createQuiz" aria-hidden="true"></span> Create Quiz</a>
-              <a class="nav-item nav-link ml-4 btn-sm" href="/prof/Quiz/EditQuiz" id="editQuizpill"><span class="oi oi-pencil" title="editQuiz" aria-hidden="true"></span> Edit Quiz</a>
+              <a class="nav-item nav-link pl-5 btn-sm" href="/prof/Quiz/ViewQuiz" id="viewQuizpill"><span class="oi oi-magnifying-glass" title="viewQuiz" aria-hidden="true"></span> View Quizzes</a>
+              <a class="nav-item nav-link pl-5 btn-sm" href="/prof/Quiz/CreateQuiz" id="createQuizpill"><span class="oi oi-plus" title="createQuiz" aria-hidden="true"></span> Create Quiz</a>
+              <a class="nav-item nav-link pl-5 btn-sm" href="/prof/Quiz/EditQuiz" id="editQuizpill"><span class="oi oi-pencil" title="editQuiz" aria-hidden="true"></span> Edit Quiz</a>
             </div>
             <a class="nav-item nav-link" href="/prof/Upload" id="profUploadpill"><span class="oi oi-data-transfer-upload" title="Upload" aria-hidden="true"></span> Upload</a>
             <hr class="hr-white"/>
+            <div class="fixed-bottom mb-2 ml-2"><button type="button" class="btn btn-primary" id="minbtn"><span class="oi oi-caret-left" title="navmenu" aria-hidden="true"></span></button></div>
           </div>
         </nav>
       </div>

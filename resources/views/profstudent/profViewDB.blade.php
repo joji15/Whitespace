@@ -15,8 +15,7 @@
           <div class="card-header bg-dark-grey">
             <nav class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
               <a class="nav-item nav-link active" id="nav-QandA-tab" data-toggle="tab" href="#nav-view" role="tab" aria-controls="nav-QandA" aria-expanded="true"><span class="oi oi-eye" title="View" aria-hidden="true"></span> View Database</a>
-              <!-- <a class="nav-item nav-link" id="nav-results-tab" data-toggle="tab" href="#nav-edit" role="tab" aria-controls="nav-results"><span class="oi oi-pencil" title="Edit" aria-hidden="true"></span> Edit Database</a>
-              <a class="nav-item nav-link" id="nav-other-tab" data-toggle="tab" href="#nav-delete" role="tab" aria-controls="nav-other"><span class="oi oi-trash" title="Delete" aria-hidden="true"></span> Delete Database</a> -->
+              <a class="nav-item nav-link" id="nav-settings-tab" data-toggle="tab" href="#nav-settings" role="tab" aria-controls="nav-settings"><span class="oi oi-cog" title="Settings" aria-hidden="true"></span> Database Settings</a>
             </nav>
           </div>
           <div class="card-body" style="overflow-y: auto;">
@@ -27,8 +26,8 @@
                     <label for="dbselect">Databases:</label>
                     <small id="passwordHelpBlock" class="form-text text-muted">
                       Click one to see more information.
-                  </div>
-                  <div class="col-12 col-sm-12 col-md-6 col-lg-5">
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-5">
                     </small>
                     <div class="tree">
                       <ul style="padding-left:inherit;">
@@ -300,11 +299,97 @@
                   </div>
                 </div>
               </div>
-              <div class="tab-pane fade" id="nav-edit" role="tabpanel" aria-labelledby="nav-edit-tab">
-
-              </div>
-              <div class="tab-pane fade" id="nav-delete" role="tabpanel" aria-labelledby="nav-delete-tab">
-
+              <div class="tab-pane fade" id="nav-settings" role="tabpanel" aria-labelledby="nav-settings-tab">
+                <div class="row">
+                  <div class="col-12">
+                    <nav class="nav nav-tabs" id="myTab" role="tablist">
+                      <a class="nav-item nav-link active" id="nav-users-tab" data-toggle="tab" href="#nav-users" role="tab" aria-controls="nav-users" aria-selected="true">Users and Privileges</a>
+                      <a class="nav-item nav-link" id="nav-import-export-tab" data-toggle="tab" href="#nav-import-export" role="tab" aria-controls="nav-import-export" aria-selected="false">Import/Export</a>
+                    </nav>
+                  </div>
+                  <div class="col-12">
+                    <div class="tab-content" id="nav-tabContent">
+                      <div class="tab-pane fade show active" id="nav-users" role="tabpanel" aria-labelledby="nav-users-tab">
+                        <form method="post" action="#">
+                          <div class="row">
+                            <div class="col-2">
+                              <br />
+                              <div class="col-12 pl-2">
+                                <label class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input" value="DATA">
+                                  <span class="custom-control-indicator"></span>
+                                  <span class="custom-control-description">DATA</span>
+                                </label>
+                                <br />
+                                <div class="form-check custom-controls-stacked pl-2">
+                                  <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input"  value="SELECT">
+                                    <span class="custom-control-indicator"></span>
+                                    <span class="custom-control-description">SELECT</span>
+                                  </label>
+                                  <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input"  value="INSERT">
+                                    <span class="custom-control-indicator"></span>
+                                    <span class="custom-control-description">INSERT</span>
+                                  </label>
+                                  <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input"  value="UPDATE">
+                                    <span class="custom-control-indicator"></span>
+                                    <span class="custom-control-description">UPDATE</span>
+                                  </label>
+                                  <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input"  value="DELETE">
+                                    <span class="custom-control-indicator"></span>
+                                    <span class="custom-control-description">DELETE</span>
+                                  </label>
+                                  <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input"  value="FILE">
+                                    <span class="custom-control-indicator"></span>
+                                    <span class="custom-control-description">FILE</span>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-2">
+                              <br />
+                              <div class="col-12 pl-2">
+                                <label class="custom-control custom-checkbox">
+                                  <input type="checkbox" class="custom-control-input" value="STRUCTURE">
+                                  <span class="custom-control-indicator"></span>
+                                  <span class="custom-control-description">STRUCTURE</span>
+                                </label>
+                                <br />
+                                <div class="form-check custom-controls-stacked pl-2">
+                                  <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input"  value="CREATE">
+                                    <span class="custom-control-indicator"></span>
+                                    <span class="custom-control-description">CREATE</span>
+                                  </label>
+                                  <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input"  value="ALTER">
+                                    <span class="custom-control-indicator"></span>
+                                    <span class="custom-control-description">ALTER</span>
+                                  </label>
+                                  <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input"  value="DROP">
+                                    <span class="custom-control-indicator"></span>
+                                    <span class="custom-control-description">DROP</span>
+                                  </label>
+                                  <label class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input"  value="TRIGGER">
+                                    <span class="custom-control-indicator"></span>
+                                    <span class="custom-control-description">TRIGGER</span>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="tab-pane fade" id="nav-import-export" role="tabpanel" aria-labelledby="nav-import-export-tab">...</div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

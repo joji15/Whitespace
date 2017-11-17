@@ -14,19 +14,16 @@ class CreateStudentTable extends Migration
     public function up()
     {
         Schema::create('student', function (Blueprint $table) {
-            $table->increments('stud_id');
-            $table->integer('class_id')->nullable();
-            $table->string('first_Name');
-            $table->string('middle_Name');
-            $table->string('last_Name');
-            $table->string('email');
-            $table->string('degree_Program');
-            $table->string('section');
-            $table->string('address');
-            $table->string('contact_no')->unique();
-            $table->string('password');
+            $table->integer('stud_id')->unsigned()->primary();
+            $table->integer('class_id')->unsigned()->foreign('class_id')->references('class_id')->on('class_tbl');
+            $table->string('student_name', 150);
+            $table->string('email', 50);
+            $table->string('degree_Program', 10);
+            $table->string('section', 10);
+            $table->string('password', 100);
             $table->rememberToken();
             $table->timestamps();
+
         });
     }
 

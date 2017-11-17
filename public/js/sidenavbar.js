@@ -26,61 +26,67 @@ if (home !== null){
     $('#quizSub').addClass("d-none");               //  Same as above...
 }
 
-if (stud !== null){
+else if (stud !== null){
     $(".a").find(".active").removeClass("active");
     $('#profStudpill').addClass("active");
     $('#studentSub').addClass("d-none");
     $('#quizSub').addClass("d-none");
 }
 
-if (createClass !== null){
+else if (createClass !== null){
   $(".a").find(".active").removeClass("active");    //  Find all <a> tags with the active class, and then remove the said class
   $('#profCreateClasspill').addClass("active");    //  Add an active class to the ID of the nav item
   $('#quizSub').addClass("d-none");                 //  !!!(FOR SUB-MENUS)!!! Add a d-none (display:none) class to the div of subclass
 }
 
-if (progress !== null){
+else if (progress !== null){
   $(".a").find(".active").removeClass("active");
   $('#profViewProgresspill').addClass("active");
   $('#quizSub').addClass("d-none");
 }
 
-if (viewdb !== null){
+else if (viewdb !== null){
   $(".a").find(".active").removeClass("active");
   $('#profViewDBpill').addClass("active");
   $('#quizSub').addClass("d-none");
 }
 
-if (quiz !== null){
+else if (quiz !== null){
     $(".a").find(".active").removeClass("active");
     $('#profQuizpill').addClass("active");
     $('#studentSub').addClass("d-none");
     $('#quizSub').addClass("d-none");
 }
 
-if (viewquiz !== null){
+else if (viewquiz !== null){
   $(".a").find(".active").removeClass("active");
   $('#viewQuizpill').addClass("active");
   $('#studentSub').addClass("d-none");
 }
 
-if (createquiz !== null){
+else if (createquiz !== null){
   $(".a").find(".active").removeClass("active");
   $('#createQuizpill').addClass("active");
   $('#studentSub').addClass("d-none");
 }
 
-if (editquiz !== null){
+else if (editquiz !== null){
   $(".a").find(".active").removeClass("active");
   $('#editQuizpill').addClass("active");
   $('#studentSub').addClass("d-none");
 }
 
-if (upload !== null){
+else if (upload !== null){
     $(".a").find(".active").removeClass("active");
     $('#profUploadpill').addClass("active");
     $('#studentSub').addClass("d-none");
     $('#quizSub').addClass("d-none");
+}
+
+else {
+  $(".a").find(".active").removeClass("active");
+  $('#studentSub').addClass("d-none");
+  $('#quizSub').addClass("d-none");
 }
 
 function sidenavfunc() {

@@ -15,6 +15,27 @@
           <div class="card-body">
             <div class="row">
               <div class="col-12">
+                <table class="table table-bordered table-hover">
+                  <thead class="thead-inverse text-center">
+                    <tr>
+                      <td>Name</td>
+                      <td>Course</td>
+                      <td>Section</td>
+                      <td>Year</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    @foreach($student as $s)
+                    <tr>
+                      <td>{{ $s->name }}</td>
+                      <td>{{ $s->course }}</td>
+                      <td>{{ $s->section }}</td>
+                      <td>{{ $s->year }}</td>
+                    </tr>
+                    @endforeach
+                  </tbody>
+                </table>
+
                 Detailed Progress here...
                 <table class="table table-bordered table-hover" id="progressTbl">
                   <thead class="thead-inverse text-center">
