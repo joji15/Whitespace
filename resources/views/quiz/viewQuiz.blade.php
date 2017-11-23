@@ -11,17 +11,7 @@
       <div class="col-12">
         <div class="card border-blue-grey" style="min-height:450px; max-height:700px;">
           <div class="card-header text-white bg-green h6">
-            <span class="oi oi-spreadsheet" title="Rank" aria-hidden="true"></span> Quiz Details
-          </div>
-          <div class="card-header text-white bg-dark-grey border-blue-grey h6">
-            <div class="input-group">
-              <select class="form-control form-control-sm custom-select">
-                <option selected disabled>Select Quiz...</option>
-                <option value="1">Quiz #1</option>
-                <option value="2">Quiz #2</option>
-                <option value="3">Quiz #3</option>
-              </select>
-            </div>
+            <span class="oi oi-clipboard" title="QandA" aria-hidden="true"></span> Quiz #1
           </div>
           <div class="card-header bg-dark-grey">
             <nav class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
@@ -33,93 +23,65 @@
           <div class="card-body" style="overflow-y: auto;">
             <div class="tab-content" id="nav-tabContent">
               <div class="tab-pane fade show active" id="nav-QandA" role="tabpanel" aria-labelledby="nav-QandA-tab">
-                <table class="table table-bordered">
-                  <thead class="table-inverse">
-                    <tr>
-                      <th>#</th>
-                      <th>Question</th>
-                      <th>Choices</th>
-                      <th>Answer</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th class="text-center align-middle" scope="row" rowspan="4">1</th>
-                      <td class="align-middle" rowspan="4">What is the meaning of life?</td>
-                      <td>A. The Infinite Universe</td>
-                      <td class="h4 text-center align-middle" rowspan="4">B.</td>
-                    </tr>
-                    <tr>
-                      <td>B. 42</td>
-                    </tr>
-                    <tr>
-                      <td>C. The Internet</td>
-                    </tr>
-                    <tr>
-                      <td>D. Lovelife</td>
-                    </tr>
-                    <tr>
-                      <th class="text-center align-middle" scope="row" rowspan="4">2</th>
-                      <td class="align-middle" rowspan="4">What is the Powerhouse of the Cell?</td>
-                      <td>A. Mitochondria</td>
-                      <td class="h4 text-center align-middle" rowspan="4">A.</td>
-                    </tr>
-                    <tr>
-                      <td>B. Inner Core</td>
-                    </tr>
-                    <tr>
-                      <td>C. Proteins</td>
-                    </tr>
-                    <tr>
-                      <td>D. Quad Core</td>
-                    </tr>
-                    <tr>
-                      <th class="text-center align-middle" scope="row" rowspan="4">3</th>
-                      <td class="align-middle" rowspan="4">What is the most used Programming Language overall?</td>
-                      <td>A. Java</td>
-                      <td class="h4 text-center align-middle" rowspan="4">C.</td>
-                    </tr>
-                    <tr>
-                      <td>B. SQL</td>
-                    </tr>
-                    <tr>
-                      <td>C. JavaScript</td>
-                    </tr>
-                    <tr>
-                      <td>D. HTML/CSS</td>
-                    </tr>
-                    <tr>
-                      <th class="text-center align-middle" scope="row" rowspan="4">4</th>
-                      <td class="align-middle" rowspan="4">What is the name of the latest version on Android?</td>
-                      <td>A. Ovaltine</td>
-                      <td class="h4 text-center align-middle" rowspan="4">B.</td>
-                    </tr>
-                    <tr>
-                      <td>B. Oreo</td>
-                    </tr>
-                    <tr>
-                      <td>C. Otap</td>
-                    </tr>
-                    <tr>
-                      <td>D. Oatmeal</td>
-                    </tr>
-                    <tr>
-                      <th class="text-center align-middle" scope="row" rowspan="4">5</th>
-                      <td class="align-middle" rowspan="4">What is the largest object in the Solar System?</td>
-                      <td>A. Earth</td>
-                      <td class="h4 text-center align-middle" rowspan="4">C.</td>
-                    </tr>
-                    <tr>
-                      <td>B. Jupiter</td>
-                    </tr>
-                    <tr>
-                      <td>C. The Sun</td>
-                    </tr>
-                    <tr>
-                      <td>D. Uranus</td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div class="row">
+                  <div class="col-8">
+                    <form>
+                      <div class="input-group">
+                        <input class="form-control form-control-lg" type="text" placeholder="Title of the Quiz">
+                      </div>
+                      <br />
+                      <div class="input-group">
+                        <textarea class="form-control form-control-sm" id="question1" rows="2" placeholder="Description of the Quiz"></textarea>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+
+                <br />
+                <div class="row">
+                  <div class="col-12">
+                    <form id="questionForm">
+                      <div class="row" id="questionDiv">
+                        <div class="col-6">
+                          <div class="form-group">
+                            <label for="question1">Question #1</label>
+                            <textarea class="form-control form-control-sm" id="question1" rows="6"></textarea>
+                          </div>
+                        </div>
+                        <div class="col-5">
+                          <div class="form-check custom-controls-stacked">
+                            <label for="question1">Choices</label>
+                            <div class="custom-controls-stacked">
+                              <label class="custom-control custom-radio">
+                                <input class="form-control form-control-sm" type="text" placeholder="Choice 1">
+                              </label>
+                              <label class="custom-control custom-radio">
+                                <input class="form-control form-control-sm" type="text" placeholder="Choice 2">
+                              </label>
+                              <label class="custom-control custom-radio">
+                                <input class="form-control form-control-sm" type="text" placeholder="Choice 3">
+                              </label>
+                              <label class="custom-control custom-radio">
+                                <input class="form-control form-control-sm" type="text" placeholder="Choice 4">
+                              </label>
+                            </div>
+                            <div class="form-check custom-controls-stacked">
+                              <label for="correct_answer" style="color:red;">Correct Answer</label>
+                              <label class="custom-control">
+                                <select class="form-control custom-select" id="" name="">
+                                  <option value="1">Choice A</option>
+                                  <option value="2">Choice B</option>
+                                  <option value="3">Choice C</option>
+                                  <option value="3">Choice D</option>
+                                </select>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
               </div>
               <div class="tab-pane fade" id="nav-results" role="tabpanel" aria-labelledby="nav-results-tab">
                 <select class="form-control custom-select" id="section" name="section">

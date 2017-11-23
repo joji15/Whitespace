@@ -49,10 +49,6 @@ class mainController extends Controller
         return view('admin.adminQuiz');
     }
 
-    public function connections(){
-        return view('admin.connections');
-    }
-
     public function adminViewQuiz()
     {
         return view('quiz.viewQuiz');
@@ -63,9 +59,9 @@ class mainController extends Controller
         return view('quiz.createQuiz');
     }
 
-    public function adminEditQuiz()
+    public function adminScheduleQuiz()
     {
-        return view('quiz.editQuiz');
+        return view('quiz.scheduleQuiz');
     }
 
     public function adminUpload(){
@@ -252,8 +248,8 @@ class mainController extends Controller
         return view('students.studentsTakeQuiz');
     }
 
-    public function studentsTakeQuiz2(){
-        return view('students.studentsTakeQuiz2');
+    public function studentsViewResult(){
+        return view('students.studentsViewResult');
     }
 
     public function studentsResultQuiz(){

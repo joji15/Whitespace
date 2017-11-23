@@ -1,0 +1,509 @@
+1. For each order, list the order number and the order date along with the number and name of the customer that placed the order.
+
+select ORDER_NUM, ORDER_DATE, customer.CUSTOMER_NUM, CUSTOMER_NAME
+
+from customer,orders
+
+where customer.CUSTOMER_NUM=orders.CUSTOMER_NUM
+
+2. For each order placed on October 21, 2007, list the order number along with the number & name of the customer that placed the order.
+
+select ORDER_NUM, customer.CUSTOMER_NUM, CUSTOMER_NAME
+
+from customer,orders
+
+where customer.CUSTOMER_NUM=orders.CUSTOMER_NUM 
+and ORDER_DATE='2007-10-21'
+
+3. For each order, list the order number, order date, part number, number of units ordered and quoted price for each orderline that makes up the order.
+
+select order_line.ORDER_NUM, ORDER_DATE,PART_NUM, NUM_ORDERED, QUOTED_PRICE
+
+from orders, order_line
+
+where orders.ORDER_NUM=order_line.ORDER_NUM
+
+4. Use the IN operator to find the number and name of each customer that placed an order on October 21, 2007.
+
+select order_line.ORDER_NUM, ORDER_DATE,PART_NUM, NUM_ORDERED, QUOTED_PRICE
+
+from orders, order_line
+
+where ORDER_DATE in('2007-10-21') 
+and orders.ORDER_NUM=order_line.ORDER_NUM
+
+
+5. Repeat no. 4 but this time, use the EXISTS operator in your answer.
+
+select order_line.ORDER_NUM, ORDER_DATE,PART_NUM, NUM_ORDERED, QUOTED_PRICE
+
+from orders, order_line
+
+where exists
+(select*
+from order_line 
+
+where ORDER_DATE='2007-10-21') 
+
+and orders.ORDER_NUM=order_line.ORDER_NUM
+
+
+6. Find the number and name of each customer that did not place an order on October 21, 2007.
+
+select customer.CUSTOMER_NUM, CUSTOMER_NAME
+
+from orders, customer
+
+where customer.CUSTOMER_NUM=orders.CUSTOMER_NUM
+
+and ORDER_DATE !='2007-10-21'
+
+7. For each order list the order number, order date, part number, part description and item class for each part that makes up the order.
+
+select orders.ORDER_NUM, ORDER_DATE, part.PART_NUM,DESCRIPTION,CLASS
+
+from orders, order_line, part
+
+where orders.ORDER_NUM=order_line.ORDER_NUM
+
+and order_line.PART_NUM=part.PART_NUM
+
+8. Repeat no. 7, but this time order the rows by item class and then by order number.
+
+select orders.ORDER_NUM, ORDER_DATE, part.PART_NUM,DESCRIPTION,CLASS
+
+from orders, order_line, part
+
+where orders.ORDER_NUM=order_line.ORDER_NUM
+
+and order_line.PART_NUM=part.PART_NUM
+
+order by ORDER_NUM
+
+9. Use a subquery, to find the rep number, last name and first name of each sales rep who represents at least one customer with a credit limit of $5000. List each sales rep only once in the results.
+
+select distinct rep.REP_NUM,LAST_NAME,FIRST_NAME
+
+from rep
+
+where REP_NUM in(select REP_NUM
+
+from customer
+
+where CREDIT_LIMIT ='5000')
+
+10. Repeat no. 9, but this time, do not use subquery.
+
+select distinct rep.REP_NUM,LAST_NAME,FIRST_NAME
+
+from customer,rep
+
+where customer.REP_NUM=rep.REP_NUM 
+
+and CREDIT_LIMIT='5000'
+
+11. Find the number and name of each customer that currently has an order on file for a Gas Range.
+
+select CUSTOMER_NUM,CUSTOMER_NAME
+
+from customer
+
+where CUSTOMER_NUM in 
+
+(select CUSTOMER_NUM
+
+from orders
+
+where ORDER_NUM in
+
+(select ORDER_NUM
+
+from order_line
+
+where PART_NUM in
+
+(select PART_NUM
+
+from part
+
+where DESCRIPTION='Gas Range')))
+
+12. List the part number, part description and item class for each pair of parts that are in the same item class. Ex. One pair would be part AT94 and FD21, because the item class for both parts is HW.
+
+select a.PART_NUM, a.DESCRIPTION, b.PART_NUM, b.DESCRIPTION, a.CLASS
+
+from part a, part b
+
+where a.CLASS=b.CLASS
+
+and a.PART_NUM<b.PART_NUM
+
+order by a.PART_NUM, b.PART_NUM
+
+13. List the order number and order date for each order placed by the customer named John's Department Store.
+
+select ORDER_NUM, ORDER_DATE
+
+from orders
+
+where CUSTOMER_NUM in
+
+(select CUSTOMER_NUM
+
+from customer
+
+where CUSTOMER_NUM
+
+and CUSTOMER_NAME = 'Johnson''s Department Store')
+
+
+14. List the number and order date for each order that contains an order line for an Iron.
+
+select ORDER_NUM,ORDER_DATE
+
+from orders
+
+where ORDER_NUM IN 
+
+(select ORDER_NUM
+
+from order_line
+
+where PART_NUM IN
+
+(select PART_NUM
+
+from part
+
+where DESCRIPTION='Iron'))
+
+15. List the order number and order date for each order that either was placed by Johnson's Department  Store or that contains an order line for a Gas Range.
+
+SELECT distinct(orders.ORDER_NUM),ORDER_DATE
+
+from orders, order_line,part,customer
+
+where customer.CUSTOMER_NUM=orders.CUSTOMER_NUM
+
+and CUSTOMER_NAME='Johnson''s Department Store'
+
+or orders.ORDER_NUM=order_line.ORDER_NUM
+
+and order_line. PART_NUM=part.PART_NUM
+
+and DESCRIPTION='Gas Range'
+
+16. List the order number and order date for each order that either was placed by Johnson's Department  Store and that contains an order line for a Gas Range.
+
+SELECT distinct(orders.ORDER_NUM),ORDER_DATE
+
+from orders, order_line,part,customer
+
+where customer.CUSTOMER_NUM=orders.CUSTOMER_NUM
+
+and CUSTOMER_NAME='Johnson''s Department Store'
+
+and orders.ORDER_NUM=order_line.ORDER_NUM
+
+and order_line. PART_NUM=part.PART_NUM
+
+and DESCRIPTION='Gas Range'
+
+***
+select ORDER_NUM, ORDER_DATE
+
+from orders
+
+where CUSTOMER_NUM in
+
+(select CUSTOMER_NUM
+
+from customer
+
+where CUSTOMER_NUM in 
+
+(select CUSTOMER_NUM
+
+from orders
+
+where ORDER_NUM in 
+
+(select ORDER_NUM
+
+from order_line
+
+where PART_NUM in 
+
+(select PART_NUM
+
+from part
+
+where DESCRIPTION ='Gas Range')))
+
+and CUSTOMER_NAME = 'Johnson''s Department Store')
+
+
+17. List the number and order date for each order that was placed by Johnson's Department Store but does not contain an order line for a Gas Range.
+
+SELECT distinct(orders.ORDER_NUM),ORDER_DATE
+
+from orders, order_line,part,customer
+
+where customer.CUSTOMER_NUM=orders.CUSTOMER_NUM
+
+and CUSTOMER_NAME='Johnson''s Department Store'
+
+and orders.ORDER_NUM=order_line.ORDER_NUM
+
+and order_line. PART_NUM=part.PART_NUM
+
+and DESCRIPTION !='Gas Range'
+
+***
+select ORDER_NUM, ORDER_DATE
+
+from orders
+
+where CUSTOMER_NUM in
+
+(select CUSTOMER_NUM
+
+from customer
+
+where CUSTOMER_NUM in 
+
+(select CUSTOMER_NUM
+
+from orders
+
+where ORDER_NUM in 
+
+(select ORDER_NUM
+
+from order_line
+
+where PART_NUM in 
+
+(select PART_NUM
+
+from part
+
+where DESCRIPTION !='Gas Range')))
+
+and CUSTOMER_NAME = 'Johnson''s Department Store')
+
+
+18. List the part number, part description, unit price and item class for each part that has a unit price of every part in item class AP. Use either ALL or ANY operator in your query.
+
+select PART_NUM,DESCRIPTION,PRICE,CLASS
+
+from part
+
+where PRICE >ALL 
+
+(select PRICE 
+
+from part
+
+where CLASS='AP')
+
+
+19. If you used ALL in no. 18 repeat using ANY.
+
+select PART_NUM,DESCRIPTION,PRICE,CLASS
+
+from part
+
+where PRICE >ANY
+
+(select PRICE 
+
+from part
+
+where CLASS='AP')
+
+
+___________________________________________________________________________________________________
+
+10. For each part on order, list the part number, number ordered, order number, order date, customer number and customer name along with last name of the sales rep who represents each customer
+
+select PART_NUM, NUM_ORDERED, order_line.ORDER_NUM, ORDER_DATE, customer.CUSTOMER_NUM,CUSTOMER_NAME,LAST_NAME
+
+from order_line,orders,customer,rep
+
+where orders.ORDER_NUM=order_line.ORDER_NUM
+
+and customer.CUSTOMER_NUM=orders.CUSTOMER_NUM
+
+and rep.REP_NUM=customer.REP_NUM
+
+11. List the number and name of each customer that either is represented by sales rep 65 or that currently has orders on file or both.
+
+/** either = UNION */
+
+select CUSTOMER_NUM,CUSTOMER_NAME
+
+from customer
+
+where REP_NUM ='65'
+
+UNION
+
+select customer.CUSTOMER_NUM,CUSTOMER_NAME
+
+from customer, orders
+
+where customer.CUSTOMER_NUM=orders.CUSTOMER_NUM
+
+12. List the number and name of each customer that is represented by sales rep 65 and that currently has orders on file.
+
+select CUSTOMER_NUM,CUSTOMER_NAME
+
+from customer
+where REP_NUM='65'
+
+AND CUSTOMER_NUM IN 
+
+(select CUSTOMER_NUM
+
+FROM orders)
+
+>>>>>
+select CUSTOMER_NUM,CUSTOMER_NAME
+
+from customer
+
+where REP_NUM='65'
+
+INTERSECT
+
+select customer.CUSTOMER_NUM, CUSTOMER_NAME
+
+from customer,orders
+
+where customer.CUSTOMER_NUM=orders.CUSTOMER_NUM
+
+***
+select CUSTOMER_NUM,CUSTOMER_NAME
+
+from customer
+
+where CUSTOMER_NUM IN
+
+(select CUSTOMER_NUM
+
+from orders)
+
+and REP_NUM='65'
+
+13. List the number and name of each customer that is represented by sales rep 65 but that does not have orders currently on file
+
+select CUSTOMER_NUM, CUSTOMER_NAME
+
+from customer
+
+where REP_NUM='65'
+
+and CUSTOMER_NUM not in
+
+(select CUSTOMER_NUM
+
+from orders)
+
+>>>
+select CUSTOMER_NUM, CUSTOMER_NAME
+
+from customer
+
+where REP_NUM='65'
+
+MINUS
+
+select customer.CUSTOMER_NUM, CUSTOMER_NAME
+
+from customer, orders
+
+where customer.CUSTOMER_NUM=orders.CUSTOMER_NUM
+
+14. Find the customer number, name, current balance and rep number of each customer whose balance exceeds the maximum balance of all customers represented by sales rep 65.
+
+select CUSTOMER_NUM, CUSTOMER_NAME, BALANCE, REP_NUM
+
+from customer
+
+where BALANCE>ALL
+
+(select BALANCE
+
+FROM customer
+
+WHERE REP_NUM='65')
+
+select CUSTOMER_NUM, CUSTOMER_NAME, BALANCE, REP_NUM
+
+from customer
+
+where BALANCE>
+
+(select MAX(BALANCE)
+
+FROM customer
+
+WHERE REP_NUM='65')
+
+15. Find  the customer number, name, current balance and rep number of each customer whose balance is greater than the balance of at least one customer of sales rep 65.
+
+select CUSTOMER_NUM, CUSTOMER_NAME, BALANCE, REP_NUM
+
+from customer
+
+where BALANCE>ANY
+
+(select BALANCE
+
+FROM customer
+
+WHERE REP_NUM='65')
+
+select CUSTOMER_NUM, CUSTOMER_NAME, BALANCE, REP_NUM
+
+from customer
+
+where BALANCE>
+
+(select MIN(BALANCE)
+
+FROM customer
+
+WHERE REP_NUM='65')
+
+16. Display the customer number, customer name, order num and order date for each order. Sort the results by customer number.
+
+select customer.CUSTOMER_NUM, CUSTOMER_NAME, ORDER_NUM, ORDER_DATE
+
+from customer
+
+INNER JOIN orders
+
+on customer.CUSTOMER_NUM=orders.CUSTOMER_NUM
+
+order by customer.CUSTOMER_NUM
+
+17. Display the customer number, customer name, order num and order date for all orders. Include all customers in the results. For customers that do not have orders, omit the order number and order date.
+
+/** LEFT JOIN = No null on the left side*/
+
+select customer.CUSTOMER_NUM,CUSTOMER_NAME,ORDER_NUM,ORDER_DATE
+
+from customer
+
+LEFT JOIN orders
+
+on customer.CUSTOMER_NUM=orders.CUSTOMER_NUM
+
+order by customer.CUSTOMER_NUM
+
+18. From the product of the customer and orders tables. Display the customer number and name from the customer table, along with the order number and order date from the orders table.
+
+select customer.CUSTOMER_NUM,CUSTOMER_NAME,ORDER_NUM,ORDER_DATE
+from customer, orders
