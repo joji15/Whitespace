@@ -27,14 +27,17 @@ Route::get('adminViewDB', 'mainController@adminViewDB');
 
 Route::get('adminViewProgress', 'mainController@adminViewProgress');
 
-Route::get('adminQuiz', 'mainController@adminQuiz');
+//Route::get('adminQuiz', 'mainController@adminQuiz');
+Route::get('adminQuiz','QuizController@viewQuizzes');
 
-Route::get('adminViewQuiz', 'mainController@adminViewQuiz');
+Route::get('adminViewQuiz', 'QuizController@viewQuestions');
+//Route::get('adminViewQuiz', 'mainController@adminViewQuiz');
 //Route::get('quiz.viewQuiz','QuizController@getData');
 
 Route::get('adminCreateQuiz', 'mainController@adminCreateQuiz');
 
-Route::get('adminScheduleQuiz', 'mainController@adminScheduleQuiz');
+Route::get('adminScheduleQuiz', 'ScheduleController@viewSchedule');
+Route::post('addSchedule', 'ScheduleController@addSchedule');
 
 //Route::get('adminUpload', 'mainController@adminUpload');
 
@@ -134,9 +137,11 @@ Route::get('nulls', 'mainController@nulls');
 
 /*------------------------QUIZZES------------------------*/
 
-Route::get('studentsScheduledQuizzes', 'mainController@studentsScheduledQuizzes');
+//Route::get('studentsScheduledQuizzes', 'mainController@studentsScheduledQuizzes');
+Route::get('studentsScheduledQuizzes', 'QuizController@viewScheduledQuizzes');
 
-Route::get('studentsTakeQuiz', 'mainController@studentsTakeQuiz');
+//Route::get('studentsTakeQuiz', 'mainController@studentsTakeQuiz');
+Route::get('studentsTakeQuiz', 'QuizController@viewQuestionsRandom');
 
 Route::get('studentsViewResult', 'mainController@studentsViewResult');
 

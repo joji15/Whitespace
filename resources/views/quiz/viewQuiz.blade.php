@@ -26,26 +26,29 @@
                 <div class="row">
                   <div class="col-8">
                     <form>
+
                       <div class="input-group">
-                        <input class="form-control form-control-lg" type="text" placeholder="Title of the Quiz">
+                        <input class="form-control form-control-lg" type="text" placeholder="Title of the Quiz" value="">
                       </div>
                       <br />
                       <div class="input-group">
                         <textarea class="form-control form-control-sm" id="question1" rows="2" placeholder="Description of the Quiz"></textarea>
                       </div>
+
                     </form>
                   </div>
                 </div>
 
                 <br />
+                @foreach($questions as $q)
                 <div class="row">
                   <div class="col-12">
                     <form id="questionForm">
                       <div class="row" id="questionDiv">
                         <div class="col-6">
                           <div class="form-group">
-                            <label for="question1">Question #1</label>
-                            <textarea class="form-control form-control-sm" id="question1" rows="6"></textarea>
+                            <label for="question1">Question #</label>
+                            <textarea class="form-control form-control-sm" id="question1" rows="6">{{$q->question}}</textarea>
                           </div>
                         </div>
                         <div class="col-5">
@@ -53,26 +56,26 @@
                             <label for="question1">Choices</label>
                             <div class="custom-controls-stacked">
                               <label class="custom-control custom-radio">
-                                <input class="form-control form-control-sm" type="text" placeholder="Choice 1">
+                                <input class="form-control form-control-sm" type="text" placeholder="Choice 1" value="{{$q->choice_A}}">
                               </label>
                               <label class="custom-control custom-radio">
-                                <input class="form-control form-control-sm" type="text" placeholder="Choice 2">
+                                <input class="form-control form-control-sm" type="text" placeholder="Choice 2" value="{{$q->choice_B}}">
                               </label>
                               <label class="custom-control custom-radio">
-                                <input class="form-control form-control-sm" type="text" placeholder="Choice 3">
+                                <input class="form-control form-control-sm" type="text" placeholder="Choice 3" value="{{$q->choice_C}}">
                               </label>
                               <label class="custom-control custom-radio">
-                                <input class="form-control form-control-sm" type="text" placeholder="Choice 4">
+                                <input class="form-control form-control-sm" type="text" placeholder="Choice 4" value="{{$q->choice_D}}">
                               </label>
                             </div>
                             <div class="form-check custom-controls-stacked">
                               <label for="correct_answer" style="color:red;">Correct Answer</label>
                               <label class="custom-control">
-                                <select class="form-control custom-select" id="" name="">
-                                  <option value="1">Choice A</option>
-                                  <option value="2">Choice B</option>
-                                  <option value="3">Choice C</option>
-                                  <option value="3">Choice D</option>
+                                <select class="form-control custom-select" id="" name="{{$q->correct_ans}}questions[] multiple">
+                                  <option value="choice_A">Choice A</option>
+                                  <option value="choice_B">Choice B</option>
+                                  <option value="choice_C">Choice C</option>
+                                  <option value="choice_D">Choice D</option>
                                 </select>
                               </label>
                             </div>
@@ -82,6 +85,8 @@
                     </form>
                   </div>
                 </div>
+                @endforeach
+
               </div>
               <div class="tab-pane fade" id="nav-results" role="tabpanel" aria-labelledby="nav-results-tab">
                 <select class="form-control custom-select" id="section" name="section">

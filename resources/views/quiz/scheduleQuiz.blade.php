@@ -18,14 +18,16 @@
             <h6><strong>Schedule Quiz</strong></h6>
           </div>
           <div class="card-body bg-light"  style="padding:10px;">
-            <form class="" action="" method="post">
+            <form class="" action="addSchedule" method="post">
+              {{csrf_field()}}
+
               <div class="form-group">
-                <label for="">C/Y/S</label>
-                <select class="form-control custom-select" id="" name="">
-                  <option value="1">BSIT 4A</option>
-                  <option value="2">BSIT 4B</option>
-                  <option value="3">BSIS 1A</option>
-                  <option value="3">BSCS 1A</option>
+                <label for="">C/Y/S : School Year</label>
+                <select class="cys form-control custom-select" name="class_id">
+                  <option value="0" disabled="true" selected="true">--Select--</option>
+                  @foreach($class as $class)
+                  <option value="{{$class->class_id}}">{{$class->course}} {{$class->section}} : {{$class->school_year}}</option>
+                  @endforeach
                 </select>
               </div>
               <div class="form-group">
@@ -34,21 +36,22 @@
                   <div class="input-group-addon">
                     <i class="oi oi-calendar"></i>
                   </div>
-                  <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text"/>
+                  <input class="form-control" id="date" name="quiz_date" placeholder="YYYY-MM-DD" type="text"/>
                 </div>
               </div>
               <div class="form-group" id="timeOnly">
                 <label for="date">Time Start</label>
-                <input type="text" class="time start form-control"/>
+                <input type="text" class="time start form-control" name="time_start"/>
                 <label for="date">Time End</label>
-                <input type="text" class="time end form-control"/>
+                <input type="text" class="time end form-control" name="time_end"/>
               </div>
-            </form>
+
           </div>
           <div class="card-footer text-center">
-            <button type="submit" name="button" class="btn btn-primary mr-3" style="width:30%"> Save </button>
-            <button type="submit" name="button" class="btn btn-danger" style="width:33%"> Clear </button>
+            <button type="submit" name="submit" class="btn btn-primary mr-3" style="width:30%"> Save </button>
+            <button type="reset" name="button" class="btn btn-danger" style="width:33%"> Clear </button>
           </div>
+          </form>
         </div>
       </div>
       <div class="col-12 col-md-6 col-lg-8 mt-4">
@@ -61,18 +64,22 @@
               <thead class="thead-inverse text-center">
                 <tr>
                   <th class="text-center">C/Y/S</th>
+                  <th class="text-center">School Year</th>
                   <th class="text-center">Date</th>
                   <th class="text-center">Time Start</th>
                   <th class="text-center">Time End</th>
                 </tr>
               </thead>
               <tbody>
+                @foreach($schedule as $sched)
                 <tr>
-                  <th scope="row"></th>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <th scope="row">{{$sched -> course}} {{$sched -> section}}</th>
+                  <td>{{$sched -> school_year}}</td>
+                  <td>{{$sched -> quiz_date}}</td>
+                  <td>{{$sched -> time_start}}</td>
+                  <td>{{$sched -> time_end}}</td>
                 </tr>
+                @endforeach
               </tbody>
             </table>
           </div>
@@ -86,10 +93,10 @@
 
 <script>
     $(document).ready(function(){
-        var date_input=$('input[name="date"]'); //our date input has the name "date"
+        var date_input=$('input[name="quiz_date"]'); //our date input has the name "date"
         var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
         date_input.datepicker({
-            format: 'mm/dd/yyyy',
+            format: 'yyyy-mm-dd',
             container: container,
             todayHighlight: true,
             autoclose: true,

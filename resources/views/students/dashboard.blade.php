@@ -12,11 +12,37 @@
     </p>
     <hr />
     <div class="row">
+      <div class="col-12 col-lg-6 mt-4">
+        <div class="card border-silver">
+          <div class="card-header bg-purple text-white">
+            <div class="card-title h5">
+              <span class="oi oi-bullhorn"></span> Upcoming Quizzes
+            </div>
+          </div>
+          <div class="card-body">
 
+          </div>
+          <div class="card-footer bg-lightpurple">
 
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6 mt-4">
+        <div class="card border-whitesmoke">
+          <div class="card-header bg-customlightblue">
+            <div class="card-title h5 text-white">
+              <span class="oi oi-copywriting"></span> Quiz Results
+            </div>
+          </div>
+          <div class="card-body">
 
+          </div>
+          <div class="card-footer bg-lighterblue">
+
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-
 @endsection

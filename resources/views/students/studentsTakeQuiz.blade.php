@@ -13,11 +13,13 @@
             <p class="card-title"><span class="oi oi-spreadsheet" title="scheduledQuiz" aria-hidden="true"></span> Quiz Title</p>
           </div>
           <div class="card-body bg-light">
+            @php $count = 1 @endphp
+            @foreach($question as $q)
             <div class="row">
               <div class="col-12 col-lg-7">
-                <h3 class="mb-4"><code>Question #</code></h3>
+                <h3 class="mb-4"><code>Question #{{$count++}}</code></h3>
                 <blockquote class="blockquote blockquote-box blockquote-primary clearfix">
-                  <p class="ml-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                  <p class="ml-3">{{$q->question}}</p>
                 </blockquote>
               </div>
               <div class="col-12 col-lg-4 mt-4 ml-3">
@@ -26,29 +28,30 @@
                   <label class="custom-control custom-radio">
                     <input id="radioStacked3" name="radio-stacked" type="radio" class="custom-control-input">
                     <span class="custom-control-indicator"></span>
-                    <div class="choice">Choice 1</div>
+                    <div class="choice">{{$q->choice_A}}</div>
                   </label>
                   <label class="custom-control custom-radio">
                     <input id="radioStacked4" name="radio-stacked" type="radio" class="custom-control-input">
                     <span class="custom-control-indicator"></span>
-                    <div class="choice">Choice 2</div>
+                    <div class="choice">{{$q->choice_B}}</div>
                   </label>
                   <label class="custom-control custom-radio">
                     <input id="radioStacked4" name="radio-stacked" type="radio" class="custom-control-input">
                     <span class="custom-control-indicator"></span>
-                    <div class="choice">Choice 3</div>
+                    <div class="choice">{{$q->choice_C}}</div>
                   </label>
                   <label class="custom-control custom-radio">
                     <input id="radioStacked4" name="radio-stacked" type="radio" class="custom-control-input">
                     <span class="custom-control-indicator"></span>
-                    <div class="choice">Choice 4</div>
+                    <div class="choice">{{$q->choice_D}}</div>
                   </label>
                 </div>
               </div>
             </div>
+            @endforeach
           </div>
-          <div class="card-footer bg-primary text-right">
-            <button type="submit" name="button" class="btn btn-dark">Submit</button>
+          <div class="card-footer bg-lightprimary text-right">
+            <button type="submit" name="button" class="btn btn-primary"><span class="oi oi-location"></span> Submit</button>
           </div>
         </div>
       </div>

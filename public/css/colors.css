@@ -160,6 +160,10 @@
   background-color: rgb(96,180,249);
 }
 
+.bg-lighterblue{
+  background-color: rgb(167, 222, 255) !important;
+}
+
 .border-customlightblue{
   border-color: rgb(96,180,249);
 }

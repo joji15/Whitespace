@@ -19,23 +19,24 @@
     </div>
     <hr />
     <div class="row">
-
+    @foreach($quiz as $quiz)
       <div class="col-12 col-md-6 col-lg-3 mt-4">
           <div class="card border-silver">
             <div class="card-body">
-              <h4 class="card-title text-center"><a href="" style="text-decoration:none;">Quiz Title</a></h4>
-              <p class="card-text">Brief description about the quiz</p>
+              <h4 class="card-title text-center"><a href="adminViewQuiz" style="text-decoration:none;">{{$quiz->quiz_title}}</a></h4>
+              <p class="card-text text-center">{{$quiz->quiz_desc}}</p>
+              <input type="hidden" name="quiz_id" value="{{$quiz->quiz_id}}">
               <div class="text-center">
                 <a href="adminViewQuiz" role="button" name="button" class="button" style="background-color: #00b300; "><span>Questions</span></a>
                 <a href="adminScheduleQuiz" role="button" name="button" class="button" style="background-color: #e62e00; "><span>Schedules</span></a>
               </div>
             </div>
             <div class="card-footer">
-              <small class="text-muted">Posted 3 mins ago</small>
+              <small class="text-muted">Created {{ Carbon\Carbon::parse($quiz->created_at)->diffForHumans() }}</small>
             </div>
           </div>
       </div>
-
+    @endforeach
     </div>
   </div>
 </div>
