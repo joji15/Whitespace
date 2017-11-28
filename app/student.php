@@ -11,7 +11,7 @@ class Student extends Authenticatable
 
     protected $table = 'student';
 
-    protected $primaryKey = 'stud_id';
+    protected $primaryKey = 'student_id';
 
     protected $guard = 'student';
 
@@ -21,7 +21,7 @@ class Student extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'stud_id', 'class_id', 'email', 'first_Name', 'middle_Name', 'last_Name', 'degree_Program', 'section', 'address', 'contact_no', 'password',
+        'student_id', 'student_name', 'student_email', 'class_id', 'password',
     ];
 
     /**
@@ -32,4 +32,9 @@ class Student extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function classtbl()
+    {
+      return $this->belongsTo('App\class_tbl', 'class_id');
+    }
 }

@@ -14,10 +14,10 @@ var viewquiz = document.getElementById('viewQuizContent');
 var createquiz = document.getElementById('createQuizContent');
 var editquiz = document.getElementById('editQuizContent');
 var upload = document.getElementById('upContent');
-/*
-    These variables are getting the ID of every page
-*/
 
+/*
+    These variables are getting the ID of every page on the Professor's Side
+*/
 
 if (home !== null){
     $(".a").find(".active").removeClass("active");  //  Find all <a> tags with the active class, and then remove the said class

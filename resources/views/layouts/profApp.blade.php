@@ -31,23 +31,7 @@
 
   <script async>
   $(document).ready(function(){
-      var upload = document.getElementById('minbtn');
-      $(upload).on('click', function (){
-        $("#navbarmenu").removeClass("col-sm-4");
-        $("#navbarmenu").addClass("col-sm-1");
-        $("#navbarmenu").removeClass("col-md-3");
-        $("#navbarmenu").addClass("col-md-1");
-        $("#navbarmenu").removeClass("col-lg-2");
-        $("#navbarmenu").addClass("col-lg-1");
-        $("#profpill").text("");
-        $("#profpill").append("<span class='oi oi-home' title='Home' aria-hidden='true'></span>");
-        $("#profStudpill").text("");
-        $("#profStudpill").append("<span class='oi oi-people' title='Student' aria-hidden='true'></span>");
-        $("#profQuizpill").text("");
-        $("#profQuizpill").append("<span class='oi oi-spreadsheet' title='Quiz' aria-hidden='true'></span>");
-        $("#profUploadpill").text("");
-        $("#profUploadpill").append("<span class='oi oi-data-transfer-upload' title='Upload' aria-hidden='true'></span>");
-      });
+
   });
   </script>
   <style>
@@ -66,7 +50,7 @@
     </button>
     <a class="navbar-brand align-middle animated fadeIn mr-auto p-2" href="">
       <img src="{{ asset('img/WS-ICO.png') }}" width="40" height="40" alt="WS Logo">
-      Professor's Dashboard
+      {{ Auth::user()->prof_fName }} {{ Auth::user()->prof_lName }}
     </a>
     <ul class="navbar-nav">
       <li class="nav-item dropdown">

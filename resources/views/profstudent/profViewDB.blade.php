@@ -22,12 +22,10 @@
             <div class="tab-content" id="nav-tabContent">
               <div class="tab-pane fade show active" id="nav-view" role="tabpanel" aria-labelledby="nav-view-tab">
                 <div class="row">
-                  <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                  <div class="col-12">
                     <label for="dbselect">Databases:</label>
                     <small id="passwordHelpBlock" class="form-text text-muted">
                       Click one to see more information.
-                    </div>
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-5">
                     </small>
                     <div class="tree">
                       <ul style="padding-left:inherit;">

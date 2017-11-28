@@ -67,9 +67,11 @@
       <div class="row">
         <div class="col-12 text-center">
           <hr />
-          <p class="display-2">
-            Wow, Homepage ng Whitespace
+          <br />
+          <p class="display-3">
+            Homepage goes here...
           </p>
+          <br />
           <hr />
         </div>
       </div>

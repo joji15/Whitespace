@@ -21,14 +21,14 @@ class profLoginController extends Controller
     public function login(Request $request)
     {
         $this->validate($request,[
-            'email' => 'required|email',
+            'prof_email' => 'required|email',
             'password' => 'required|min:6'
         ]);
 
-        if (Auth::guard('prof')->attempt(['email' => $request->email, 'password' => $request->password], $request->remember)) {
+        if (Auth::guard('prof')->attempt(['prof_email' => $request->prof_email, 'password' => $request->password], $request->remember)) {
             return redirect()->intended(route('prof.profHome'));
         }
 
-        return redirect()->back()->withInput($request->only('email','remember'));
+        return redirect()->back()->withInput($request->only('prof_email','remember'));
     }
 }

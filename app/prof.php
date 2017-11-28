@@ -21,7 +21,7 @@ class Prof extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'prof_id', 'email', 'first_Name', 'middle_Name', 'last_Name', 'address', 'contact_no', 'password',
+        'prof_id', 'prof_email', 'prof_fName', 'prof_mName', 'prof_lName', 'password',
     ];
 
     /**
@@ -32,4 +32,9 @@ class Prof extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function classes()
+    {
+      return $this->hasMany('App\class_tbl');
+    }
 }

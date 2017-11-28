@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class quiz extends Model
 {
-    protected $table = 'quiz';
+    protected $table = 'quiz_tbl';
 
     protected $primaryKey = 'quiz_code';
 
@@ -16,7 +16,7 @@ class quiz extends Model
     * @var array
     */
     protected $fillable = [
-        'quiz_code', 'title', 'sched_date', 'sched_time', 'class_id', 'prof_id',
+        'quiz_id', 'quiz_title', 'quiz_desc', 'quiz_sched_id',
     ];
 
     /**
@@ -24,7 +24,9 @@ class quiz extends Model
     *
     * @var array
     */
-    protected $hidden = [
-        'quiz_code', 'class_id', 'prof_id',
-    ];
+    
+    public function questions()
+    {
+        return $this->hasMany('App\question');
+    }
 }

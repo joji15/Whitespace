@@ -21,14 +21,14 @@ class studentLoginController extends Controller
     public function login(Request $request)
     {
         $this->validate($request,[
-            'email' => 'required|email',
+            'student_email' => 'required|email',
             'password' => 'required|min:6'
         ]);
 
-        if (Auth::guard('stud')->attempt(['email' => $request->email, 'password' => $request->password], $request->remember)) {
+        if (Auth::guard('stud')->attempt(['student_email' => $request->student_email, 'password' => $request->password], $request->remember)) {
             return redirect()->intended(route('student.Home'));
         }
 
-        return redirect()->back()->withInput($request->only('email','remember'));
+        return redirect()->back()->withInput($request->only('student_email','remember'));
     }
 }

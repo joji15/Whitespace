@@ -11,7 +11,7 @@
     <br />
     <div class="input-group{{ $errors->has('email') ? ' has-error' : '' }}">
       <span class="input-group-addon"><span class="oi oi-person" title="Email" aria-hidden="true"></span></span>
-      <input type="email" class="form-control" placeholder="Email" aria-label="email" aria-describedby="email" id="email" name="email" required>
+      <input type="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="Email" id="student_email" name="student_email" required>
       @if ($errors->has('email'))
         <span class="help-block">
           <strong>{{ $errors->first('email') }}</strong>

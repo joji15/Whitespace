@@ -36,8 +36,8 @@ class profController extends Controller
 
   public function CreateClassView()
   {
-    $show = 0;
-    return view('profstudent.profCreateClass', ['status' => $show]);
+    $status = 0;
+    return view('profstudent.profCreateClass', ['show' => $status]);
   }
 
   public function ViewDatabaseView()
@@ -67,7 +67,8 @@ class profController extends Controller
 
   public function CreateQuizView()
   {
-    return view('profquiz.createQuiz');
+    $message = "0";
+    return view('profquiz.createQuiz', ['messages'=>$message]);
   }
 
   public function EditQuizView()

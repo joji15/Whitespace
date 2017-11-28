@@ -1,26 +1,25 @@
 @extends('layouts.studentapp')
 
-@section('title', 'List of Lessons')
+@section('title', 'Student Lessons')
 
 @section('content')
 
-<div class="col-sm-8 col-md-9 col-lg-10 justify-content-start content" id="">
+<div class="col-sm-8 col-md-9 col-lg-10 justify-content-start content" id="studentLessonContent">
   <div class="container-fluid contentMargin">
-    <hr />
-    <p class="h2" style="font-family:Segoe UI Light;">
-      List of Lessons
+    <br />
+    <p class="h2" style="font-family:Segoe UI Light; font-weight:lighter;">
+      <span class="oi oi-justify-left text-orange" title="Simulator" aria-hidden="true"></span> SQL Lessons
     </p>
-    <hr />
 
     <!---SQL INTRODUCTION--->
-    <div class="row">
+    <div class="row mt-4">
       <div class="col-sm-6">
         <div class="card border-primary">
           <div class="card-body text-white bg-primary">
             <h4 class="card-title"><span class="oi oi-book" title="lessonList" aria-hidden="true"></span> Chapter 1: SQL Introduction</h4>
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
-          <a href="{{ route('chapter1') }}">
+          <a href="{{ route('student.SQLLesson.chapter1') }}">
             <div class="card-footer border-primary">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
@@ -35,7 +34,7 @@
             <h4 class="card-title"><span class="oi oi-book" title="lessonList" aria-hidden="true"></span> Database Concepts</h4>
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
-          <a href="{{ route('chapter1.database_concepts') }}">
+          <a href="{{ route('student.SQLLesson.chapter1.database_concepts') }}">
             <div class="card-footer border-primary">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
@@ -48,7 +47,7 @@
             <h4 class="card-title"><span class="oi oi-book" title="lessonList" aria-hidden="true"></span> Relational Database</h4>
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
-          <a href="relational_db">
+          <a href="{{ route('student.SQLLesson.chapter1.relational_db') }}">
             <div class="card-footer border-primary">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
@@ -61,7 +60,7 @@
             <h4 class="card-title"><span class="oi oi-book" title="lessonList" aria-hidden="true"></span> Entities, Attributes, and Relationships</h4>
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
-          <a href="entities_attributes_relationships">
+          <a href="{{ route('student.SQLLesson.chapter1.ent_attr_relationships') }}">
             <div class="card-footer border-primary">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
@@ -74,7 +73,7 @@
             <h4 class="card-title"><span class="oi oi-book" title="lessonList" aria-hidden="true"></span> Functional Dependence</h4>
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
-          <a href="functional_dependence">
+          <a href="{{ route('student.SQLLesson.chapter1.functional_dependence') }}">
             <div class="card-footer border-primary">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
@@ -87,7 +86,7 @@
             <h4 class="card-title"><span class="oi oi-book" title="lessonList" aria-hidden="true"></span> Primary Key</h4>
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
-          <a href="primary_key">
+          <a href="{{ route('student.SQLLesson.chapter1.primary_key') }}">
             <div class="card-footer border-primary">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
@@ -100,7 +99,7 @@
             <h4 class="card-title"><span class="oi oi-book" title="lessonList" aria-hidden="true"></span> Diagrams for Database Design (ERD)</h4>
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
-          <a href="diagrams_dbDesign">
+          <a href="{{ route('student.SQLLesson.chapter1.diagrams_dbDesign') }}">
             <div class="card-footer border-primary">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
@@ -117,7 +116,7 @@
             <h4 class="card-title"><span class="oi oi-book" title="lessonList" aria-hidden="true"></span> Chapter 2: Creating Tables</h4>
             <h6><span class="card-text oi oi-graph"></span> Status</h6>
           </div>
-          <a href="chap2_intro">
+          <a href="{{ route('student.SQLLesson.chapter2') }}">
             <div class="card-footer border-danger">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
@@ -543,195 +542,6 @@
           </div>
           <a href="nulls">
             <div class="card-footer border-success">
-            Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!---MULTIPLE TABLE QUERIES--->
-    <div class="row mt-5">
-      <div class="col-sm-6">
-        <div class="card border-warning">
-          <div class="card-body text-white bg-warning">
-            <h4 class="card-title"><span class="oi oi-book" title="lessonList" aria-hidden="true"></span>
-              Chapter 4: Multiple Table Queries</h4>
-            <h6><span class="card-text oi oi-graph"></span> Status</h6>
-          </div>
-          <a href="multiple_table">
-            <div class="card-footer border-warning">
-            Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="row mt-3">
-      <div class="col-sm-4 mt-3">
-        <div class="card border-silver">
-          <div class="card-body text-white bg-warning">
-            <h4 class="card-title"><span class="oi oi-book" title="lessonList" aria-hidden="true"></span> Joining Two Tables</h4>
-            <h6><span class="card-text oi oi-graph"></span> Status</h6>
-          </div>
-          <a href="joining_two_tables">
-            <div class="card-footer border-warning">
-            Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-sm-4 mt-3">
-        <div class="card border-silver">
-          <div class="card-body text-white bg-warning">
-            <h4 class="card-title"><span class="oi oi-book" title="lessonList" aria-hidden="true"></span> Using the IN Operator</h4>
-            <h6><span class="card-text oi oi-graph"></span> Status</h6>
-          </div>
-          <a href="in_operator">
-            <div class="card-footer border-warning">
-            Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-sm-4 mt-3">
-        <div class="card border-silver">
-          <div class="card-body text-white bg-warning">
-            <h4 class="card-title"><span class="oi oi-book" title="lessonList" aria-hidden="true"></span> Using the EXISTS Operator</h4>
-            <h6><span class="card-text oi oi-graph"></span> Status</h6>
-          </div>
-          <a href="exists_operator">
-            <div class="card-footer border-warning">
-            Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-sm-4 mt-3">
-        <div class="card border-silver">
-          <div class="card-body text-white bg-warning">
-            <h4 class="card-title"><span class="oi oi-book" title="lessonList" aria-hidden="true"></span> Using a Subquery Within a Subquery</h4>
-            <h6><span class="card-text oi oi-graph"></span> Status</h6>
-          </div>
-          <a href="subquery_within_subquery">
-            <div class="card-footer border-warning">
-            Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-sm-4 mt-3">
-        <div class="card border-silver">
-          <div class="card-body text-white bg-warning">
-            <h4 class="card-title"><span class="oi oi-book" title="lessonList" aria-hidden="true"></span> Using an Alias</h4>
-            <h6><span class="card-text oi oi-graph"></span> Status</h6>
-          </div>
-          <a href="alias">
-            <div class="card-footer border-warning">
-            Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-sm-4 mt-3">
-        <div class="card border-silver">
-          <div class="card-body text-white bg-warning">
-            <h4 class="card-title"><span class="oi oi-book" title="lessonList" aria-hidden="true"></span> Joining a Table to Itself</h4>
-            <h6><span class="card-text oi oi-graph"></span> Status</h6>
-          </div>
-          <a href="joining_table_itself">
-            <div class="card-footer border-warning">
-            Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-sm-4 mt-3">
-        <div class="card border-silver">
-          <div class="card-body text-white bg-warning">
-            <h4 class="card-title"><span class="oi oi-book" title="lessonList" aria-hidden="true"></span> Using a Self-Join on a Primary Key Column</h4>
-            <h6><span class="card-text oi oi-graph"></span> Status</h6>
-          </div>
-          <a href="self_join_primary_key">
-            <div class="card-footer border-warning">
-            Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-sm-4 mt-3">
-        <div class="card border-silver">
-          <div class="card-body text-white bg-warning">
-            <h4 class="card-title"><span class="oi oi-book" title="lessonList" aria-hidden="true"></span> Joining Several Tables</h4>
-            <h6><span class="card-text oi oi-graph"></span> Status</h6>
-          </div>
-          <a href="joining_several_tables">
-            <div class="card-footer border-warning">
-            Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-sm-4 mt-3">
-        <div class="card border-silver">
-          <div class="card-body text-white bg-warning">
-            <h4 class="card-title"><span class="oi oi-book" title="lessonList" aria-hidden="true"></span> Set Operations</h4>
-            <h6><span class="card-text oi oi-graph"></span> Status</h6>
-          </div>
-          <a href="set_operations">
-            <div class="card-footer border-warning">
-            Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-sm-4 mt-3">
-        <div class="card border-silver">
-          <div class="card-body text-white bg-warning">
-            <h4 class="card-title"><span class="oi oi-book" title="lessonList" aria-hidden="true"></span> ALL and ANY</h4>
-            <h6><span class="card-text oi oi-graph"></span> Status</h6>
-          </div>
-          <a href="all_and_any">
-            <div class="card-footer border-warning">
-            Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-sm-4 mt-3">
-        <div class="card border-silver">
-          <div class="card-body text-white bg-warning">
-            <h4 class="card-title"><span class="oi oi-book" title="lessonList" aria-hidden="true"></span> Inner Join</h4>
-            <h6><span class="card-text oi oi-graph"></span> Status</h6>
-          </div>
-          <a href="inner_join">
-            <div class="card-footer border-warning">
-            Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-sm-4 mt-3">
-        <div class="card border-silver">
-          <div class="card-body text-white bg-warning">
-            <h4 class="card-title"><span class="oi oi-book" title="lessonList" aria-hidden="true"></span> Outer Join</h4>
-            <h6><span class="card-text oi oi-graph"></span> Status</h6>
-          </div>
-          <a href="outer_join">
-            <div class="card-footer border-warning">
-            Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-sm-4 mt-3">
-        <div class="card border-silver">
-          <div class="card-body text-white bg-warning">
-            <h4 class="card-title"><span class="oi oi-book" title="lessonList" aria-hidden="true"></span> Product</h4>
-            <h6><span class="card-text oi oi-graph"></span> Status</h6>
-          </div>
-          <a href="product">
-            <div class="card-footer border-warning">
             Start Lesson <span class="oi oi-arrow-circle-right" title="viewLessonList" aria-hidden="true"></span>
             </div>
           </a>

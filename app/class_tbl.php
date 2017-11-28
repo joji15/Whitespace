@@ -16,7 +16,16 @@ class class_tbl extends Model
   * @var array
   */
   protected $fillable = [
-    'class_id', 'crs_sec', 'prof_id', 'room',
+    'class_id', 'course', 'section', 'school_year', 'prof_id',
   ];
 
+  public function students()
+  {
+    return $this->hasMany('App\student', 'student_id');
+  }
+
+  public function profs()
+  {
+    return $this->belongsTo('App\prof');
+  }
 }

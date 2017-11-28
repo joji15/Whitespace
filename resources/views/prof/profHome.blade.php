@@ -47,7 +47,7 @@
                       @foreach ($students as $student)
                       <tr>
                         <th scope="row">{{ $student->stud_id }}</th>
-                        <td>{{ $student->last_Name }}, {{ $student->first_Name }} {{ $student->middle_Name }}</td>
+                        <td>{{ $student->student_name }}</td>
                         <td>{{ $student->degree_Program }}-{{ $student->section }}</td>
                         <td>NO SCORE</td>
                       </tr>

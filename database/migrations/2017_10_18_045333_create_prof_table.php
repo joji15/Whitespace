@@ -13,16 +13,16 @@ class CreateProfTable extends Migration
      */
     public function up()
     {
+        Schema::enableForeignKeyConstraints();
         Schema::create('professor', function (Blueprint $table) {
-            $table->integer('prof_id')->unsigned()->primary();
-            $table->string('first_Name', 50);
-            $table->string('middle_Name', 50);
-            $table->string('last_Name', 50);
-            $table->string('email', 50);
+            $table->increments('prof_id');
+            $table->string('prof_fName', 50);
+            $table->string('prof_mName', 50);
+            $table->string('prof_lName', 50);
+            $table->string('prof_email', 50);
             $table->string('password', 100);
             $table->rememberToken();
             $table->timestamps();
-
         });
     }
 

@@ -25,17 +25,42 @@
   <script src="/js/popper.min.js"></script>
   <script src="/js/bootstrap.min.js"></script>
 
-  <!-- To make use of the active class in the side nav, edit this js file -->
-  <script src="/js/sidenavbar.js" async></script>
+  <script src="https://widget.battleforthenet.com/widget.js" async></script>
+
+  <style>
+    .oi-fork{
+      -webkit-transform: rotate(90deg);
+      -moz-transform: rotate(90deg);
+      -o-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      transform: rotate(90deg);
+    }
+
+    .nav-item{
+      font-size: 14px;
+    }
+
+    .nav-pills .nav-link{
+      border-radius: 0px;
+    }
+    #editor {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height:300px;
+    }
+  </style>
 </head>
 <body class="dashboard">
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top d-flex justify-content-end shadow">
+  <nav class="navbar navbar-expand-md navbar-dark bg-light fixed-top d-flex justify-content-end studentshadow">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenavbar" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand align-middle animated fadeIn mr-auto p-2" href="" style="font-family:Roboto;">
+    <a class="navbar-brand align-middle animated fadeIn mr-auto p-2 text-dark" href="" style="font-family:Roboto;">
       <img src="{{ asset('img/WS-ICO.png') }}" width="40" height="40" alt="WS Logo">
-      Student's Dashboard
+      {{ Auth::user()->student_name }}
     </a>
     <li style="list-style-type:none">
       <a class="btn btn-danger" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
@@ -46,29 +71,33 @@
       </form>
     </li>
   </nav>
+
   <div class="container-fluid">
-    <div class="row" style="height:100%">
-      <div class="col-sm-4 col-md-3 col-lg-2" style="background-color: rgb(40, 40, 40)">
+    <div class="row" style="height:100%;">
+      <div class="col-sm-4 col-md-3 col-lg-2 bg-light" style="padding:0px;" id="navbarmenu">
         <nav class="nav nav-pills flex-column">
           <div class="navbar-collapse animated fadeIn" id="sidenavbar">
+            <hr />
+            <a class="nav-item nav-link" href="/student/Home" id="studentpill"><span class="oi oi-home" title="Home" aria-hidden="true"></span> Home</a>
+            <a class="nav-item nav-link" href="/student/Profile" id="studentprofilepill"><span class="oi oi-person" title="Profile" aria-hidden="true"></span> Profile</a>
+            <!-- <div id="profilesub">
+              <a class="nav-item nav-link pl-5 btn-sm" href="/student/Profile/Quiz" id="studentquizpill"><span class="oi oi-clock" title="ScheduledQuizzes" aria-hidden="true"></span> Quizzes</a>
+              <a class="nav-item nav-link pl-5 btn-sm" href="/student/Profile/Download" id="studentdownpill"><span class="oi oi-data-transfer-download" title="Downloads" aria-hidden="true"></span> Downloads</a>
+            </div> -->
+            <a class="nav-item nav-link" href="/student/SQLLesson" id="studentlessonpill"><span class="oi oi-justify-left" title="SQL Lessons" aria-hidden="true"></span> SQL Lessons</a>
+            <a class="nav-item nav-link" href="/student/Simulator" id="studentsimpill"><span class="oi oi-project" title="SQL Simulator" aria-hidden="true"></span> SQL Simulator</a>
+            <a class="nav-item nav-link" href="/student/Designer" id="studentdespill"><span class="oi oi-fork" title="SQL Designer" aria-hidden="true"></span> SQL Designer</a>
             <hr class="hr-white"/>
-            <!--  Change id  -->
-            <a class="nav-item nav-link" href="{{ route('student.Home') }}" id="adminpill"><span class="oi oi-home" title="Home" aria-hidden="true"></span> Home</a>
-            <div id="homeSub">
-              <a class="nav-item nav-link ml-4 btn-sm" href="{{ route('student.Home.studentsClassList') }}" id=""><span class="oi oi-list" title="ClassList" aria-hidden="true"></span> Class List</a>
-              <a class="nav-item nav-link ml-4 btn-sm" href="{{ route('student.Home.studentsScheduledQuizzes') }}" id=""><span class="oi oi-clock" title="ScheduledQuizzes" aria-hidden="true"></span> Quizzes</a>
-              <a class="nav-item nav-link ml-4 btn-sm" href="{{ route('student.Home.studentsRankings') }}" id=""><span class="oi oi-vertical-align-bottom" title="Rankings" aria-hidden="true"></span> Rankings</a>
-            </div>
-            <a class="nav-item nav-link" href="{{ route('student.SQLLesson') }}" id="adminStudpill"><span class="oi oi-book" title="SQL Lessons" aria-hidden="true"></span> SQL Lessons</a>
-            <a class="nav-item nav-link" href="{{ route('student.studentsDownload') }}" id="adminUploadpill"><span class="oi oi-data-transfer-download" title="Uploaded Files" aria-hidden="true"></span> Download Files</a>
-            <a class="nav-item nav-link" href="{{ route('student.studentsSimulator') }}" id="adminQuizpill"><span class="oi oi-loop-circular" title="SQL Simulator" aria-hidden="true"></span> SQL Simulator</a>
-            <hr class="hr-white"/>
+            <div class="fixed-bottom mb-2 ml-2"><button type="button" class="btn btn-primary" id="minbtn"><span class="oi oi-caret-left" title="navmenu" aria-hidden="true"></span></button></div>
           </div>
         </nav>
       </div>
       @yield('content')
     </div>
   </div>
+
+  <!-- To make use of the active class in the side nav, edit this js file -->
+  <script src="/js/studentsidenavbar.js"></script>
 
   <!-- Tree view -->
   <script src="/js/treeview.js"></script>
