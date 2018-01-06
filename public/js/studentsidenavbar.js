@@ -5,7 +5,9 @@
 
 var studentHome = document.getElementById('studentHomeContent');
 var studentProfile = document.getElementById('studentProfileContent');
+var studentLessons = document.getElementById('studentLessonContent');
 var studentSimulator = document.getElementById('studentSimContent');
+var studentDesigner = document.getElementById('studentDesContent');
 
 /*
     These variables are getting the ID of every page on the Professor's Side
@@ -23,17 +25,29 @@ else if (studentProfile !== null){
     // $('#profilesub').addClass("d-block");
 }
 
+else if (studentLessons !== null) {
+    $(".a").find(".active").removeClass("active");
+    $('#studentlessonpill').addClass("active");
+    // $('#profilesub').addClass("d-none");
+}
+
 else if (studentSimulator !== null) {
     $(".a").find(".active").removeClass("active");
     $('#studentsimpill').addClass("active");
     // $('#profilesub').addClass("d-none");
 }
 
-else if (createClass !== null){
-  $(".a").find(".active").removeClass("active");    //  Find all <a> tags with the active class, and then remove the said class
-  $('#profCreateClasspill').addClass("active");    //  Add an active class to the ID of the nav item
-  $('#quizSub').addClass("d-none");                 //  !!!(FOR SUB-MENUS)!!! Add a d-none (display:none) class to the div of subclass
+else if (studentDesigner !== null) {
+    $(".a").find(".active").removeClass("active");
+    $('#studentdespill').addClass("active");
+    // $('#profilesub').addClass("d-none");
 }
+//
+// else if (createClass !== null){
+//   $(".a").find(".active").removeClass("active");    //  Find all <a> tags with the active class, and then remove the said class
+//   $('#profCreateClasspill').addClass("active");    //  Add an active class to the ID of the nav item
+//   $('#quizSub').addClass("d-none");                 //  !!!(FOR SUB-MENUS)!!! Add a d-none (display:none) class to the div of subclass
+// }
 
 else {
   $(".a").find(".active").removeClass("active");

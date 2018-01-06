@@ -24,8 +24,7 @@
   <script src="/js/jquery-3.2.1.min.js"></script>
   <script src="/js/popper.min.js"></script>
   <script src="/js/bootstrap.min.js"></script>
-
-  <script src="https://widget.battleforthenet.com/widget.js" async></script>
+  <script src="/js/html2canvas.min.js"></script>
 
   <style>
     .oi-fork{
@@ -79,14 +78,14 @@
           <div class="navbar-collapse animated fadeIn" id="sidenavbar">
             <hr />
             <a class="nav-item nav-link" href="/student/Home" id="studentpill"><span class="oi oi-home" title="Home" aria-hidden="true"></span> Home</a>
-            <a class="nav-item nav-link" href="/student/Profile" id="studentprofilepill"><span class="oi oi-person" title="Profile" aria-hidden="true"></span> Profile</a>
+            <a class="nav-item nav-link" href="/student/Profile" id="studentprofilepill"><span class="oi oi-person text-red" title="Profile" aria-hidden="true"></span> Profile</a>
             <!-- <div id="profilesub">
               <a class="nav-item nav-link pl-5 btn-sm" href="/student/Profile/Quiz" id="studentquizpill"><span class="oi oi-clock" title="ScheduledQuizzes" aria-hidden="true"></span> Quizzes</a>
               <a class="nav-item nav-link pl-5 btn-sm" href="/student/Profile/Download" id="studentdownpill"><span class="oi oi-data-transfer-download" title="Downloads" aria-hidden="true"></span> Downloads</a>
             </div> -->
-            <a class="nav-item nav-link" href="/student/SQLLesson" id="studentlessonpill"><span class="oi oi-justify-left" title="SQL Lessons" aria-hidden="true"></span> SQL Lessons</a>
-            <a class="nav-item nav-link" href="/student/Simulator" id="studentsimpill"><span class="oi oi-project" title="SQL Simulator" aria-hidden="true"></span> SQL Simulator</a>
-            <a class="nav-item nav-link" href="/student/Designer" id="studentdespill"><span class="oi oi-fork" title="SQL Designer" aria-hidden="true"></span> SQL Designer</a>
+            <a class="nav-item nav-link" href="/student/SQLLesson" id="studentlessonpill"><span class="oi oi-justify-left text-orange" title="SQL Lessons" aria-hidden="true"></span> SQL Lessons</a>
+            <a class="nav-item nav-link" href="/student/Simulator" id="studentsimpill"><span class="oi oi-project text-green" title="SQL Simulator" aria-hidden="true"></span> SQL Simulator</a>
+            <a class="nav-item nav-link" href="/student/Designer" id="studentdespill"><span class="oi oi-fork text-yellow" title="SQL Designer" aria-hidden="true"></span> SQL Designer</a>
             <hr class="hr-white"/>
             <div class="fixed-bottom mb-2 ml-2"><button type="button" class="btn btn-primary" id="minbtn"><span class="oi oi-caret-left" title="navmenu" aria-hidden="true"></span></button></div>
           </div>
@@ -102,9 +101,6 @@
   <!-- Tree view -->
   <script src="/js/treeview.js"></script>
 
-  <!--Lined Textarea-->
-  <script src="./js/bcralnit.js"></script>
-
   <script>
     $(document).ready(function(){
       $('#searchInput').on('click', function(){
@@ -117,13 +113,6 @@
         }
       });
     });
-  </script>
-  <script>
-  $(".lined").bcralnit({
-      width: '50px',
-      background: 'rgb(38,50,56)',
-      color: '#fff',
-  });
   </script>
 </body>
 </html>

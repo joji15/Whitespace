@@ -11,16 +11,26 @@
       <span class="oi oi-project text-green" title="Simulator" aria-hidden="true"></span> SQL Simulator
     </p>
     <div class="row mt-4 mb-4">
-      <div class="col-9">
+      <div class="col-12 col-md-8 col-lg-9">
         <div class="card border-grey" style="min-height:450px; max-height:700px;">
           <div class="card-body" style="overflow-y: auto;">
-            <div class="row">
+            <div class="row" style="height: 350px;">
               <div class="col-12">
                 <form action="Simulator" method="POST">
                   <input type="hidden" value="{{ csrf_token() }}" name="_token">
-                  <textarea name="simtext" id="editor">SELECT * FROM sample_tbl</textarea>
-                  <div class="mt-1 text-right">
-                    <button type="submit" class="btn btn-sm btn-primary" type="button" id="simulate">Run <i class="oi oi-chevron-right"><i class="oi oi-chevron-right"></i></i></button>
+                  <div class="row" style="height: 300px;">
+                    <div class="col-12">
+                      <div id="editor"></div>
+                      <textarea name="editor" style="display: none;" rows="6" ></textarea>
+                    </div>
+                  </div>
+                  <br />
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="mt-1 text-right">
+                        <button type="submit" class="btn btn-sm btn-primary" type="button" id="simulate">Run <i class="oi oi-chevron-right"><i class="oi oi-chevron-right"></i></i></button>
+                      </div>
+                    </div>
                   </div>
                 </form>
               </div>
@@ -79,7 +89,7 @@
                     <div id="historyaccrdn1" class="collapse" role="tabpanel">
                       <br />
                       <table class="table table-sm">
-                        <thead style="font-size: 12px;">
+                        <thead class="table-inverse" style="font-size: 12px;">
                           <tr>
                             <th scope="col">#</th>
                             <th scope="col">Query</th>
@@ -114,7 +124,7 @@
         </div>
       </div>
 
-      <div class="col-3">
+      <div class="col-12 col-md-4 col-lg-3">
         <div class="card border-blue-grey" style="min-height:450px; max-height:700px;">
           <div class="row">
             <div class="col-12 ml-3 mt-3">
@@ -259,6 +269,10 @@
     // trigger extension
     ace.require("ace/ext/language_tools");
     var editor = ace.edit("editor");
+    var textarea = $('textarea[name="editor"]');
+    editor.getSession().on("change", function () {
+      textarea.val(editor.getSession().getValue());
+    });
     editor.setTheme("ace/theme/crimson_editor");
     editor.getSession().setMode("ace/mode/mysql");
     // enable autocompletion and snippets

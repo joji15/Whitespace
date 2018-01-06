@@ -62,7 +62,7 @@
                   </div>
                 </div>
               </div>
-              <button class="btn btn-primary btn-sm" type="button" id="addBtn"><span class="oi oi-plus" title="add" aria-hidden="true"></span></button>
+              <button class="btn btn-primary btn-sm" type="button" id="addBtn"><span class="oi oi-plus" title="Add Questions" aria-hidden="true"></span></button>
               <br />
               <br />
               <button type="submit" name="submit" class="btn btn-outline-primary"><span class="oi oi-check"></span>  Create Quiz...</button>

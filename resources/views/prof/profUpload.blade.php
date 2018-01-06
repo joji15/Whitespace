@@ -6,66 +6,30 @@
 
 <div class="col-sm-8 col-md-9 col-lg-10 justify-content-start content" id="upContent">
   <div class="container-fluid contentMargin">
-    <hr />
-    <p class="h2" style="font-family:Segoe UI Light;">
-      Upload Files for Students
+    <br />
+    <p class="h2" style="font-family:Segoe UI Light; font-weight:lighter;">
+      <span class="oi oi-data-transfer-upload text-blue" title="File" aria-hidden="true"></span><span class="oi oi-data-transfer-download text-green" title="File" aria-hidden="true"></span> Manage Files for your Students
     </p>
-    <hr />
     <div class="row">
       <div class="col-sm col-md-7 col-lg-7 mt-4">
-        <div class="card border-blue-grey">
-          <div class="card-header bg-blue text-white h6">
-            <span class="oi oi-data-transfer-upload" title="Uploaded Files" aria-hidden="true"></span> Uploaded Files
-          </div>
-          <div class="card-body" style="overflow:auto;">
-            <table class="table table-hover table-sm">
-              <thead class="thead-inverse text-center">
-                <tr>
-                  <th>File Name</th>
-                  <th>Date Uploaded</th>
-                  <th class="text-center">Download</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">SQL Lesson #1.docx</th>
-                  <td>09/24/2017</td>
-                  <td class="text-center"><a href="#" class=""><span class="oi oi-data-transfer-download" title="Download this file" aria-hidden="true"></span></a></td>
-                </tr>
-                <tr>
-                  <th scope="row">SQL Lesson #2.docx</th>
-                  <td>09/26/2017</td>
-                  <td class="text-center"><a href="#"><span class="oi oi-data-transfer-download" title="Download this file" aria-hidden="true"></span></a></td>
-                </tr>
-                <tr>
-                  <th scope="row">Query Reviewer.pdf</th>
-                  <td>09/27/2017</td>
-                  <td class="text-center"><a href="#"><span class="oi oi-data-transfer-download" title="Download this file" aria-hidden="true"></span></a></td>
-                </tr>
-                <tr>
-                  <th scope="row">SQL Lesson #3.docx</th>
-                  <td>09/29/2017</td>
-                  <td class="text-center"><a href="#"><span class="oi oi-data-transfer-download" title="Download this file" aria-hidden="true"></span></a></td>
-                </tr>
-                <tr>
-                  <th scope="row">SQL Lesson #4.docx</th>
-                  <td>09/29/2017</td>
-                  <td class="text-center"><a href="#"><span class="oi oi-data-transfer-download" title="Download this file" aria-hidden="true"></span></a></td>
-                </tr>
-                <tr>
-                  <th scope="row">SQL Reviewer.pdf</th>
-                  <td>09/30/2017</td>
-                  <td class="text-center"><a href="#"><span class="oi oi-data-transfer-download" title="Download this file" aria-hidden="true"></span></a></td>
-                </tr>
-                <tr>
-                  <th scope="row">Database Management.pptx</th>
-                  <td>10/01/2017</td>
-                  <td class="text-center"><a href="#"><span class="oi oi-data-transfer-download" title="Download this file" aria-hidden="true"></span></a></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
+        <table class="table table-hover">
+          <thead class="thead-inverse table-sm text-center">
+            <tr>
+              <th>File Name</th>
+              <th>Date Uploaded</th>
+              <th class="text-center">Download</th>
+            </tr>
+          </thead>
+          <tbody>
+            @foreach($downloads as $down)
+            <tr>
+              <th scope="row">{{$down->file_name}}</th>
+              <td>{{$down->uploaded_at}}</td>
+              <td class="text-center"><a href="up_file/{{$down->file_name}}" download="{{$down->file_name}}"><span class="oi oi-data-transfer-download" title="Download this file" aria-hidden="true"></span></a></td>
+            </tr>
+            @endforeach
+          </tbody>
+        </table>
       </div>
       <div class="col-sm col-md-5 col-lg-5 mt-4">
         <div class="card border-blue-grey">
@@ -76,18 +40,23 @@
                 <li>Word Document (.doc/.docx)</li>
                 <li>Portable Document Format (.pdf)</li>
                 <li>PowerPoint Presentation (.ppt/.pptx)</li>
-                <li>Audio file (.mp3)</li>
+                <li>Excel File (.xls/.xlsx)</li>
                 <li>Text file (.txt)</li>
-                <li>Images (.jpeg/.jpg/.png)</li>
+                <li>SQL File (.sql)</li>
+                <li>Images (.jpeg/.jpg/.png/.svg)</li>
               </ul>
             </p>
             <br />
-            <form>
-              <div class="form-group">
+            <form action="/prof/Upload/insertfile" method="post" enctype="multipart/form-data">
+              <input type="hidden" value="{{ csrf_token() }}" name="_token" />
+              <div class="form-group ">
                 <label class="custom-file">
-                  <input type="file" id="file2" class="custom-file-input">
-                  <span class="custom-file-control"></span>
+                  <input type="file" name="file" id="file" class="form-control-file">
                 </label>
+
+                @if($errors->has('file'))
+                <p class="help-block">{{$errors->first('file')}}</p>
+                @endif
               </div>
               <button class="btn btn-outline-primary">Upload</button>
             </form>
@@ -97,5 +66,19 @@
     </div>
   </div>
 </div>
+<script>
+  @if(Session::has('notification'))
+  alert("{{ Session::get('notification.alert-type') }}");
+    var type = "{{ Session::get('alert-type','info') }}";
+    switch (type) {
+      case success:
+        toastr.success("{{ Session::get('notification.message') }}");
+        break;
+      case error:
+        toastr.error("{{ Session::get('notification.message') }}");
+        break;
+      }
+    @endif
+</script>
 
 @endsection

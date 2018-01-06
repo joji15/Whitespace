@@ -59,7 +59,7 @@
         <div class="card border-blue-grey">
           <div class="card-body">
             <h4 class="card-title"><span class="oi oi-clock text-green" title="history" aria-hidden="true"></span> Recent Queries</h4>
-            <p class="card-text">These are your 10 recent queries.</p>
+            <p class="card-text">Here are 3 of your most recent queries.</p>
             <table class="table table-bordered table-hover" id="databaseTbl">
               <thead class="thead-inverse text-center">
                 <tr>
@@ -69,13 +69,18 @@
                 </tr>
               </thead>
               <tbody>
-                @if($quiz=0)
-                  @foreach($quiz as $q)
+                @if(!$history->isEmpty())
+                  <p class="d-none">{{ $p = 1 }}</p>
+                  @foreach($history as $h)
+                  @if($p != 4)
                   <tr>
-                    <th>{{ $q->num }}</th>
-                    <td>{{ $q->name }}</td>
-                    <td>{{ $q->score }}</td>
+                    <th>{{ $p++ }}</th>
+                    <td>{{ $h->query_text }}</td>
+                    <td>{{ $h->created_at }}</td>
                   </tr>
+                  @else
+                  @break
+                  @endif
                   @endforeach
                 @else
                 <tr>
@@ -123,5 +128,12 @@
     </div>
   </div>
 </div>
+
+<style>
+.card-body{
+   padding: 15px;
+}
+
+</style>
 
 @endsection

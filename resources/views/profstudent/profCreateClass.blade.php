@@ -45,21 +45,13 @@
           </div>
         </form>
 
-        <div class="alert bg-green text-white border-dark-grey alert-dismissible fade show" role="alert">
+        @if($show==1)
+        <div class="alert bg-green text-white border-dark-grey alert-dismissible fade show toast" role="alert">
           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
           <p class="h2 alert-heading">Success!</p>
           <p>You have successfully created a class for your students. They can now register.</p>
-        </div>
-
-        @if($show==1)
-        <div class="alert alert-warning alert-dismissible fade show" role="alert">
-          <h4 class="alert-heading">Success!</h4>
-          <p>You have successfully created a class for your students. They can now register.</p>
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
         </div>
         @else
 

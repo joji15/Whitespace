@@ -31,12 +31,20 @@ class studentController extends Controller
   public function index()
   {
 		$quiz = 0;
-    return view('students.studentHome', compact('quiz'));
+		$student = Auth::user()->student_id;
+    $history = DB::table('history_tbl')->select('query_text', 'created_at')->where('student_id', '=', $student)->get();
+    return view('students.studentHome', compact('quiz','history'));
   }
 
 	public function studentprofile()
 	{
-		return view('students.studentProfile');
+		$studentID = Auth::user()->student_id;
+		$classID = DB::table('student')->where('student_id', $studentID)->value('class_id');
+		$profID = DB::table('class_tbl')->where('class_id', $classID)->value('prof_id');
+    $downloads = DB::table('files_tbl')->where('prof_id', $profID)->get();
+
+		$history = DB::table('history_tbl')->select('query_text', 'created_at')->where('student_id', '=', $studentID)->get();
+		return view('students.studentProfile',compact('downloads', 'history'));
 	}
 
 	public function studentQuiz()
@@ -63,13 +71,14 @@ class studentController extends Controller
   public function submitSimulator(Request $request)
   {
 		$studentID = Auth::user()->student_id;
-		$qtext = $request->input('simtext');
+		$qtext = $request->input('editor');
 
 		DB::table('history_tbl')->insertGetId(
 				['query_text' => $qtext,
 				'created_at' => \Carbon\Carbon::now(),
 				'student_id' => $studentID]
 		);
+		return $this->studentSimulator();
   }
 
 	public function studentDesigner()
@@ -239,108 +248,52 @@ class studentController extends Controller
 		return view('studentlessons.chapter3.nulls');
 	}
 
-	public function multiple_table(){
-		return view('studentlessons.chapter4.multiple_table');
-	}
-
-	public function joining_two_tables(){
-		return view('studentlessons.chapter4.joining_two_tables');
-	}
-
-	public function in_operator(){
-		return view('studentlessons.chapter4.in_operator');
-	}
-
-	public function exists_operator(){
-		return view('studentlessons.chapter4.exists_operator');
-	}
-
-	public function subquery_within_subquery(){
-		return view('studentlessons.chapter4.subquery_within_subquery');
-	}
-
-	public function alias(){
-		return view('studentlessons.chapter4.alias');
-	}
-
-	public function joining_table_itself(){
-		return view('studentlessons.chapter4.joining_table_itself');
-	}
-
-	public function self_join_primary_key(){
-		return view('studentlessons.chapter4.self_join_primary_key');
-	}
-
-	public function joining_several_tables(){
-		return view('studentlessons.chapter4.joining_several_tables');
-	}
-
-	public function set_operations(){
-		return view('studentlessons.chapter4.set_operations');
-	}
-
-	public function all_and_any(){
-		return view('studentlessons.chapter4.all_and_any');
-	}
-
-	public function inner_join(){
-		return view('studentlessons.chapter4.inner_join');
-	}
-
-	public function outer_join(){
-		return view('studentlessons.chapter4.outer_join');
-	}
-
-	public function product(){
-		return view('studentlessons.chapter4.product');
-	}
-
 	public function updating_data(){
-		return view('studentlessons.chapter5.updating_data');
+		return view('studentlessons.chapter4.updating_data');
 	}
 
 	public function new_from_existing(){
-		return view('studentlessons.chapter5.new_from_existing');
+		return view('studentlessons.chapter4.new_from_existing');
 	}
 
 	public function existing_data(){
-		return view('studentlessons.chapter5.existing_data');
+		return view('studentlessons.chapter4.existing_data');
 	}
 
 	public function add_rows_existing(){
-		return view('studentlessons.chapter5.add_rows_existing');
+		return view('studentlessons.chapter4.add_rows_existing');
 	}
 
 	public function commit_and_rollback(){
-		return view('studentlessons.chapter5.commit_and_rollback');
+		return view('studentlessons.chapter4.commit_and_rollback');
 	}
 
 	public function transactions(){
-		return view('studentlessons.chapter5.transactions');
+		return view('studentlessons.chapter4.transactions');
 	}
 
 	public function changing_deleting_existing(){
-		return view('studentlessons.chapter5.changing_deleting_existing');
+		return view('studentlessons.chapter4.changing_deleting_existing');
 	}
 
 	public function rollback(){
-		return view('studentlessons.chapter5.rollback');
+		return view('studentlessons.chapter4.rollback');
 	}
 
 	public function value_to_null(){
-		return view('studentlessons.chapter5.value_to_null');
+		return view('studentlessons.chapter4.value_to_null');
 	}
 
 	public function tables_structure(){
-		return view('studentlessons.chapter5.tables_structure');
+		return view('studentlessons.chapter4.tables_structure');
 	}
 
 	public function complex_changes(){
-		return view('studentlessons.chapter5.complex_changes');
+		return view('studentlessons.chapter4.complex_changes');
 	}
 
 	public function dropping_table(){
-		return view('studentlessons.chapter5.dropping_table');
+		return view('studentlessons.chapter4.dropping_table');
 	}
 	/*------------------------QUIZZES------------------------*/
 

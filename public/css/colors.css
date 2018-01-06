@@ -12,6 +12,18 @@
   color: rgb(244,67,54);
 }
 
+.bg-pink{
+  background-color: rgb(233,30,99);
+}
+
+.border-pink{
+  border-color: rgb(233,30,99);
+}
+
+.text-pink{
+  color: rgb(233,30,99);
+}
+
 .bg-purple{
   background-color: rgb(156,39,176);
 }

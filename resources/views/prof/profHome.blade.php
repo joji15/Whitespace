@@ -6,32 +6,22 @@
 
 <div class="col-sm-8 col-md-9 col-lg-10 justify-content-start content" id="homeContent">
   <div class="container-fluid contentMargin">
+    <br />
+    <p class="h2 mb-4" style="font-family:Segoe UI Light; font-weight:lighter;">
+      <span class="oi oi-home text-blue" title="Professor Dashboard" aria-hidden="true"></span> Welcome to your Dashboard
+    </p>
     <div class="row">
-      <div class="col-12 col-md-12 col-lg-12 mt-4">
+      <div class="col-12 col-md-12 col-lg-12  mb-4">
         <div class="card border-blue-grey">
-          <div class="card-header bg-yellow text-white h6">
-            <span class="oi oi-star" title="Rank" aria-hidden="true"></span> Class Standing - Overall
-          </div>
-          <div class="card-header bg-dark-grey">
-            <nav class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
-              @if($classes->isEmpty())
-                <p class="h5 text-white pl-3">
-                  No Class Found
-                </p>
-              @else
-                @foreach ($classes as $class)
-                  <a class="nav-item nav-link active" id="nav-{{ $class->crs_sec }}-tab" data-toggle="tab" href="#nav-{{ $class->crs_sec }}" role="tab" aria-controls="nav-{{ $class->crs_sec }}" aria-expanded="true"><span class="oi oi-people" title="{{ $class->crs_sec }}" aria-hidden="true"></span> {{ $class->crs_sec }}</a>
-                @endforeach
-              @endif
-            </nav>
-          </div>
-          <div class="card-body" style="overflow-y: auto;">
+          <div class="card-body border-blue-grey" style="overflow-y: auto;">
+            <h4 class="card-title border-yellow"><span class="oi oi-star text-yellow" title="Quiz" aria-hidden="true"></span> Top 5 Students</h4>
+            <p class="card-text">Below are your top 5 students across all of your classes this semester.</p>
             <div class="tab-content" id="nav-tabContent">
               <div class="tab-pane fade show active" id="nav-BSIT3A" role="tabpanel" aria-labelledby="nav-BSIT3A-tab">
                 <table class="table table-striped table-hover table-sm">
                   <thead class="thead-inverse text-center">
                     <tr>
-                      @if($students->isEmpty())
+                      @if($students->count() == 0)
                       <p class="h3 pt-3">
                         No Students Found
                       </p>
@@ -44,14 +34,18 @@
                     </tr>
                   </thead>
                   <tbody>
-                      @foreach ($students as $student)
-                      <tr>
-                        <th scope="row">{{ $student->stud_id }}</th>
-                        <td>{{ $student->student_name }}</td>
-                        <td>{{ $student->degree_Program }}-{{ $student->section }}</td>
-                        <td>NO SCORE</td>
-                      </tr>
-                      @endforeach
+                    @if($students->count() == 0)
+                    
+                    @else
+                    @foreach ($students as $student)
+                    <tr>
+                      <th scope="row">{{ $student->stud_id }}</th>
+                      <td>{{ $student->student_name }}</td>
+                      <td>{{ $student->degree_Program }}-{{ $student->section }}</td>
+                      <td>NO SCORE</td>
+                    </tr>
+                    @endforeach
+                    @endif
                   </tbody>
                 </table>
               </div>
@@ -59,7 +53,7 @@
           </div>
         </div>
       </div>
-      <div class="col-12 col-md-6 col-lg-6 mt-4">
+      <div class="col-12 col-md-6 col-lg-6  mb-4">
         <div class="card border-blue-grey">
           <div class="card-header bg-green text-white h6">
             <span class="oi oi-spreadsheet" title="Quizzes" aria-hidden="true"></span> Scheduled Quizzes
@@ -79,7 +73,7 @@
           </div>
         </div>
       </div>
-      <div class="col-12 col-md-6 col-lg-6 mt-4">
+      <div class="col-12 col-md-6 col-lg-6  mb-4">
         <div class="card border-blue-grey">
           <div class="card-header bg-blue text-white h6">
             <span class="oi oi-folder" title="Database" aria-hidden="true"></span> Recent Databases

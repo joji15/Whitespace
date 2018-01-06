@@ -29,6 +29,8 @@ class profLoginController extends Controller
             return redirect()->intended(route('prof.profHome'));
         }
 
-        return redirect()->back()->withInput($request->only('prof_email','remember'));
+        return redirect()->back()->withInput($request->only('prof_email','remember'))->withErrors([
+                    'loginerr' => 'Either the email or the password is incorrect.',
+                ]);
     }
 }

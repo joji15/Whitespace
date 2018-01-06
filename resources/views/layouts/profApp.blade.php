@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>WhiteSpace Admin Dashboard -  @yield('title')</title>
+  <title>WhiteSpace Professor Dashboard -  @yield('title')</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,6 +13,12 @@
   <link href="/css/open-iconic-bootstrap.css" rel="stylesheet">
   <!-- Stylesheet for Customazation -->
   <link href="/css/styles.css" rel="stylesheet">
+
+  <!-- jQuery UI CSS files -->
+  <link href="/css/jquery-ui.min.css" rel="stylesheet">
+  <link href="/css/jquery-ui.structure.min.css" rel="stylesheet">
+  <link href="/css/jquery-ui.theme.min.css" rel="stylesheet">
+
   <link href="/css/colors.css" rel="stylesheet">
   <link href="/css/media-queries.css" rel="stylesheet">
   <link href="/css/admintree.css" rel="stylesheet">
@@ -25,6 +31,8 @@
   <script src="/js/popper.min.js"></script>
   <script src="/js/bootstrap.min.js"></script>
   <script src="/js/Chart.bundle.min.js"></script>
+  <!-- jQuery UI JS files -->
+  <script src="/js/jquery-ui.min.js"></script>
 
   <!-- To make use of the active class in the side nav, edit this js file -->
   <script src="/js/sidenavbar.js" async></script>
@@ -52,31 +60,14 @@
       <img src="{{ asset('img/WS-ICO.png') }}" width="40" height="40" alt="WS Logo">
       {{ Auth::user()->prof_fName }} {{ Auth::user()->prof_lName }}
     </a>
-    <ul class="navbar-nav">
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="notificationDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span class="oi oi-bell" title="notification" aria-hidden="true"> &nbsp;&nbsp;<span class="badge badge-light">4</span></span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="notificationDropdown">
-
-        </div>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span class="oi oi-person" title="account" aria-hidden="true"></span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item text-red" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-            <span class="oi oi-account-logout" title="logout" aria-hidden="true"></span> Logout
-          </a>
-          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-            {{ csrf_field() }}
-          </form>
-        </div>
-      </li>
-    </ul>
+    <li style="list-style-type:none">
+      <a class="btn btn-danger" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+        Logout
+      </a>
+      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+        {{ csrf_field() }}
+      </form>
+    </li>
   </nav>
 
   <div class="container-fluid">
@@ -99,8 +90,7 @@
               <a class="nav-item nav-link pl-5 btn-sm" href="/prof/Quiz/EditQuiz" id="editQuizpill"><span class="oi oi-pencil" title="editQuiz" aria-hidden="true"></span> Edit Quiz</a>
             </div>
             <a class="nav-item nav-link" href="/prof/Upload" id="profUploadpill"><span class="oi oi-data-transfer-upload" title="Upload" aria-hidden="true"></span> Upload</a>
-            <hr class="hr-white"/>
-            <div class="fixed-bottom mb-2 ml-2"><button type="button" class="btn btn-primary" id="minbtn"><span class="oi oi-caret-left" title="navmenu" aria-hidden="true"></span></button></div>
+            <!-- <div class="fixed-bottom mb-2 ml-2"><button type="button" class="btn btn-primary" id="minbtn"><span class="oi oi-caret-left" title="navmenu" aria-hidden="true"></span></button></div> -->
           </div>
         </nav>
       </div>

@@ -28,6 +28,11 @@ class mainController extends Controller
 		return view('home');
 	}
 
+	public function aboutUs()
+	{
+		return view('aboutus');
+	}
+
 	public function register()
 	{
 		return view('register');

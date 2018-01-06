@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\class_tbl;
 use App\student;
 use App\quiz;
+use Auth;
+use DB;
 
 class profController extends Controller
 {
@@ -24,6 +26,12 @@ class profController extends Controller
   *
   * @return \Illuminate\Http\Response
   */
+
+  public function home()
+  {
+    return redirect()->route('prof.profHome');
+  }
+
   public function index()
   {
     return view('prof.profHome')->with('students', Student::all())->with('quizzes', Quiz::all())->with('classes', class_tbl::all());
@@ -31,13 +39,14 @@ class profController extends Controller
 
   public function StudentView()
   {
-    return view('prof.profStudent');
+    $show = 0;
+    return view('prof.profStudent', compact('show'));
   }
 
   public function CreateClassView()
   {
-    $status = 0;
-    return view('profstudent.profCreateClass', ['show' => $status]);
+    $show = 0;
+    return view('profstudent.profCreateClass', compact('show'));
   }
 
   public function ViewDatabaseView()
@@ -57,7 +66,12 @@ class profController extends Controller
 
   public function QuizView()
   {
-    return view('prof.profQuiz');
+    $profID = Auth::user()->prof_id;
+    $quiz = DB::table('quiz_tbl')
+      ->selectRaw('quiz_id, quiz_title, quiz_desc, created_at')
+      ->whereRaw('prof_id = ?', $profID)
+      ->get();
+    return view('prof.profQuiz', compact('quiz'));
   }
 
   public function ViewQuizView()
@@ -71,9 +85,18 @@ class profController extends Controller
     return view('profquiz.createQuiz', ['messages'=>$message]);
   }
 
-  public function EditQuizView()
+  public function EditQuizView(Request $request)
   {
-    return view('profquiz.editQuiz');
+    $quizID = $request->input('quiz_id');
+    $question = DB::table('question_tbl')
+      ->selectRaw('question_id, question, choice_A, choice_B, choice_C, choice_D, correct_ans')
+      ->whereRaw('quiz_id = ?',$quizID)
+      ->get();
+    $question_info = DB::table('quiz_tbl')
+      ->selectRaw('quiz_title, quiz_desc')
+      ->whereRaw('quiz_id = ?',$quizID)
+      ->get();
+    return view('profquiz.editQuiz', compact('quizID','question','question_info'));
   }
 
   public function EditQuizContentView()

@@ -13,16 +13,6 @@
           <div class="card-header text-white bg-green h6">
             <span class="oi oi-spreadsheet" title="Rank" aria-hidden="true"></span> Quiz Details
           </div>
-          <div class="card-header text-white bg-dark-grey border-blue-grey h6">
-            <div class="input-group">
-              <select class="form-control form-control-sm custom-select">
-                <option selected disabled>Select Quiz...</option>
-                <option value="1">Quiz #1</option>
-                <option value="2">Quiz #2</option>
-                <option value="3">Quiz #3</option>
-              </select>
-            </div>
-          </div>
           <div class="card-header bg-dark-grey">
             <nav class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
               <a class="nav-item nav-link active" id="nav-QandA-tab" data-toggle="tab" href="#nav-QandA" role="tab" aria-controls="nav-QandA" aria-expanded="true"><span class="oi oi-question-mark" title="qanda" aria-hidden="true"></span> Questions and Answers</a>
