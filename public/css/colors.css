@@ -1,5 +1,15 @@
 /* ---CSS Custom Color Scheme--- */
 
+.bg-transparent{
+  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.border-transparent{
+  border-color: rgb(255, 255, 255);
+  border-color: rgba(255, 255, 255, 0);
+}
+
 .bg-red{
   background-color: rgb(244,67,54);
 }
@@ -48,8 +58,28 @@
   color: rgb(186,104,200);
 }
 
-.text-lavender{
+.background-lavender{
+  background-color: rgb(211,69,244);
+}
+
+.border-lavender{
   border-color: rgb(211,69,244);
+}
+
+.text-lavender{
+  color: rgb(211,69,244);
+}
+
+.bg-indigo{
+  background-color: rgb(63,81,181);
+}
+
+.border-indigo{
+  border-color: rgb(63,81,181);
+}
+
+.text-indigo{
+  color: rgb(63,81,181);
 }
 
 .bg-blue{
@@ -62,6 +92,18 @@
 
 .text-blue{
   color: rgb(33,150,243);
+}
+
+.bg-teal{
+  background-color: rgb(100,255,218);
+}
+
+.border-teal{
+  border-color: rgb(100,255,218);
+}
+
+.text-teal{
+  color: rgb(100,255,218);
 }
 
 .bg-green{
@@ -77,15 +119,15 @@
 }
 
 .bg-yellow{
-  background-color: rgb(255,196,0);
+  background-color: rgb(255,171,0);
 }
 
 .border-yellow{
-  border-color: rgb(255,196,0);
+  border-color: rgb(255,171,0);
 }
 
 .text-yellow{
-  color: rgb(255,196,0);
+  color: rgb(255,171,0);
 }
 
 .bg-orange{
@@ -157,7 +199,7 @@
 }
 
 .text-silver{
-  border-color: rgb(192,192,192);
+  color: rgb(192,192,192);
 }
 
 .bg-gainsboro{
@@ -165,11 +207,11 @@
 }
 
 .border-gainsboro{
-  background-color: rgb(220,220,220);
+  border-color: rgb(220,220,220);
 }
 
 .text-gainsboro{
-  background-color: rgb(220,220,220);
+  color: rgb(220,220,220);
 }
 
 .bg-whitesmoke{
@@ -177,11 +219,11 @@
 }
 
 .border-whitesmoke{
-  background-color: rgb(245,245,245);
+  border-color: rgb(245,245,245);
 }
 
 .text-whitesmoke{
-  background-color: rgb(245,245,245);
+  color: rgb(245,245,245);
 }
 
 .bg-customblue{
@@ -192,6 +234,10 @@
   border-color: rgb(0,155,183);
 }
 
+.text-customblue{
+  color: rgb(0,155,183);
+}
+
 .bg-customlightblue{
   background-color: rgb(96,180,249);
 }
@@ -200,8 +246,20 @@
   border-color: rgb(96,180,249);
 }
 
+.text-customlightblue{
+  color: rgb(96,180,249);
+}
+
 .bg-lightprimary {
   background-color: rgb(90,173,246);
+}
+
+.border-lightprimary {
+  border-color: rgb(90,173,246);
+}
+
+.text-lightprimary {
+  color: rgb(90,173,246);
 }
 
 .bg-maroon{
@@ -210,4 +268,8 @@
 
 .border-maroon{
   border-color: rgb(196,61,54);
+}
+
+.text-maroon{
+  color: rgb(196,61,54);
 }

@@ -19,6 +19,7 @@ class CreateQuizSchedTbl extends Migration
       $table->date('quiz_date', 50);
       $table->string('time_start', 10);
       $table->string('time_end', 10);
+      $table->string('status', 10)->nullable();
       $table->integer('class_id')->unsigned()->nullable();
       $table->integer('quiz_id')->unsigned()->nullable();
     });

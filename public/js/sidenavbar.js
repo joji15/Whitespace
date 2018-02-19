@@ -13,7 +13,9 @@ var quiz = document.getElementById('quizContent');
 var viewquiz = document.getElementById('viewQuizContent');
 var createquiz = document.getElementById('createQuizContent');
 var editquiz = document.getElementById('editQuizContent');
+var schedquiz = document.getElementById('ScheduleQuizContent');
 var upload = document.getElementById('upContent');
+var audit = document.getElementById('auditContent');
 
 /*
     These variables are getting the ID of every page on the Professor's Side
@@ -60,25 +62,42 @@ else if (quiz !== null){
 
 else if (viewquiz !== null){
   $(".a").find(".active").removeClass("active");
-  $('#viewQuizpill').addClass("active");
-  $('#studentSub').addClass("d-none");
+    $('#profQuizpill').addClass("active");
+    $('#studentSub').addClass("d-none");
+    $('#quizSub').addClass("d-none");
 }
 
 else if (createquiz !== null){
   $(".a").find(".active").removeClass("active");
-  $('#createQuizpill').addClass("active");
-  $('#studentSub').addClass("d-none");
+    $('#profQuizpill').addClass("active");
+    $('#studentSub').addClass("d-none");
+    $('#quizSub').addClass("d-none");
 }
 
 else if (editquiz !== null){
   $(".a").find(".active").removeClass("active");
-  $('#editQuizpill').addClass("active");
-  $('#studentSub').addClass("d-none");
+    $('#profQuizpill').addClass("active");
+    $('#studentSub').addClass("d-none");
+    $('#quizSub').addClass("d-none");
+}
+
+else if (schedquiz !== null){
+  $(".a").find(".active").removeClass("active");
+    $('#profQuizpill').addClass("active");
+    $('#studentSub').addClass("d-none");
+    $('#quizSub').addClass("d-none");
 }
 
 else if (upload !== null){
     $(".a").find(".active").removeClass("active");
     $('#profUploadpill').addClass("active");
+    $('#studentSub').addClass("d-none");
+    $('#quizSub').addClass("d-none");
+}
+
+else if (audit !== null){
+    $(".a").find(".active").removeClass("active");
+    $('#profAuditpill').addClass("active");
     $('#studentSub').addClass("d-none");
     $('#quizSub').addClass("d-none");
 }

@@ -6,16 +6,22 @@ TBA
 
 ## About Whitespace
 
-TBA
+Whitespace is a Web based SQL Learning Hub with an SQL Simulator and SQL Designer.
 
 ## About Whitespace.
 
-10.8.2017
-— Fixed the toggle of the side navigation bar if for some reason that viewing this website in mobile is ever needed, even though it's supposed to be used in a desktop, but I guess that's just our problem.
-— Added a few cards on the student tab, links to be added
-— Card sizes fixed to equal height
-— Col sizes Updated
-— Other minor fixes and design choices.
+2017.02.04
+— Edited some Controllers
+— Added AOS Animation
+— Added and edited some colors
+— Seperated the designer css and js file
+— Some styles
+— Finally added a working Simulator using Web SQL
+— A working but buggy SQL Designer
+— Fixed Downloads
+— Design Choices
+— Minor Fixes...
+
 
 ## License
 
@@ -23,5 +29,8 @@ The Whitespace website is open-sourced software licensed under the GNU GPL licen
 
 ## To be Updated
 
-<li>Finish Student Tab</li>
-<li>Finish Quiz Tab</li>
+<li>Finish Student Quizzes</li>
+<li>Finish SQL Simulator</li>
+<li>Finish SQL Designer</li>
+<li>Finish Results</li>
+<li>Finish Student Progess</li>

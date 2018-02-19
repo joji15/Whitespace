@@ -1,5 +1,9 @@
 
-/*---Main CSS External Stylesheet---*/
+/*--- Main CSS External Stylesheet ---*/
+
+body{
+  image-rendering: -webkit-optimize-contrast;
+}
 
 body, html, .container-fluid {
   color: rgb(0, 0, 0);
@@ -10,6 +14,15 @@ body, html, .container-fluid {
 .bodycenter{
   align-items:center;
   display:flex;
+  background-color: rgb(245,245,245);
+  overflow: hidden;
+}
+
+.bodycenter-prof{
+  align-items:center;
+  display:flex;
+  background-color: rgb(33,33,33);
+  overflow: hidden;
 }
 
 .card{
@@ -36,6 +49,16 @@ body, html, .container-fluid {
   padding: 3px;
 }
 
+.navbar-brand.footer-link{
+  color: rgb(255,255,255);
+  -webkit-transition: color 0.25s;
+  transition: color 0.25s;
+}
+
+.navbar-brand.footer-link:hover{
+  color: rgb(33,150,243);
+}
+
 .hr-white{
   border-top: 1px solid rgb(66,66,66);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -48,6 +71,46 @@ body, html, .container-fluid {
 
 .shadow{
   box-shadow: 0 2px 10px rgba(33,33,33,0.5);
+}
+
+.no-shadow{
+  box-shadow: initial;
+}
+
+.nav-def{
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.0);
+  border-radius: 100px;
+  -webkit-transition: background 0.25s;
+  transition: background 0.25s;
+}
+
+.nav-link{
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.0);
+  box-shadow: 0 0px 0px rgba(33,33,33,0.3);
+  -webkit-transition: background 0.25s, box-shadow 0.25s, color 0.25s;
+  transition: background 0.25s, box-shadow 0.15s, color 0.25s;
+}
+
+.nav-link:hover{
+  background-color: rgb(33,150,243);
+  background-color: rgba(33,150,243,0.9);
+  box-shadow: 0 2px 5px rgba(33,33,33,0.3);
+  color: rgb(255,255,255);
+}
+
+.nav-link:focus{
+  background-color: rgb(63,81,181);
+  background-color: rgba(63,81,181,0.9);
+  box-shadow: inset 0 2px 5px rgba(33,33,33,0.3);
+  color: rgb(255,255,255);
+}
+
+.nav-def:hover{
+  background-color: rgb(41,98,255);
+  border-radius: 100px;
+  color: rgb(255,255,255);
 }
 
 .studentshadow{
@@ -93,9 +156,9 @@ body, html, .container-fluid {
   width:25px
 }
 .tree li span {
+  border:1px solid #999;
   -moz-border-radius:5px;
   -webkit-border-radius:5px;
-  border:1px solid #999;
   border-radius:5px;
   display:inline-block;
   padding:3px 8px;

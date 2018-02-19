@@ -1,0 +1,7 @@
+        DB::table('audit_trail_tbl')->insert(
+            ['audit_transaction' => 'Added Class',
+             'audit_description' => $course+'-'+$section+': '+$year+' has been added as a Class by You',
+             'created_at' => Carbon::now()
+             'student_id' => NULL,
+             'prof_id' => $profID]
+        );

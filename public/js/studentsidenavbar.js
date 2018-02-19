@@ -6,6 +6,7 @@
 var studentHome = document.getElementById('studentHomeContent');
 var studentProfile = document.getElementById('studentProfileContent');
 var studentLessons = document.getElementById('studentLessonContent');
+var studentLessonsCon = document.getElementById('studlessonContent');
 var studentSimulator = document.getElementById('studentSimContent');
 var studentDesigner = document.getElementById('studentDesContent');
 
@@ -14,33 +15,41 @@ var studentDesigner = document.getElementById('studentDesContent');
 */
 
 if (studentHome !== null){
-    $(".a").find(".active").removeClass("active");  //  Find all <a> tags with the active class, and then remove the said class
-    $('#studentpill').addClass("active");             //  Add an active class to the ID of the nav item
-    // $('#profilesub').addClass("d-none");            //  !!!(FOR SUB-MENUS)!!! Add a d-none (display:none) class to the div of subclass
+  $(".a").find(".active").removeClass("active");  //  Find all <a> tags with the active class, and then remove the said class
+  $('#studentpill').addClass("active");             //  Add an active class to the ID of the nav item
+  // $('#profilesub').addClass("d-none");            //  !!!(FOR SUB-MENUS)!!! Add a d-none (display:none) class to the div of subclass
 }
 
 else if (studentProfile !== null){
-    $(".a").find(".active").removeClass("active");
-    $('#studentprofilepill').addClass("active");
-    // $('#profilesub').addClass("d-block");
+  $(".a").find(".active").removeClass("active");
+  $('#studentprofilepill').addClass("active");
+  // $('#profilesub').addClass("d-block");
+}
+
+else if (studentLessonsCon !== null) {
+  $(".a").find(".active").removeClass("active");
+  $('#studentlessonpill').addClass("active");
+  // $('#profilesub').addClass("d-none");
 }
 
 else if (studentLessons !== null) {
-    $(".a").find(".active").removeClass("active");
-    $('#studentlessonpill').addClass("active");
-    // $('#profilesub').addClass("d-none");
+  $(".a").find(".active").removeClass("active");
+  $('#studentlessonpill').addClass("active");
+  // $('#profilesub').addClass("d-none");
 }
 
 else if (studentSimulator !== null) {
-    $(".a").find(".active").removeClass("active");
-    $('#studentsimpill').addClass("active");
-    // $('#profilesub').addClass("d-none");
+  $(".a").find(".active").removeClass("active");
+  $('#studentsimpill').addClass("active");
+  // $('#profilesub').addClass("d-none");
 }
 
 else if (studentDesigner !== null) {
-    $(".a").find(".active").removeClass("active");
-    $('#studentdespill').addClass("active");
-    // $('#profilesub').addClass("d-none");
+  $(".a").find(".active").removeClass("active");
+  $('#studentdespill').addClass("active");
+  // $('#profilesub').addClass("d-none");
+  $(document).ready(designerwidth);
+  $(window).resize(designerwidth);
 }
 //
 // else if (createClass !== null){
@@ -65,5 +74,17 @@ function sidenavfunc() {
     $('#sidenavbar').removeClass("collapse");     //  If the window is less than or equal to 575 pixels, remove the collapse class or unhide the navbar
 }
 
+function designerwidth() {
+  if($(window).width() <=575) {
+    $('#mobileDesignerErr').removeClass("d-none");        //  If the window is less than or equal to 575 pixels, add the collapse class or hide the navbar
+    $('#mainDesignerPage').addClass("d-none");        //  If the window is less than or equal to 575 pixels, add the collapse class or hide the navbar
+  }
+  else {
+    $('#mainDesignerPage').removeClass("d-none");     //  If the window is less than or equal to 575 pixels, remove the collapse class or unhide the navbar
+    $('#mobileDesignerErr').addClass("d-none");        //  If the window is less than or equal to 575 pixels, add the collapse class or hide the navbar
+  }
+}
+
 $(document).ready(sidenavfunc);
 $(window).resize(sidenavfunc);
+

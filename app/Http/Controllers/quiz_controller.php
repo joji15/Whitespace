@@ -101,7 +101,7 @@ class quiz_controller extends Controller
       'quiz_id'=>$quizID,
       'correct_ans'=>$add_correct_ans[$i]]);
     }
-    return redirect('adminQuiz');
+    return redirect('/prof/Quiz');
   }
 
 }

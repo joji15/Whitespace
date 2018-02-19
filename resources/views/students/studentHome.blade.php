@@ -60,7 +60,7 @@
           <div class="card-body">
             <h4 class="card-title"><span class="oi oi-clock text-green" title="history" aria-hidden="true"></span> Recent Queries</h4>
             <p class="card-text">Here are 3 of your most recent queries.</p>
-            <table class="table table-bordered table-hover" id="databaseTbl">
+            <table class="table table-bordered table-hover table-sm" id="databaseTbl">
               <thead class="thead-inverse text-center">
                 <tr>
                   <th>No.</th>
@@ -69,8 +69,9 @@
                 </tr>
               </thead>
               <tbody>
+
                 @if(!$history->isEmpty())
-                  <p class="d-none">{{ $p = 1 }}</p>
+                  @php $p = 1 @endphp
                   @foreach($history as $h)
                   @if($p != 4)
                   <tr>
@@ -90,7 +91,7 @@
               </tbody>
             </table>
           </div>
-          <a href="studentsRankings" class="bg-blue-grey text-green">
+          <a href="{{ route('student.Profile') }}" class="bg-blue-grey text-green">
             <div class="card-footer border-green">
             See your full history <span class="oi oi-link-intact" title="linkhistory" aria-hidden="true"></span>
             </div>
@@ -115,10 +116,40 @@
         <div class="card border-blue-grey">
           <div class="card-body">
             <h4 class="card-title"><span class="oi oi-data-transfer-download text-purple" title="Download" aria-hidden="true"></span> Recent Files</h4>
-            <p class="card-text">Below are the files that your teacher uploaded for you to download</p>
-
+            <p class="card-text">Below are 3 of the files that your teacher uploaded for you to download</p>
+            <table class="table table-bordered table-hover table-sm" id="downloadtable">
+              <thead class="thead-inverse text-center">
+                <tr>
+                  <th>No.</th>
+                  <th>File Name</th>
+                  <th>Date Uploaded</th>
+                  <th>Download</th>
+                </tr>
+              </thead>
+              <tbody>
+                @if(!$download->isEmpty())
+                  <p class="d-none">{{ $dCtn = 1 }}</p>
+                  @foreach($download as $d)
+                  @if($dCtn != 4)
+                  <tr>
+                    <th>{{ $dCtn++ }}</th>
+                    <td>{{ $d->file_name }}</td>
+                    <td>{{ $d->uploaded_at }}</td>
+                    <td class="text-center"><a href="/up_file/{{$d->file_name}}" download="{{$d->file_name}}"><span class="oi oi-data-transfer-download" title="Download this file" aria-hidden="true"></span></a></td>
+                  </tr>
+                  @else
+                  @break
+                  @endif
+                  @endforeach
+                @else
+                <tr>
+                  <th colspan="3"></th>
+                </tr>
+                @endif
+              </tbody>
+            </table>
           </div>
-          <a href="studentsScheduledQuizzes" class="bg-blue-grey text-lightpurple">
+          <a href="{{ route('student.Profile') }}" class="bg-blue-grey text-lightpurple">
             <div class="card-footer border-lightpurple">
               View All of your Downloadable Files <span class="oi oi-link-intact" title="linkdownload" aria-hidden="true"></span>
             </div>

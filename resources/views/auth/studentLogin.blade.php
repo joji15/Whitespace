@@ -4,8 +4,8 @@
 
 @section('content')
 
-<div class="col-md-6 align-self-center">
-  <p class="h3 text-center"><em>Student Login</em></p>
+<div class="col-md-6 align-self-center animated fadeInRight">
+  <p class="h4 text-center" style="font-family:Segoe UI; font-weight:lighter;"><span class="oi oi-account-login text-green"></span><em> Student Login</em></p>
   <form method="POST" action="{{ route('student.login.submit') }}">
     {{ csrf_field() }}
     <br />

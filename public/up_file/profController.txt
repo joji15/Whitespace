@@ -1,0 +1,75 @@
+//profController.php
+  public function EditSchedule(Request $req)
+  {
+    $quizSchedID = $req->input('quiz_sched_id');
+    $quizId = $req->input('quiz_id');
+    $class_sched = DB::table('quiz_sched_tbl')
+                   -> join('quiz_tbl','quiz_tbl.quiz_id','=','quiz_sched_tbl.quiz_id')
+                   -> join('class_tbl', 'class_tbl.class_id', '=', 'quiz_sched_tbl.class_id')
+                   ->whereRaw('quiz_sched_id = ?', $quizSchedID)
+                   ->get();
+
+    $quiz = DB::table('quiz_sched_tbl')
+                   -> join('quiz_tbl','quiz_tbl.quiz_id','=','quiz_sched_tbl.quiz_id')
+                   -> join('class_tbl', 'class_tbl.class_id', '=', 'quiz_sched_tbl.class_id')
+                    ->whereRaw('quiz_tbl.quiz_id = ?', $quizId )
+                    ->whereRaw('quiz_sched_id != ?', $quizSchedID)
+                   ->get();
+
+    return view('profquiz.editSchedule', compact('quizSchedID','class_sched','quiz'));
+  }
+
+  public function updateSchedule(Request $req)
+  {
+    $quizId = $req -> input('quiz_id');
+    $quizDate = $req -> input('quiz_date');
+    $timeStart = $req -> input('time_start');
+    $timeEnd = $req ->  input('time_end');
+
+    DB::table('quiz_sched_tbl')
+    ->where('quiz_sched_id',$quizId)
+    ->update(['quiz_date'=>$quizDate,
+    'time_start'=>$timeStart,
+    'time_end'=>$timeEnd]);
+
+    return Redirect::to('/prof/Quiz');
+
+  }
+
+  public function ScheduleQuiz()
+  {
+    $class = DB::table('class_tbl')->orderBy('school_year','desc')->get();
+
+    //$schedule = DB::table('quiz_sched_tbl')->orderBy('quiz_date','desc')->get();
+    $schedule = DB::table('quiz_sched_tbl')
+                    ->join('class_tbl', 'quiz_sched_tbl.class_id','=','class_tbl.class_id')
+                    ->orderBy('school_year','desc')
+                    ->get();
+
+    $quiz_title = DB::table('quiz_tbl')->get();
+    return view('profquiz.scheduleQuiz', compact('class','quiz_title'));
+  }
+
+  public function addSchedule(Request $req)
+    {
+      $quizID = $req->input('quiz_id');
+      $classID = $req->input('class_id');
+      $quiz_date = $req->input('quiz_date');
+      $time_start = $req->input('time_start');
+      $time_end = $req->input('time_end');
+
+      $data = array('quiz_id' =>$quizID , 'class_id' => $classID, 'quiz_date' => $quiz_date, 'time_start' => $time_start, 'time_end' => $time_end);
+
+      DB::table('quiz_sched_tbl')->insert($data);
+
+      return Redirect::to('/prof/Quiz/ScheduleQuiz');
+    }
+
+//web.php
+Route::get('EditSchedule', 'profController@EditSchedule')->name('profquiz.EditSchedule');
+
+        Route::post('EditSchedule', 'profController@updateSchedule')->name('profquiz.updateSchedule.submit');
+
+        Route::get('ScheduleQuiz', 'profController@ScheduleQuiz')->name('profquiz.ScheduleQuiz');
+
+        Route::post('ScheduleQuiz', 'profController@addSchedule')->name('profquiz.addSchedule.submit');

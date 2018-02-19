@@ -18,6 +18,6 @@ class DownloadController extends Controller
   {
     $profID = Auth::user()->prof_id;
     $downloads=DB::table('files_tbl')->where('prof_id',$profID)->get();
-    return view('prof.profupload',compact('downloads'));
+    return view('prof.profUpload',compact('downloads'));
   }
 }

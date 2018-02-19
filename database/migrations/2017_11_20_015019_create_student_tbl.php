@@ -11,21 +11,33 @@ class CreateStudentTbl extends Migration
      *
      * @return void
      */
-     public function up()
-   {
-       Schema::enableForeignKeyConstraints();
-       Schema::create('student', function (Blueprint $table) {
-           $table->increments('student_id');
-           $table->string('student_name', 200);
-           $table->string('student_email', 50)->nullable();
-           $table->integer('class_id')->unsigned()->nullable();
-           $table->string('password', 100)->nullable();
-           $table->rememberToken();
-           $table->timestamps();
-       });
+    public function up()
+    {
+     Schema::enableForeignKeyConstraints();
+     Schema::create('student', function (Blueprint $table) {
+       $table->increments('student_id');
+       $table->string('student_fname', 200);
+       $table->string('student_mname', 200);
+       $table->string('student_lname', 200);
+       $table->string('student_email', 50)->nullable();
+       $table->integer('class_id')->unsigned()->nullable();
+       $table->string('password', 100)->nullable();
+       $table->rememberToken();
+       $table->timestamps();
+     });
 
-       Schema::table('student', function($table) {
-          $table->foreign('class_id')->references('class_id')->on('class_tbl')->onDelete('cascade');
-       });
+     Schema::table('student', function($table) {
+      $table->foreign('class_id')->references('class_id')->on('class_tbl')->onDelete('cascade');
+      $table->unique('student_email');
+    });
    }
-}
+   /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+   public function down()
+   {
+     Schema::dropIfExists('student');
+   }
+ }

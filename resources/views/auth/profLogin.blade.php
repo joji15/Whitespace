@@ -1,22 +1,22 @@
-@extends('layouts.app')
+@extends('layouts.app-prof')
 
 @section('title', 'Professor Login')
 
 @section('content')
 
-<div class="col-md-6 align-self-center">
-  <p class="h3 text-center"><em>Professor Login</em></p>
+<div class="col-md-6 align-self-center animated fadeInRight">
+  <p class="h4 text-center text-white" style="font-family:Segoe UI; font-weight:lighter;"><span class="oi oi-account-login text-green"></span><em> Professor Login</em></p>
   <form method="POST" action="{{ route('prof.login.submit') }}">
     {{ csrf_field() }}
     <br />
     <div class="input-group{{ $errors->has('email') ? ' has-error' : '' }}">
-      <span class="input-group-addon"><span class="oi oi-person" title="Email" aria-hidden="true"></span></span>
-      <input type="email" class="form-control" placeholder="Email" aria-label="email" aria-describedby="email" id="prof_email" name="prof_email" required>
+      <span class="input-group-addon text-light bg-dark border-black"><span class="oi oi-person" title="Email" aria-hidden="true"></span></span>
+      <input type="email" class="form-control text-light bg-dark" placeholder="Email" aria-label="email" aria-describedby="email" id="prof_email" name="prof_email" required>
     </div>
     <br />
     <div class="input-group{{ $errors->has('password') ? ' has-error' : '' }}">
-      <span class="input-group-addon"><span class="oi oi-key" title="Password" aria-hidden="true"></span></span>
-      <input type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="password" id="password" name="password" required>
+      <span class="input-group-addon text-light bg-dark border-black"><span class="oi oi-key" title="Password" aria-hidden="true"></span></span>
+      <input type="password" class="form-control text-light bg-dark" placeholder="Password" aria-label="Password" aria-describedby="password" id="password" name="password" required>
     </div>
     <br />
     <div class="form-group row text-center">

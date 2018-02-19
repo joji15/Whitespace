@@ -11,6 +11,11 @@ use Redirect;
 
 class ScheduleController extends Controller
 {
+  public function __construct()
+  {
+    $this->middleware('auth:prof');
+  }
+
   public function viewSchedule()
   {
 
@@ -19,12 +24,12 @@ class ScheduleController extends Controller
 
     //$schedule = DB::table('quiz_sched_tbl')->orderBy('quiz_date','desc')->get();
     $schedule = DB::table('quiz_sched_tbl')
-                    ->join('class_tbl', 'quiz_sched_tbl.class_id','=','class_tbl.class_id')
-                    ->orderBy('school_year','desc')
-                    ->get();
+    ->join('class_tbl', 'quiz_sched_tbl.class_id','=','class_tbl.class_id')
+    ->orderBy('school_year','desc')
+    ->get();
 
     //$schedule = ScheduleModel::all();
-    return view('quiz/scheduleQuiz', ['class'=>$class, 'schedule'=>$schedule]);
+    return view('profquiz/scheduleQuiz', ['class'=>$class, 'schedule'=>$schedule]);
 
   }
 
@@ -40,6 +45,6 @@ class ScheduleController extends Controller
 
     DB::table('quiz_sched_tbl')->insert($data);
 
-    return Redirect::to('adminScheduleQuiz');
+    return Redirect::to(route('prof.quiz.ScheduleQuiz'));
   }
 }

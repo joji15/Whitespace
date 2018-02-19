@@ -19,7 +19,7 @@ class UploadController extends Controller
 
     public function getView()
     {
-        return view('adminUpload');
+        return view('prof.profUpload');
     }
 
     public function insertFile()
@@ -36,7 +36,7 @@ class UploadController extends Controller
 
         if ($validator->fails()) {
             $messages=$validator->messages();
-            return Redirect::to('adminUpload')->withInput()->withErrors($validator);
+            return Redirect::to(route('prof.upload'))->withInput()->withErrors($validator);
         }
 
         else if ($validator->passes()){
@@ -53,12 +53,12 @@ class UploadController extends Controller
                 $notification = array('message' => 'File uploaded successfully!',
                 'alert-type' => 'success');
 
-                return Redirect::to('prof.upload') -> with($notification);
+                return Redirect::to(route('prof.upload')) -> with($notification);
 
             } else {
                 $notification = array('message' => 'File is not valid!',
                 'alert-type' => 'error');
-                return Redirect::to('prof.upload') -> with($notification);
+                return Redirect::to(route('prof.upload')) -> with($notification);
             }
 
         }

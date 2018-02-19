@@ -31,7 +31,7 @@
     <div class="row justify-content-center">
       <div class="col-md-6 align-self-center">
         <div class="row">
-          <div class="col-12 animated fadeInUp d-inline-flex d-flex justify-content-center">
+          <div class="col-12 animated fadeInLeft d-inline-flex d-flex justify-content-center">
             <img src="{{ asset('img/WS.png') }}" class="main-header-img" width="150" height="150" alt="WS Logo">
             <h1 class="display-3 title main-header align-self-center"  style="font-family:Segoe UI;"><em>WhiteSpace</em></h1>
           </div>
@@ -42,8 +42,5 @@
 
     </div>
   </div>
-
-  <!-- Scripts -->
-  <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

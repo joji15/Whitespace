@@ -25,8 +25,32 @@ class studentLoginController extends Controller
     return view('auth.newpassword');
   }
 
-  public function NewPassForm()
+  public function NewPassForm(Request $request)
   {
+    $email = $request->input('student_email');
+    $oldpass = $request->input('oldpassword');
+    $newpass = $request->input('newpassword');
+    $newpasscon = $request->input('confnewpassword');
+
+
+    $users = DB::table('student')->select('password')->where('student_email', $request->student_email)->get();
+    $pass = $users->implode('password', '');
+    
+    if ($newpass == $oldpass) {
+      return redirect()->back()->withInput($request->only('student_email','remember'))->withErrors([
+        'passerr' => 'Your New password cannot be the same as your old password.',
+      ]);
+    } 
+    else if ($newpass != $newpasscon) {
+      return redirect()->back()->withInput($request->only('student_email','remember'))->withErrors([
+        'passerr' => 'Your new password does not match the confirm password.',
+      ]);
+    }
+    else{
+      $PassHash = Hash::make($newpass);
+      DB::table('student')->where('student_email', $email)->update(['password' => $PassHash]);
+      return redirect()->route('student.login');
+    }
     
   }
 

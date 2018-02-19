@@ -11,7 +11,8 @@
   <title>Whitespace - About Us</title>
 
   <!-- Bootstrap CSS -->
-  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <!-- Animate CSS for animations -->
   <link href="/css/animate.min.css" rel="stylesheet">
   <!-- Open Iconic - Icon Set *Glyphicons don't work -->
@@ -25,6 +26,9 @@
   <script src="/js/jquery-3.2.1.min.js"></script>
   <script src="/js/popper.min.js"></script>
   <script src="/js/bootstrap.min.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
   <style>
 
   </style>
@@ -42,10 +46,10 @@
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
           <li class="nav-item">
-            <a class="nav-link text-white" style="font-family: Segoe UI; font-weight:lighter;" href="{{ route('prof.login') }}">Login as Professor</a>
+            <a class="nav-link nav-def p-2 pl-3 pr-3 text-white" style="font-family: Segoe UI; font-weight:lighter;" href="{{ route('prof.login') }}">Login as Professor</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" style="font-family: Segoe UI; font-weight:lighter;" href="{{ route('student.login') }}">Login as Student</a>
+            <a class="nav-link nav-def p-2 pl-3 pr-3 text-white" style="font-family: Segoe UI; font-weight:lighter;" href="{{ route('student.login') }}">Login as Student</a>
           </li>
         </ul>
       </div>
@@ -55,11 +59,8 @@
     <div class="container">
       <div class="row" style="font-family: Segoe UI; font-weight:lighter;">
         <div class="col-3 mb-5 mt-5">
-          <br />
-          <br />
-          <br />
           <p class="text-center align-self-center">
-            Picture Goes Here
+            <img src="{{ asset('img/20 Gong - Kim.jpg') }}" width="200" height="200" alt="Cruz, Aimee Lou D.">
           </p>
           <hr />
         </div>
@@ -67,17 +68,14 @@
           <div class="card">
             <div class="card-body">
               <div class="row">
-                <div class="col-8">
+                <div class="col-7">
                   <p class="card-title h2" style="font-family: Segoe UI; font-weight:lighter;">Cruz, Aimee Lou D.</p>
                   <p class="card-text">BSIT-4A</p>
                 </div>
-                <div class="col-4">
+                <div class="col-5">
                   <ul>
                     <li>
-                      Phone Number: Placeholder
-                    </li>
-                    <li>
-                      Email: Placeholder
+                      Email: aimeecruz107@gmail.com
                     </li>
                   </ul>
                 </div>
@@ -86,11 +84,8 @@
           </div>
         </div>
         <div class="col-3 mb-5">
-          <br />
-          <br />
-          <br />
           <p class="text-center align-self-center">
-            Picture Goes Here
+            <img src="{{ asset('img/21 De Vera.jpg') }}" width="200" height="200" alt="De Vera, Jazelene Mae M.">
           </p>
           <hr />
         </div>
@@ -98,17 +93,14 @@
           <div class="card">
             <div class="card-body">
               <div class="row">
-                <div class="col-8">
+                <div class="col-7">
                   <p class="card-title h2" style="font-family: Segoe UI; font-weight:lighter;">De Vera, Jazelene Mae M.</p>
                   <p class="card-text">BSIT-4A</p>
                 </div>
-                <div class="col-4">
+                <div class="col-5">
                   <ul>
                     <li>
-                      Phone Number: Placeholder
-                    </li>
-                    <li>
-                      Email: Placeholder
+                      Email: jazelenedevera@gmail.com
                     </li>
                   </ul>
                 </div>
@@ -117,11 +109,8 @@
           </div>
         </div>
         <div class="col-3 mb-5">
-          <br />
-          <br />
-          <br />
           <p class="text-center align-self-center">
-            Picture Goes Here
+            <img src="{{ asset('img/joji.jpg') }}" width="200" height="200" alt="George, Donald Patrick C.">
           </p>
           <hr />
         </div>
@@ -129,17 +118,14 @@
           <div class="card">
             <div class="card-body">
               <div class="row">
-                <div class="col-8">
+                <div class="col-7">
                   <p class="card-title h2" style="font-family: Segoe UI; font-weight:lighter;">George, Donald Patrick C.</p>
                   <p class="card-text">BSIT-4A</p>
                 </div>
-                <div class="col-4">
+                <div class="col-5">
                   <ul>
                     <li>
-                      Phone Number: Placeholder
-                    </li>
-                    <li>
-                      Email: Placeholder
+                      Email: donpatrick15@gmail.com
                     </li>
                   </ul>
                 </div>
@@ -155,20 +141,11 @@
       <div class="row">
         <div class="col-12">
           <a class="navbar-brand align-middle mr-auto p-2 text-white" href="#">
-            Terms of Service
-          </a>
-          <a class="navbar-brand align-middle mr-auto p-2 text-white" href="#">
-            Contacts
-          </a>
-          <a class="navbar-brand align-middle mr-auto p-2 text-white" href="#">
             About Us
           </a>
         </div>
       </div>
     </div>
   </nav>
-
-  <!-- Scripts -->
-  <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

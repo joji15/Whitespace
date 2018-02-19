@@ -13,7 +13,7 @@
     <div class="row">
       <div class="col-sm col-md-7 col-lg-7 mt-4">
         <table class="table table-hover">
-          <thead class="thead-inverse table-sm text-center">
+          <thead class="thead-dark table-sm">
             <tr>
               <th>File Name</th>
               <th>Date Uploaded</th>
@@ -25,7 +25,7 @@
             <tr>
               <th scope="row">{{$down->file_name}}</th>
               <td>{{$down->uploaded_at}}</td>
-              <td class="text-center"><a href="up_file/{{$down->file_name}}" download="{{$down->file_name}}"><span class="oi oi-data-transfer-download" title="Download this file" aria-hidden="true"></span></a></td>
+              <td class="text-center"><a href="/up_file/{{$down->file_name}}" download="{{$down->file_name}}"><span class="oi oi-data-transfer-download" title="Download this file" aria-hidden="true"></span></a></td>
             </tr>
             @endforeach
           </tbody>
@@ -47,7 +47,7 @@
               </ul>
             </p>
             <br />
-            <form action="/prof/Upload/insertfile" method="post" enctype="multipart/form-data">
+            <form action="Upload/insertfile" method="post" enctype="multipart/form-data">
               <input type="hidden" value="{{ csrf_token() }}" name="_token" />
               <div class="form-group ">
                 <label class="custom-file">
