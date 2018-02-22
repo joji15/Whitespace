@@ -12,55 +12,7 @@
     </p>
     <br>
     <div class="row">
-      <div class="col-3">
-        <p class="h5" style="font-weight: lighter;"><span class="oi oi-document" title="Simulator" aria-hidden="true"></span> Exercises:</p>
-        <div id="lessonAccord" role="tablist">
-          <div class="card border-blue-grey no-shadow">
-            <div class="card-header pt-2 pb-2 pl-3 bg-whitesmoke" role="tab" id="Exercise1">
-              <h5 class="mb-0">
-                <a data-toggle="collapse" href="#exercise1col" role="button" aria-expanded="true" aria-controls="exercise1col" style="font-size: 14px">
-                  SQL &amp; Things
-                </a>
-              </h5>
-            </div>
-
-            <div id="exercise1col" class="collapse" role="tabpanel" aria-labelledby="Exercise1" data-parent="#lessonAccord">
-              <div class="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
-              </div>
-            </div>
-          </div>
-          <div class="card border-blue-grey no-shadow">
-            <div class="card-header pt-2 pb-2 pl-3 bg-whitesmoke" role="tab" id="Exercise2">
-              <h5 class="mb-0">
-                <a class="collapsed" data-toggle="collapse" href="#exercise2col" role="button" aria-expanded="false" aria-controls="exercise2col" style="font-size: 14px">
-                  Exercise #2
-                </a>
-              </h5>
-            </div>
-            <div id="exercise2col" class="collapse" role="tabpanel" aria-labelledby="Exercise2" data-parent="#lessonAccord">
-              <div class="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
-              </div>
-            </div>
-          </div>
-          <div class="card border-blue-grey no-shadow">
-            <div class="card-header pt-2 pb-2 pl-3 bg-whitesmoke" role="tab" id="Exercise3">
-              <h5 class="mb-0">
-                <a class="collapsed" data-toggle="collapse" href="#exercise3col" role="button" aria-expanded="false" aria-controls="exercise3col" style="font-size: 14px">
-                  Exercise #3
-                </a>
-              </h5>
-            </div>
-            <div id="exercise3col" class="collapse" role="tabpanel" aria-labelledby="Exercise3" data-parent="#lessonAccord">
-              <div class="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-9">
+      <div class="col-12">
         <p class="h5" style="font-weight: lighter;"><span class="oi oi-code" title="Simulator" aria-hidden="true"></span> Simulator:</p>
         <div class="row">
           <div class="col-4 mb-2" style="max-height: 210px; min-height: 100px;">
@@ -133,7 +85,7 @@
                 </form>
                 <div class="row text-right">
                   <div class="col">
-                    <input class="btn btn-primary btn-sm mt-2" type="button" value="Run Query »" onclick="wsschoolsSQLSubmit()">  
+                    <input class="btn btn-primary btn-sm mt-2" type="button" value="Run Query »" onclick="wsschoolsSQLSubmit(); saveHistory()">  
                   </div>
                 </div>
               </div>
@@ -297,6 +249,25 @@
       var idoc = (ifr.contentWindow || ifr.contentDocument);
       if (idoc.document) idoc=idoc.document;
       idoc.write("<div style='margin:10px;font-family:verdana;font-size:12px;'>Click <b>'Run SQL'</b> to execute the SQL statement above.</div>");
+    }
+
+    function saveHistory() {
+      var query = document.getElementById('textareaCodeSQL').value;
+      $.ajax({
+        type: 'ajax',
+        method: 'post',
+        url: 'student/Simulator',
+        data: {query: query},
+        async: false,
+        dataType: 'json',
+        success: function(response){
+          alert('Inserted');
+        }
+        error: function() {
+          // body...
+        }
+
+      });
     }
 
     function showDescription() {

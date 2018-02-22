@@ -37,7 +37,7 @@
               @foreach($scheduled_quiz as $sq)
               <div class="col-12 col-md-6 col-lg-3 mt-2">
                 <div class="card border-primary">
-                  <form action="{{route('students.studentTakeQuiz')}}" method="POST">
+                  <form action="{{route('student.Profile.Quiz')}}" method="POST">
                     <div class="card-body text-white bg-primary">
                       <input type="hidden" value="{{ csrf_token() }}" name="_token">
                       <input type="hidden" name="quiz_id" value="{{$sq->quiz_id}}" id="quiz_id">
@@ -51,6 +51,7 @@
                     </div>
                     <div class="card-footer border-blue bg-white p-0">
                       <input type="hidden" name="quiz_id" value="{{$sq->quiz_id}}">
+                      <input type="hidden" value="{{$sq->quiz_sched_id}}" name="quizSchedID">
                       <button class="btn bg-transparent" type="submit">
                         <div class="row">
                           <div class="col-10 text-primary">Take this quiz! <span class="oi oi-link-intact"></span></div>
@@ -75,7 +76,7 @@
               @foreach ($finished_quiz as $fQ)
               <div class="col-12 col-md-6 col-lg-3 mt-2 mb-4">
                 <div class="card border-blue-grey">
-                  <form action="/student/Profile/Quiz/studentReviewResult" method="POST">
+                  <form action="{{route('student.Profile.Quiz.ReviewResult')}}" method="POST">
                     <input type="hidden" value="{{ csrf_token() }}" name="_token">
                     <div class="card-body bg-white">
                       <h5 class="card-title"><span class="oi oi-spreadsheet" title="scheduledQuiz" aria-hidden="true"></span> {{$fQ->quiz_title}}</h5>
@@ -87,7 +88,7 @@
                       <input type="hidden" name="quiz_id" value="{{$fQ->quiz_id}}">
                       <button class="btn bg-transparent" type="submit">
                         <div class="row">
-                          <div class="col-10 text-warning">Review Quiz <span class="oi oi oi-link-intact"></span></div>
+                          <a class="col-10 text-warning">Review Quiz <span class="oi oi oi-link-intact"></span></a>
                           <div class="col-2 text-right"></div>
                         </div>
                       </button>
@@ -97,7 +98,7 @@
               </div>
               @endforeach
               @else
-              <marquee behavior="alternate" class="h1" style="font-weight: lighter;">You have no scheduled quizzes.</marquee>
+              <marquee behavior="alternate" class="h1" style="font-weight: lighter;">You have no finished quizzes yet.</marquee>
               @endif
             </div>
           </div>

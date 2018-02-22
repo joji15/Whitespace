@@ -82,15 +82,15 @@
         <nav class="nav nav-pills flex-column">
           <div class="navbar-collapse animated fadeIn" id="sidenavbar">
             <hr />
-            <a class="nav-item nav-link" href="/student/Home" id="studentpill"><span class="oi oi-home" title="Home" aria-hidden="true"></span> Home</a>
-            <a class="nav-item nav-link" href="/student/Profile" id="studentprofilepill"><span class="oi oi-person text-red" title="Profile" aria-hidden="true"></span> Profile</a>
+            <a class="nav-item nav-link pt-3 pb-3" href="/student/Home" id="studentpill"><span class="oi oi-home" title="Home" aria-hidden="true"></span> Home</a>
+            <a class="nav-item nav-link pt-3 pb-3" href="/student/Profile" id="studentprofilepill"><span class="oi oi-person text-red" title="Profile" aria-hidden="true"></span> Profile</a>
             <!-- <div id="profilesub">
               <a class="nav-item nav-link pl-5 btn-sm" href="/student/Profile/Quiz" id="studentquizpill"><span class="oi oi-clock" title="ScheduledQuizzes" aria-hidden="true"></span> Quizzes</a>
               <a class="nav-item nav-link pl-5 btn-sm" href="/student/Profile/Download" id="studentdownpill"><span class="oi oi-data-transfer-download" title="Downloads" aria-hidden="true"></span> Downloads</a>
             </div> -->
-            <a class="nav-item nav-link" href="/student/SQLLesson" id="studentlessonpill"><span class="oi oi-justify-left text-orange" title="SQL Lessons" aria-hidden="true"></span> Lessons</a>
-            <a class="nav-item nav-link" href="/student/Simulator" id="studentsimpill"><span class="oi oi-hard-drive text-green" title="SQL Simulator" aria-hidden="true"></span> Query Simulator</a>
-            <a class="nav-item nav-link" href="/student/Designer" id="studentdespill"><span class="oi oi-fork text-yellow" title="SQL Designer" aria-hidden="true"></span> Designer</a>
+            <a class="nav-item nav-link pt-3 pb-3" href="/student/SQLLesson" id="studentlessonpill"><span class="oi oi-justify-left text-orange" title="SQL Lessons" aria-hidden="true"></span> Lessons</a>
+            <a class="nav-item nav-link pt-3 pb-3" href="/student/Simulator" id="studentsimpill"><span class="oi oi-hard-drive text-green" title="SQL Simulator" aria-hidden="true"></span> Query Simulator</a>
+            <a class="nav-item nav-link pt-3 pb-3" href="/student/Designer" id="studentdespill"><span class="oi oi-fork text-yellow" title="SQL Designer" aria-hidden="true"></span> Designer</a>
             <hr class="hr-white"/>
             <p id="testtxt" style="font-size:10px">
               

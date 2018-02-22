@@ -8,7 +8,7 @@
   <div class="container-fluid contentMargin">
     <br />
     <p class="h2 mb-4" style="font-family:Segoe UI; font-weight:lighter;">
-      <span class="oi oi-person text-red" title="Student Profile" aria-hidden="true"></span> Manage Students
+      <span class="oi oi-people text-red" title="Student Profile" aria-hidden="true"></span> Manage Students
     </p>
 
     <div class="row">

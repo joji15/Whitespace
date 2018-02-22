@@ -59,7 +59,7 @@
     </button>
     <a class="navbar-brand align-middle animated fadeIn mr-auto p-2" href="" style="font-size:16px; font-family:Roboto;">
       <img src="{{ asset('img/WS-ICO.png') }}" width="40" height="40" alt="WS Logo">
-      {{ Auth::user()->prof_fName }} {{ Auth::user()->prof_lName }}
+      {{ Auth::user()->prof_lName }}, {{ Auth::user()->prof_fName }}
     </a>
     <li style="list-style-type:none">
       <a class="btn btn-danger btn-sm" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();"><span class="oi oi-account-logout"></span> Logout
@@ -76,16 +76,17 @@
         <nav class="nav nav-pills flex-column">
           <div class="navbar-collapse animated fadeIn" id="sidenavbar">
             <hr class="hr-white"/>
-            <a class="nav-item nav-link" href="{{route('prof.profHome')}}" id="profpill"><span class="oi oi-home" title="Home" aria-hidden="true"></span> Home</a>
-            <a class="nav-item nav-link" href="{{route('prof.student')}}" id="profStudpill"><span class="oi oi-people text-red" title="Student" aria-hidden="true"></span> Students</a>
+            <a class="nav-item nav-link pt-3 pb-3" href="{{route('prof.profHome')}}" id="profpill"><span class="oi oi-home" title="Home" aria-hidden="true"></span> Home</a>
+            <a class="nav-item nav-link pt-3 pb-3" href="{{route('prof.student')}}" id="profStudpill"><span class="oi oi-people text-red" title="Student" aria-hidden="true"></span> Students</a>
             <div id="studentSub">
-              <a class="nav-item nav-link pl-5 btn-sm" href="/prof/Student/CreateClass" id="profCreateClasspill"><span class="oi oi-plus" title="CreateClass" aria-hidden="true"></span> Create Class</a>
-              <a class="nav-item nav-link pl-5 btn-sm" href="/prof/Student/ViewProgress" id="profViewProgresspill"><span class="oi oi-graph" title="ViewProgress" aria-hidden="true"></span> Student Progress</a>
-              <a class="nav-item nav-link pl-5 btn-sm" href="/prof/Student/ViewDatabase" id="profViewDBpill"><span class="oi oi-folder" title="Classdb" aria-hidden="true"></span> Class Database</a>
+              <a class="nav-item nav-link pt-3 pb-3 pl-5 btn-sm" href="/prof/Student/CreateClass" id="profCreateClasspill"><span class="oi oi-plus" title="CreateClass" aria-hidden="true"></span> Create Class</a>
+              <a class="nav-item nav-link pt-3 pb-3 pl-5 btn-sm" href="/prof/Student/ViewProgress" id="profViewProgresspill"><span class="oi oi-graph" title="ViewProgress" aria-hidden="true"></span> Student Progress</a>
+              <a class="nav-item nav-link pt-3 pb-3 pl-5 btn-sm" href="/prof/Student/ViewDatabase" id="profViewDBpill"><span class="oi oi-folder" title="Classdb" aria-hidden="true"></span> Class Database</a>
             </div>
-            <a class="nav-item nav-link" href="{{route('prof.quiz')}}" id="profQuizpill"><span class="oi oi-spreadsheet text-orange" title="Quiz" aria-hidden="true"></span> Quizzes</a>
-            <a class="nav-item nav-link" href="{{route('prof.upload')}}" id="profUploadpill"><span class="oi oi-data-transfer-upload text-green" title="Upload" aria-hidden="true"></span> Upload</a>
-            <a class="nav-item nav-link" href="{{route('prof.audit')}}" id="profAuditpill"><span class="oi oi-script text-white" title="Audit Trail" aria-hidden="true"></span> Audit Trail</a>
+            <a class="nav-item nav-link pt-3 pb-3" href="{{route('prof.quiz')}}" id="profQuizpill"><span class="oi oi-spreadsheet text-orange" title="Quiz" aria-hidden="true"></span> Quizzes</a>
+            <a class="nav-item nav-link pt-3 pb-3" href="{{route('prof.upload')}}" id="profUploadpill"><span class="oi oi-data-transfer-upload text-green" title="Upload" aria-hidden="true"></span> Upload</a>
+            <a class="nav-item nav-link pt-3 pb-3" href="{{route('prof.audit')}}" id="profAuditpill"><span class="oi oi-script text-white" title="Audit Trail" aria-hidden="true"></span> Audit Trail</a>
+            <a class="nav-item nav-link pt-3 pb-3" href="{{route('prof.users')}}" id="profUserspill"><span class="oi oi-person text-yellow" title="Manage Users" aria-hidden="true"></span> Users</a>
           </div>
         </nav>
       </div>

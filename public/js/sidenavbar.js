@@ -16,6 +16,7 @@ var editquiz = document.getElementById('editQuizContent');
 var schedquiz = document.getElementById('ScheduleQuizContent');
 var upload = document.getElementById('upContent');
 var audit = document.getElementById('auditContent');
+var users = document.getElementById('usersContent');
 
 /*
     These variables are getting the ID of every page on the Professor's Side
@@ -98,6 +99,13 @@ else if (upload !== null){
 else if (audit !== null){
     $(".a").find(".active").removeClass("active");
     $('#profAuditpill').addClass("active");
+    $('#studentSub').addClass("d-none");
+    $('#quizSub').addClass("d-none");
+}
+
+else if (users !== null){
+    $(".a").find(".active").removeClass("active");
+    $('#profUserspill').addClass("active");
     $('#studentSub').addClass("d-none");
     $('#quizSub').addClass("d-none");
 }

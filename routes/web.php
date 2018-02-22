@@ -43,7 +43,6 @@ Route::prefix('student')->group(function(){
 
         Route::get('studentsLesson', 'studentController@studentsLesson');
         
-        Route::get('studentTakeQuiz', 'studentController@checkSched')->name('students.studentTakeQuiz');
 
     });
 
@@ -53,10 +52,17 @@ Route::prefix('student')->group(function(){
 
         Route::prefix('Quiz')->group(function(){
 
-          Route::get('/', 'studentController@studentQuiz')->name('student.Profile.Quiz');
+            Route::get('studentViewQuiz','studentController@studentTakeQuiz')->name('student.Profile.Quiz.ViewQuiz');
+            
+            Route::get('studentTakeQuiz', 'studentController@checkSched')->name('students.studentTakeQuiz');
 
-          Route::get('studentReviewResult', 'studentController@reviewResult')->name('student.Profile.Quiz.studentReviewResult');
+            Route::get('viewQuestion','studentController@viewTakeQuizGet')->name('student.Profile.Quiz.Get');
 
+            Route::post('viewQuestion','studentController@viewTakeQuiz')->name('student.Profile.Quiz');
+
+            Route::get('studentReviewResult', 'studentController@reviewResult')->name('student.Profile.Quiz.ReviewResult');
+
+            Route::post('studentSubmitAnswer','studentController@submitAnswer')->name('student.Profile.Quiz.SubmitAnswer');
         });
 
         Route::get('/Download', 'studentController@studentDownload')->name('student.Profile.Download');
@@ -194,6 +200,14 @@ Route::prefix('prof')->group(function(){
     Route::prefix('Audit')->group(function(){
 
         Route::get('/', 'profController@AuditView')->name('prof.audit');
+
+    });
+
+    Route::prefix('Users')->group(function(){
+
+        Route::get('/', 'profController@UsersView')->name('prof.users');
+
+        Route::post('/', 'profController@UsersAddAccount')->name('prof.users.add');
 
     });
 
