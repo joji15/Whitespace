@@ -1,9 +1,5 @@
 <h1 align="center">WHITESPACE</h1>
 
-<p align="center">
-TBA
-</p>
-
 ## About Whitespace
 
 Whitespace is a Web based SQL Learning Hub with an SQL Simulator and SQL Designer.
