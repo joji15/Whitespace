@@ -6,18 +6,7 @@ Whitespace is a Web based SQL Learning Hub with an SQL Simulator and SQL Designe
 
 ## About Whitespace.
 
-2017.02.04
-— Edited some Controllers
-— Added AOS Animation
-— Added and edited some colors
-— Seperated the designer css and js file
-— Some styles
-— Finally added a working Simulator using Web SQL
-— A working but buggy SQL Designer
-— Fixed Downloads
-— Design Choices
-— Minor Fixes...
-
+TBD
 
 ## License
 
