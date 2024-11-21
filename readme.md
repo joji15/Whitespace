@@ -1,4 +1,4 @@
-<h1 align="center">WHITESPACE</h1>
+<h1 align="center">WHITESPACE PROJECT - [ARCHIVED]</h1>
 
 ## About Whitespace
 
